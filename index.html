@@ -70,20 +70,20 @@
   <div class="status">
     <div class="cell"><div class="k">キャラクター</div><div class="v">muse</div></div>
     <div class="cell"><div class="k">種族 / クラス</div><div class="v">Human / ネクロマンサー</div></div>
-    <div class="cell"><div class="k">レベル</div><div class="v">Lv.28</div></div>
-    <div class="cell"><div class="k">HP / MP</div><div class="v">1499 / 1764</div></div>
-    <div class="cell"><div class="k">ゴールド</div><div class="v">1,102,852</div></div>
-    <div class="cell"><div class="k">場所</div><div class="v">クロマ・タワー F1</div></div>
+    <div class="cell"><div class="k">レベル</div><div class="v">Lv.29</div></div>
+    <div class="cell"><div class="k">HP / MP</div><div class="v">1547 / 1815</div></div>
+    <div class="cell"><div class="k">ゴールド</div><div class="v">1,413,597</div></div>
+    <div class="cell"><div class="k">場所</div><div class="v">Marshland Crossing</div></div>
   </div>
-  <p class="note">2026年11月20日 16:58 時点。ペット「Corrupted Man」を召喚可能。塔の中ではオートファーム禁止（手動戦闘のみ）。パッシブはGravelord 27/53。</p>
+  <p class="note">2026年11月20日 20:37 時点。ペット「Corrupted Man」（最大HP 4,450）を召喚可能。塔の中ではオートファームが効かず手動戦闘のみ。パッシブはGravelord 27/53（未使用1点）。</p>
 </section>
 
 <section id="history">
   <h2>更新履歴</h2>
   <ul class="history">
+    <li><time>2026-11-20 20:37</time><span>Lv.29到達。Marshland Crossing の実測効率（XP 約42%/時・ゴールド約181,000/時・死亡0）と Room 5 の教訓（攻撃呪文で敵が本人へ直行）を狩場データに記録。B2M運用でMP枯渇が解消</span></li>
+    <li><time>2026-11-20 20:18</time><span>パッシブツリーの解説を充実（仕組み・3ルートの個性・プリセットと振り直し）</span></li>
     <li><time>2026-11-20 20:02</time><span>「狩場データ」の記録を開始。狩場ごとの効率（経験値・ゴールドの時給）をセッション単位で計測していく</span></li>
-    <li><time>2026-11-20 19:10</time><span>画面ガイドにテレポートとブラックマーケット（闇市）を追加。武器強化スクロールの仕様も掲載</span></li>
-    <li><time>2026-11-20 19:04</time><span>メイン画面をハンターズビレッジの街並みの実写に、ワールドマップを大陸全体図に差し替え。領地ごとのレベル帯を掲載</span></li>
   </ul>
   <p class="note"><a href="history.html">過去の更新履歴（全44件）はこちら</a></p>
 </section>
@@ -178,8 +178,8 @@
       <tr><th>狩場</th><th>レベル帯</th><th>効率メモ</th><th>死亡</th></tr>
       <tr><td>クロマ・タワー Room 2</td><td>22-23</td><td>1体≒XP 1.9%。連勝25でも Gilded 出現なし</td><td>0</td></tr>
       <tr><td>クロマ・タワー Room 3</td><td>24-25</td><td>1体≒XP 5%（Room 2より高効率）。増援の乱入が危険</td><td>2（11/20夕方）</td></tr>
-      <tr><td>クロマ・タワー Room 5</td><td>28-29</td><td>適正帯でも死亡あり。先にレベルを上げてから再挑戦</td><td>1（11/20夜）</td></tr>
-      <tr><td>Marshland Crossing</td><td>26-30</td><td>野外。オートファーム可。レイドボス Malgrath（Lv.30）接近時は離脱</td><td>計測中</td></tr>
+      <tr><td>クロマ・タワー Room 5</td><td>28-29</td><td>1体≒XP 5.18%。ペット単独クリーンキル7、連勝最大8でも Gilded 0。攻撃呪文を撃つと敵が muse 本人へ直行する</td><td>1（11/20夜）</td></tr>
+      <tr><td>Marshland Crossing</td><td>26-30</td><td>野外。オートファーム＋B2M運用で XP 約42%/時、ゴールド約181,000/時。レイドボス Malgrath（Lv.30）接近時は離脱</td><td>0</td></tr>
       <tr><td>Forsaken Garrison</td><td>28-32</td><td>野外。未計測</td><td>-</td></tr>
     </table>
     <p class="note">塔内はオートファームが効かず（仕様の可能性）、指示待ちの立ち止まりが死亡につながる。塔内は1体ずつ手動で捌き、倒したら安全地帯へ引く。レベリングは野外が安全。</p>
@@ -222,10 +222,17 @@
   <img src="assets/screen-passives-annotated.png" alt="パッシブツリーの注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
   <div class="card"><table>
     <tr><td>① ポイント表示（上部）</td><td>「0 points available · 28 / 28 spent」＝残り0、28点使用済み。レベルアップで1点ずつ増える</td></tr>
-    <tr><td>② ルート＆合計（右パネル）</td><td>ネクロマンサーには3ルート：Curse Weaver（呪い系）／Gravelord（召喚・死体系）／Blood Price（血系）。muse は Gravelord 中心（27/53）。RESET ALL で振り直し可能</td></tr>
+    <tr><td>② ルート＆合計（右パネル）</td><td>クラスごとの3ルートと振り分け状況、プリセット、取得済みマスタリー数、RESET ALL（振り直し）</td></tr>
     <tr><td>③ ツリー本体</td><td>金色の線が取得済みの道。大きな円はマスタリー（要石）ノード</td></tr>
     <tr><td>④ ノード検索（上部）</td><td>「CRIT」のように効果でノードを検索できる</td></tr>
   </table></div>
+  <div class="card">
+    <p><strong>仕組み</strong>：レベルが1上がるごとに1ポイント得られ、ツリー上のノード（丸）を取ってキャラを伸ばす育成盤。ノードは線でつながっていて、取ったノードの隣から先へ進める。小さい丸は通常ノード（ステータスや小ボーナス）、大きな丸は<strong>マスタリー</strong>と呼ばれる要石で、ビルドの性格を決める強力な効果を持つ。</p>
+    <p><strong>3つのルート</strong>：クラスごとに3方向のルートがあり、どこにポイントを寄せるかで別キャラのように性格が変わる。ネクロマンサーの場合は Curse Weaver（呪い・弱体化を極める系、全55ノード）、Gravelord（召喚物と死霊を強化する系、全53ノード）、Blood Price（HPを代償に力を得る血系、全52ノード）。</p>
+    <p><strong>muse の現状</strong>：28ポイント中27を Gravelord に集中させた召喚特化型で、マスタリーは4つ取得済み。召喚物の Corrupted Man が主力になるよう、残りのポイントも Gravelord を進める方針。</p>
+    <p><strong>プリセットと振り直し</strong>：Preset にビルドを保存して切り替えられる（装備プリセットとは別）。RESET ALL で全ポイントを振り直せるので、方針転換も可能。</p>
+    <p class="note">各ノードの個別効果は、ツリーを拡大してツールチップを確認しながら順次追記予定。</p>
+  </div>
   <h3>クエスト</h3>
   <img src="assets/screen-quests-annotated.png" alt="クエスト画面の注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
   <div class="card"><table>
