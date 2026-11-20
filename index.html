@@ -81,6 +81,8 @@
 <section id="history">
   <h2>更新履歴</h2>
   <ul class="history">
+    <li><time>2026-11-20 18:46</time><span>画面ガイドにクエスト画面の注釈つきスクリーンショットを追加。「見習いの儀式」と「深淵の怒り」の内容をクエスト画面の文面で更新</span></li>
+    <li><time>2026-11-20 18:45</time><span>画面ガイドにパッシブツリーの注釈つきスクリーンショットを追加</span></li>
     <li><time>2026-11-20 18:41</time><span>画面ガイドにスキル画面（スペルブック）の注釈つきスクリーンショットを追加。スキル表の消費MP・詠唱・CDを実画面の数値に更新</span></li>
     <li><time>2026-11-20 18:39</time><span>画面ガイドにインベントリの注釈つきスクリーンショットを追加。所持金が1,102,852ゴールドに到達</span></li>
     <li><time>2026-11-20 18:32</time><span>画面ガイドにワールドマップ（クロマ・タワーF1）の注釈つきスクリーンショットを追加。F1に部屋4（26-27）・部屋5（28-29）があることが判明</span></li>
@@ -147,8 +149,8 @@
     <table>
       <tr><th>クエスト</th><th>状態</th></tr>
       <tr><td>黄金の狩り（The Gilded Hunt）</td><td>進行中 1/5（あと4体）。クエスト文によれば、Gildedは「クリーンな討伐（無傷討伐）から生まれ、仕留める前に消えてしまう」。連勝20・25、部屋3での10討伐でも出現せず。キーパーの話では「死者の中から輝きを放って現れる」ため、出現場所は討伐現場の死体付近とみられ、討伐直後に死体付近を注視する必要がある。自分の手で5体倒すと戦旗がもらえる</td></tr>
-      <tr><td>見習いの儀式（The Apprentice's Ritual）</td><td>Lv.15+。Sage Aldwin／Grandmaster Theron 関連（未受注）</td></tr>
-      <tr><td>深淵の怒り（Wrath of the Deep）<span class="tag party">PARTY</span></td><td>Lv.12+。パーティ専用のためソロでは保留</td></tr>
+      <tr><td>見習いの儀式（The Apprentice's Ritual）</td><td>Lv.15+。話す島の賢者アルドウィンの束縛の儀式を手伝い、力量を証明してグルーディオスのグランドマスター・セロンに披露する（未受注）</td></tr>
+      <tr><td>深淵の怒り（Wrath of the Deep）<span class="tag party">PARTY</span></td><td>Lv.12+。話す島の衛兵隊長マーカスの依頼で、歌う滝の下の洞窟に巣食う海獣テンペスト・ウォーデンを討つ。パーティ専用のためソロでは保留</td></tr>
     </table>
   </div>
 </section>
@@ -230,16 +232,19 @@
     <tr><td>③ チェックマーク</td><td>ホットバーに登録済み。画面の案内通り、空きスロットをタップするとスキルを割り当てられる</td></tr>
   </table></div>
   <h3>パッシブツリー</h3>
-  <div class="shot">スクリーンショット追加予定</div>
+  <img src="assets/screen-passives-annotated.png" alt="パッシブツリーの注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
   <div class="card"><table>
-    <tr><td>Gravelord</td><td>グレイブロード。ネクロマンサー系の育成ルート</td></tr>
+    <tr><td>① ポイント表示（上部）</td><td>「0 points available · 28 / 28 spent」＝残り0、28点使用済み。レベルアップで1点ずつ増える</td></tr>
+    <tr><td>② ルート＆合計（右パネル）</td><td>ネクロマンサーには3ルート：Curse Weaver（呪い系）／Gravelord（召喚・死体系）／Blood Price（血系）。muse は Gravelord 中心（27/53）。RESET ALL で振り直し可能</td></tr>
+    <tr><td>③ ツリー本体</td><td>金色の線が取得済みの道。大きな円はマスタリー（要石）ノード</td></tr>
+    <tr><td>④ ノード検索（上部）</td><td>「CRIT」のように効果でノードを検索できる</td></tr>
   </table></div>
   <h3>クエスト</h3>
-  <div class="shot">スクリーンショット追加予定</div>
+  <img src="assets/screen-quests-annotated.png" alt="クエスト画面の注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
   <div class="card"><table>
-    <tr><td>Quest Log</td><td>クエスト一覧</td></tr>
-    <tr><td>[PARTY]</td><td>パーティ専用クエスト（一人では受けない）</td></tr>
-    <tr><td>Reward</td><td>報酬</td></tr>
+    <tr><td>① ACTIVE（進行中）</td><td>受けているクエスト。説明文の下に目的と進捗（例：5体中1体）</td></tr>
+    <tr><td>② TRACK</td><td>チェックを入れると目的がメイン画面に常時表示される</td></tr>
+    <tr><td>③ AVAILABLE（受注可能）</td><td>受けられるクエストの一覧。「SHOW ON MAP」で依頼場所を地図表示。[PARTY] はパーティ専用（一人では受けない）</td></tr>
   </table></div>
   <h3>インベントリ</h3>
   <img src="assets/screen-inventory-annotated.png" alt="インベントリの注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
