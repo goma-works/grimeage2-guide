@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ガイド日本語訳 | Grimeage II 攻略ノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#241a2e;--panel:#3d3242;--panel2:#352b3d;--line:#5a4a6b;--gold:#d8b25c;--text:#ece5f0;--muted:#b8a9c4;--red:#e06c5c;--redbg:#4a2320;--blue:#6ca8e0;--bluebg:#1f3049}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.7}
+a{color:var(--gold)}
+header.top{max-width:1100px;margin:0 auto;padding:26px 20px 4px}
+.logo{font-family:Cinzel,serif;font-size:22px;color:var(--gold);letter-spacing:.08em}
+.top nav{margin-top:8px;font-size:14px}
+.top nav a{margin-right:16px;text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+main{max-width:1100px;margin:0 auto;padding:10px 20px 48px}
+h1{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:30px;text-align:center;margin:18px 0 2px}
+.sub{text-align:center;color:var(--muted);margin:0 0 22px}
+h2{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:21px;margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3.race{font-family:Cinzel,serif;color:var(--gold);font-size:18px;margin:22px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;transition:border-color .15s}
+.card:hover{border-color:var(--gold)}
+.card .icon{font-size:34px}
+.card .t{font-family:Cinzel,serif;color:var(--gold);font-size:16px;margin:6px 0 4px}
+.card .d{color:var(--muted);font-size:13px}
+.card .st{font-size:12px;margin-top:8px;color:var(--text)}
+.classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.cls{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;transition:border-color .15s}
+.cls:hover{border-color:var(--gold)}
+.cls img{width:76px;height:76px;object-fit:cover;border-radius:8px;flex:none}
+.cls .nm{font-family:Cinzel,serif;color:var(--gold);font-size:15px}
+.cls .en{color:var(--muted);font-size:11px}
+.pill{display:inline-block;font-size:10px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+.pill.f{color:var(--red);background:var(--redbg)}
+.pill.w{color:var(--blue);background:var(--bluebg)}
+.cls .ds{color:var(--muted);font-size:12.5px;margin-top:3px}
+.cls .lv{font-family:ui-monospace,monospace;font-size:11.5px;color:var(--text);margin-top:3px}
+.hero{display:flex;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;flex-wrap:wrap}
+.hero img{width:170px;height:170px;object-fit:cover;border-radius:10px}
+.stats{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center}
+.stat .n{font-family:Cinzel,serif;color:var(--gold);font-size:19px}
+.stat .l{font-size:11px;color:var(--muted)}
+.skill{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;align-items:flex-start}
+.skill img{width:40px;height:40px;border-radius:8px;flex:none}
+.skill .nm{color:var(--gold);font-weight:700}
+.uniq{display:inline-block;font-size:10px;font-weight:700;color:#241a2e;background:var(--gold);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:2px}
+.skill .lv{margin-left:auto;font-family:ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.skill .ds{color:var(--muted);font-size:13.5px}
+.note{color:var(--muted);font-size:13px}
+footer{max-width:1100px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:12.5px;text-align:center}
+
+.guide{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+.guide h2{border:none;margin-top:0}
+.guide h3{color:var(--gold);font-size:16px;margin:18px 0 6px}
+.guide ul{margin:6px 0 6px 18px;padding:0}
+.guide li{margin:4px 0}
+.guide table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+.guide th,.guide td{border-top:1px solid var(--line);padding:6px 8px;text-align:left}
+.guide th{color:var(--muted)}
+.guide p{margin:6px 0}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">📖 GRIMEAGE CODEX 日本語訳 ― ガイド</div>
+  <nav><a href="codex.html">← コーデックス日本語訳</a><a href="index.html">攻略ノート トップ</a><a href="https://grimeage2.com/codex" target="_blank" rel="noopener">公式コーデックス</a></nav>
+</header>
+<main>
+  <h1>Guides</h1>
+  <p class="sub">公式コーデックスのガイド5本の全文翻訳。</p>
+
+  <section class="guide" id="tips">
+    <h2>💡 ヒント集</h2>
+    <p class="note">ゲームが序盤に表示するヒントを全部集めたもの。</p>
+    <h3>戦闘</h3>
+    <ul>
+      <li><strong>最初のスキル</strong>：1キーを押して、最初のスキルを使う。</li>
+      <li><strong>立て直し</strong>：戦闘設定で「自動休息（Auto-rest）」をONにすると、HPが少なくなる前に休んでくれる。HPポーションも持ち歩こう。オートファーム中はHPが半分を切ると自動で飲む。</li>
+      <li><strong>発見が待っている</strong>：狩りをしていると、宝・祠・モンスターの巣といった「発見」が現れる。通りかかった誰でも参加でき、ボーナス報酬がもらえる。オートファームは発見を放置するので、クリックして調べて参加しよう。</li>
+      <li><strong>一息つく</strong>：HPが少ないときは「Rest（休息）」をクリックすると回復が速くなる。</li>
+    </ul>
+    <h3>装備</h3>
+    <ul>
+      <li><strong>新しい装備</strong>：着られる装備を持っている。バッグを開いて装備しよう。アイテムをクリックして「Equip（装備）」。</li>
+      <li><strong>バッグがほぼ満杯</strong>：戦利品を商人に売るか、倉庫に預けよう。</li>
+    </ul>
+    <h3>クエスト</h3>
+    <ul>
+      <li><strong>クエスト完了</strong>：依頼人のところへ戻って報告しよう。「?」マークが目印。</li>
+    </ul>
+    <h3>キャラクター</h3>
+    <ul>
+      <li><strong>習えるスキルがある</strong>：新しいスキルを訓練できる。街にいる自分のクラスマスターを訪ねよう。</li>
+      <li><strong>パッシブポイント</strong>：パッシブポイントを獲得した。パッシブツリーで使おう。</li>
+    </ul>
+    <h3>インターフェース</h3>
+    <ul>
+      <li><strong>別のタブで狩り？</strong>：オプション › 通知で「ブラウザ通知」をONにすると、ゲームが見えていない間にオートファームが止まったとき、プレイヤーに攻撃されたとき、招待が届いたときに知らせてくれる。</li>
+    </ul>
+  </section>
+
+  <section class="guide" id="olympiad">
+    <h2>🏆 オリンピアード</h2>
+    <p>1対1のPvPアリーナ。他のプレイヤーに決闘を挑み、封鎖されたサンドボックスで戦う。装備と能力値は開始時点で固定され、両者ともバフなし・HP/MP全快で始まる。勝者はラダーを駆け上がり、トークンと週間報酬を稼ぐ。</p>
+    <h3>参加条件</h3>
+    <ul>
+      <li>転職（アセンション）済みでなければならない。素のファイターとウィザードは参加できない。</li>
+      <li>戦闘セットアップをロックしておくこと（スキルを最低1つ設定）。ロックしたコピーが、自分のキャラがボットとして戦うときの動きを決める。編集は再ロックした時点で初めて反映される。</li>
+      <li>ロックにはアリーナ用ビルドを持ち込める：装備プリセット1つとパッシブプリセット1つ。試合中はそれらを着た状態で戦い、本人のキャラは自分の装備のまま狩りを続けられる。リスペック費用はかからない。もう持っていない装備の枠は、そのとき着ているものが使われる。</li>
+      <li>自分のアカウントの別キャラには挑戦できない。</li>
+      <li>1日に開始できる試合は5回まで（UTC午前0時にリセット）。消費するのは「挑戦する」側だけ。挑戦される側は消費しない。</li>
+    </ul>
+    <h3>試合の流れ</h3>
+    <ul>
+      <li>1対1。挑戦者 vs 防衛側。本戦の前に15秒の準備フェーズがあり、開始距離は50。</li>
+      <li>試合は最大2分。相手を先にHP 0にした方が勝ち。時間切れは引き分け。</li>
+      <li>装備と能力値は開始時点のスナップショット。試合中に装備を変えても無効。</li>
+      <li>ゾーンのバフはすべて剥がされる。両者ともバフ・効果なしのHP/MP全快で開始。</li>
+      <li>試合中、自分の実際の所持品からポーションを飲める。</li>
+      <li>戦闘ルール（クリティカル、状態異常、トグル、DoT、パッシブ、武器の覚醒）はオープンワールドとまったく同じ。</li>
+      <li>アリーナ調整：全PvP共通で攻撃は65%ダメージ。さらにアリーナでは回復と吸収シールドが半減するので、試合は長引き、バーストの価値は下がる。</li>
+      <li>トレジャーハンターは、開幕技と Slip Away が1v1サンドボックスで使えない代償として、試合開始ごとに Fortune を1つ受け取る。</li>
+    </ul>
+    <h3>ライブの相手とボット</h3>
+    <ul>
+      <li>受諾も拒否もない。挑戦すると即試合開始で、防衛側のキャラは常にロック済みセットアップで動く。最低でも相手のAIと戦うことになる。</li>
+      <li>防衛側がオンラインなら、ボットから操縦を奪って本人が戦える。いつでも操作を返せる。オフラインならボットが最後まで戦う。</li>
+      <li>自分も手動で戦うか、設定に自動で戦わせるかを選べる。</li>
+      <li>ボットは有効化されたスキルのうち優先度が最も高いものを使い、HP/MPの発動条件とクールダウンを守り、すでに掛かっている効果の再付与を避け、最後は通常攻撃にフォールバックする。</li>
+    </ul>
+    <h3>2つのランキング</h3>
+    <ul>
+      <li><strong>アリーナ順位</strong>：ラダーの順位。勝てば敗者の順位をそのまま奪い、負ければ相手の順位に落ちる。引き分けでは動かない。</li>
+      <li><strong>オリンピアードポイント</strong>：週間報酬を決める。試合ごと（挑戦者のみ）：勝ち30、引き分け12、負け6。受動的（1時間ごと、順位による）：1位 10/時、2〜3位 8/時、4〜10位 6/時、11〜50位 4/時、51〜100位 3/時、101位以下 2/時。</li>
+    </ul>
+    <h3>報酬</h3>
+    <ul>
+      <li>自分が開始した試合はその場でトークンがもらえる：勝ち3、引き分け2、負け1（防衛側はもらえない）。</li>
+      <li>7日間のシーズン終了時に、最終ポイント順位でボーナストークン：1位 200／2〜3位 100／4〜10位 50／11〜25位 35／26〜50位 25／51〜100位 15／101位以下 10。</li>
+      <li>トークンはキャラごとの残高（アイテムではない）で取引できない。ギルラン（Gilran）の Olympiad Manager Sera のところで使う。</li>
+    </ul>
+  </section>
+
+  <section class="guide" id="raids">
+    <h2>💀 レイドボスの仕組み</h2>
+    <p>レイドボスはゾーン内の全員で共有する強力なワールドスポーン。専用インスタンスはない。通常モンスターより攻撃が苛烈で、ほとんどの妨害を跳ね除け、戦闘が長引くと怒り（エンゲージ）、倒したグループに報酬を与える。ここでは仕組みを説明する。各ボスはボス一覧を参照。</p>
+    <h3>出現と再出現</h3>
+    <ul>
+      <li>ボスはワールドスポーンで共有される。ゾーン内の全プレイヤーが同じボスと戦う。</li>
+      <li>多くのボスは倒されてから8〜12時間で再出現する。エピックやクエストボスは独自のタイマーを持ち、各ボスに記載されている。</li>
+      <li>ボスが倒れると、ゾーンには次に現れるおおよその時刻が知らされる。タイマーはサーバー再起動をまたいで保持される。</li>
+    </ul>
+    <h3>妨害（クラウドコントロール）の効き方</h3>
+    <ul>
+      <li>レイドボスは原則としてハードCCを無効化する。効かないもの：スタン、ルート（足止め）、睡眠、混乱、行動不能。</li>
+      <li>効くデバフ：恐怖、スロウ、沈黙、継続ダメージ、バフ解除系。</li>
+      <li>ボスの詠唱を止められるのは、その魔法自体に「中断可能」のフラグがある場合だけ。スタン連打で技を封じることはできない。</li>
+    </ul>
+    <h3>怒り（エンゲージ）</h3>
+    <ul>
+      <li>次のどちらか最初に満たした時点で怒る：HPが怒りの閾値（例：10%）まで下がる／戦闘時間が怒りのタイマー（例：5分）を過ぎる。</li>
+      <li>怒ると攻撃が苛烈になり攻撃速度が上がる（一部のボスは防御が少し下がる）。怒りは一方通行で、一度発動したら戻らない。遅い戦闘は危険になる一方。</li>
+    </ul>
+    <h3>ヘイト・フェーズ・増援</h3>
+    <ul>
+      <li>ヘイト（脅威度）は与ダメージで貯まる。ボスは最もヘイトの高い者を攻撃する。</li>
+      <li>一部の高レベルボスは、攻撃ごとに一定確率でヘイト表を消去してターゲットを選び直す。柔らかいメンバーは注意。</li>
+      <li>手強いボスにはHP閾値のフェーズがある（例：66%と33%）。フェーズも一方通行。</li>
+      <li>フェーズ到達時に一度だけ増援を呼ぶボスもいる。増援はヘイトを引き継ぎ、ボスが倒れると消える。</li>
+    </ul>
+    <h3>ドロップとレベルの規則</h3>
+    <ul>
+      <li>各ドロップに個別の確率がある。レイドのテーブルは通常モンスターより豪華。</li>
+      <li>ボスより10レベル以上高いと何も得られない（ドロップもゴールドもなし）。パーティでは「ゾーン内にいる最も高レベルのメンバー」が基準。低レベルボスに最大レベルキャラを連れて行かないこと。</li>
+      <li>戦利品バナー（ルートバナー）はレイドのドロップを増やさない（効くのは通常モンスターだけ）。</li>
+      <li>ドロップはパーティの分配方式（ランダム／ラウンドロビン／マスタールート）で分けられる。</li>
+      <li>ボスに「挑む」こと自体にレベルの門はない。レベル規則が影響するのは報酬だけ。</li>
+    </ul>
+  </section>
+
+  <section class="guide" id="parties">
+    <h2>🛡️ パーティとダンジョン</h2>
+    <p>グループを組むと経験値と戦利品を分け合え、ダンジョンに挑める。ダンジョンはフルパーティ向けに作られた、敵の密集したゾーン。ダンジョンは共有のオープンエリアであり、専用インスタンスではない。ロックアウトもリセットタイマーも、集める鍵もない。</p>
+    <h3>パーティ</h3>
+    <ul>
+      <li>1パーティ最大5人。</li>
+      <li>招待の有効期限は15秒。リーダーは突入前にレディチェック（30秒の期限付き）ができる。</li>
+      <li>リーダーはキック、分配方式の設定、リグループ要請（全員がリーダーのゾーンへ移動）ができる。</li>
+      <li>リーダーが抜けると、リーダー権は自動で別のメンバーに移る。</li>
+    </ul>
+    <h3>経験値の分配</h3>
+    <ul>
+      <li>パーティ全体のダメージで撃破し、経験値は対象メンバーで均等に分ける。</li>
+      <li>対象になるには、同じゾーンにいて、モンスターとのレベル差が10以内であること。</li>
+      <li>一撃も当てていない対象メンバーにも取り分がある。支援やヒーラーもカバーされる。</li>
+      <li>モンスターのHPの半分以上を削ると、クエストの撃破カウントが付く。</li>
+    </ul>
+    <h3>戦利品の分配</h3>
+    <ul>
+      <li>リーダーがパーティヘッダーの「Loot」チップから分配方式を選ぶ。全員に表示され、変更はチャットで知らされる。</li>
+      <li><strong>ランダム</strong>：各ドロップがゾーン内のランダムなメンバーへ。スタックは1個ずつに分けて配られることもある。</li>
+      <li><strong>ラウンドロビン</strong>：順番制。各ドロップ（スタック丸ごと含む）は、ゾーン内にいてルートフィルターでブロックしていない次のメンバーに渡り、その人は列の最後尾へ。スキップされた人は順番を保持する。</li>
+      <li><strong>マスタールート</strong>：ドロップはリーダーへ（リーダーがゾーンにいなければ最高ダメージディーラーへ）。「Leader takes」バー（すべて／レア以上／エピック以上／ユニーク。セットはエピック扱い）で、リーダーに行くのはその基準以上のものだけ。それ以外はランダムで分配される。</li>
+      <li>ウォーバンド（軍団）は20人全員で1つの分配方式を使い、ウォーバンドリーダーが設定する。</li>
+      <li>ソロでは全部自分のもの。</li>
+    </ul>
+    <h3>ダンジョン</h3>
+    <p>ダンジョンはグループ向けに調整された複数部屋のゾーン。入場条件はレベル範囲だけ。鍵やアイテムは要らない。</p>
+    <table>
+      <tr><th>ダンジョン</th><th>レベル</th></tr>
+      <tr><td>Lair of Stark（スタークの棲み処）</td><td>40〜42</td></tr>
+      <tr><td>Forgotten Temple（忘れられた神殿）</td><td>50〜55</td></tr>
+      <tr><td>Mycelium Depths（菌糸の深淵）</td><td>55〜60</td></tr>
+    </table>
+    <ul>
+      <li><strong>パックアグロ</strong>：モンスターが集団で襲ってくる。1体ずつ釣り出すことはできない。パーティで来ること。</li>
+      <li><strong>AFK自動狩り不可</strong>：自分で操作して遊ぶ必要がある。</li>
+      <li><strong>ダンジョンイベント</strong>：ランダムで裂け目や祭壇が出現し、独自の報酬がある。</li>
+      <li>入り口のガイドNPCが、終わったら外へテレポートしてくれる。</li>
+      <li>Forgotten Temple の最奥にはレイドボス「封印された大祭司マラチャー（Malachar the Sealed High Priest）」がいる。最終部屋の前に「レイドボスの仕組み」を読んでおくこと。</li>
+    </ul>
+  </section>
+
+  <section class="guide" id="fate">
+    <h2>🔮 運命のお守り（Fate Amulets）</h2>
+    <p>2つのランダムなボーナスがドロップした瞬間に決まるアクセサリー。高いティアほど同じボーナスがはるかに大きな値で付き、エンチャントでさらに伸びる。</p>
+    <h3>ティアの階段</h3>
+    <p>ティアは5段階。ティアは付くボーナスの強さを決める（ティアが全モッドの基礎値を倍率で拡大する：ティア1＝×1 〜 ティア5＝×5）。</p>
+    <table>
+      <tr><th>お守り</th><th>ティア</th><th>必要レベル</th></tr>
+      <tr><td>Tarnished Fate Amulet（くすんだ運命のお守り）</td><td>1（×1）</td><td>Lv.1</td></tr>
+      <tr><td>Burnished Fate Amulet（磨かれた運命のお守り）</td><td>2（×2）</td><td>Lv.20</td></tr>
+      <tr><td>Gilded Fate Amulet（金色の運命のお守り）</td><td>3（×3）</td><td>Lv.40</td></tr>
+      <tr><td>Resplendent Fate Amulet（絢爛な運命のお守り）</td><td>4（×4）</td><td>Lv.52</td></tr>
+      <tr><td>Eternal Fate Amulet（永遠の運命のお守り）</td><td>5（×5）</td><td>Lv.61</td></tr>
+    </table>
+    <ul>
+      <li>お守りは完全なレイドボスからのみドロップする。1キルにつき共有の30%の抽選が1回で、ティアはボスのレベルで決まる。</li>
+      <li>レシピはなく、低いティアを高いティアに格上げすることもできない。高いティアのドロップを拾うしかない。</li>
+    </ul>
+    <h3>リロールと結晶化</h3>
+    <p>運命関係のサービスはすべてグルーディオスの Fateweaver Morrigan のところ。お守りは装備を外しておくこと。</p>
+    <ul>
+      <li><strong>リロール</strong>：Unraveling Thread 1本で両方のモッドを置き換える。リロールできるのは +0 で腐敗していないお守りだけ。同じ組み合わせが再び出ることもある。</li>
+      <li><strong>結晶化</strong>：装備していないお守り（腐敗したものも可）を壊して Unraveling Thread 1本にする。</li>
+      <li><strong>交換</strong>：古い Fateshard 100個で Unraveling Thread 1本。端数は残る。</li>
+    </ul>
+    <h3>付くボーナス（モッド）</h3>
+    <p>全ティア共通で14種のボーナスプールがあり、ティアは大きさを変えるだけ。1回の抽選では必ず異なる2つが付く。</p>
+    <ul>
+      <li><strong>攻撃</strong>：物理攻撃%／魔法攻撃%／攻撃速度%／詠唱速度%／クリティカル率%／クリティカルダメージ%</li>
+      <li><strong>防御</strong>：物理防御／魔法防御／ブロック率%／被クリティカルダメージ軽減%</li>
+      <li><strong>持続</strong>：最大HP／HP回復／MP回復／移動速度</li>
+    </ul>
+    <h3>エンチャントと修理</h3>
+    <ul>
+      <li>ゴールドと Weaving Sigil を使って +16 までエンチャントできる。+7 を過ぎると成功がぐっと難しくなる。</li>
+      <li>失敗してもレベルは維持され、耐久が100のうち5減り、次回の確率を上げる「フェイルスタック」が貯まる。成功するとフェイルスタックは消え、耐久は保たれる。</li>
+      <li>耐久が0になったら、エンチャントや装備の前に修理が必要。装備中の壊れたお守りは能力値を出し続ける。</li>
+      <li>Mending Thread 1本で耐久を最大25回復（100,000ゴールド）。腐敗したお守りも修理できる。</li>
+      <li>値はティアとエンチャントで固定。低ティアのボーナスは四捨五入で0になることがあり、エンチャントしても見た目の数値が増えない段階もある。</li>
+    </ul>
+    <h3>腐敗（コラプション）</h3>
+    <ul>
+      <li>Fracture Sigil 1つで、エンチャント段階を問わず、ランダムな3つ目の異なるモッドが付く。できるのは一度だけ。お守りが壊れることはない。</li>
+      <li>腐敗すると以後エンチャントとリロールが永久にできなくなる。「どこで伸ばすのを止めるか」を選ぶこと。</li>
+    </ul>
+    <h3>通貨</h3>
+    <ul>
+      <li><strong>Weaving Sigil</strong>：グループポータルの最終ボスは1〜10個を共有で確定ドロップ。ソロ最終ボスは20%で1個（共有）、デュオ最終ボスは20%で2〜3個（共有）。パーティダンジョンの Seal of Avarice 成功で5〜15個（共有）確定。ポータルの裂け目は対象の個人報酬1回につき1個。</li>
+      <li><strong>Mending Thread</strong>：ポータルの通貨キャッシュから20%、パーティダンジョンのエリートから2%。</li>
+      <li><strong>Fracture Sigil</strong>：Slaughter Pens のみ。対象モンスターを倒すごとに0.02%。</li>
+      <li>Chrono Sigil は引退済みで、1個5,000万ゴールドで売れる。古いアクセサリー用スクロールはもう使えない。</li>
+    </ul>
+  </section>
+</main>
+<footer>Grimeage II 攻略ノート ― コーデックス日本語訳・ガイド（出典：公式コーデックス grimeage2.com/codex）</footer>
+
+</body>
+</html>
