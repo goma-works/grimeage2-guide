@@ -4,147 +4,185 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>コーデックス日本語訳 | Grimeage II 攻略ノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#9da7b1;--accent:#d4a94e}
+:root{--bg:#241a2e;--panel:#3d3242;--panel2:#352b3d;--line:#5a4a6b;--gold:#d8b25c;--text:#ece5f0;--muted:#b8a9c4;--red:#e06c5c;--redbg:#4a2320;--blue:#6ca8e0;--bluebg:#1f3049}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75}
-header{padding:28px 20px 8px;max-width:960px;margin:0 auto}
-h1{font-size:26px;margin:0 0 6px}
-.sub{color:var(--muted)}
-main{max-width:960px;margin:0 auto;padding:10px 20px 48px}
-section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:18px 0}
-h2{font-size:19px;margin:0 0 10px;color:var(--accent)}
-h3{font-size:16px;margin:16px 0 6px}
-a{color:var(--accent)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{border-top:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
-th{color:var(--muted);font-weight:600}
-.entry{border-top:1px solid var(--line);padding:10px 0}
-.orig{color:var(--muted);font-size:13px}
-footer{max-width:960px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:13px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.7}
+a{color:var(--gold)}
+header.top{max-width:1100px;margin:0 auto;padding:26px 20px 4px}
+.logo{font-family:Cinzel,serif;font-size:22px;color:var(--gold);letter-spacing:.08em}
+.top nav{margin-top:8px;font-size:14px}
+.top nav a{margin-right:16px;text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+main{max-width:1100px;margin:0 auto;padding:10px 20px 48px}
+h1{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:30px;text-align:center;margin:18px 0 2px}
+.sub{text-align:center;color:var(--muted);margin:0 0 22px}
+h2{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:21px;margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3.race{font-family:Cinzel,serif;color:var(--gold);font-size:18px;margin:22px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;transition:border-color .15s}
+.card:hover{border-color:var(--gold)}
+.card .icon{font-size:34px}
+.card .t{font-family:Cinzel,serif;color:var(--gold);font-size:16px;margin:6px 0 4px}
+.card .d{color:var(--muted);font-size:13px}
+.card .st{font-size:12px;margin-top:8px;color:var(--text)}
+.classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.cls{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;transition:border-color .15s}
+.cls:hover{border-color:var(--gold)}
+.cls img{width:76px;height:76px;object-fit:cover;border-radius:8px;flex:none}
+.cls .nm{font-family:Cinzel,serif;color:var(--gold);font-size:15px}
+.cls .en{color:var(--muted);font-size:11px}
+.pill{display:inline-block;font-size:10px;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:2px}
+.pill.f{color:var(--red);background:var(--redbg)}
+.pill.w{color:var(--blue);background:var(--bluebg)}
+.cls .ds{color:var(--muted);font-size:12.5px;margin-top:3px}
+.cls .lv{font-family:ui-monospace,monospace;font-size:11.5px;color:var(--text);margin-top:3px}
+.hero{display:flex;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;flex-wrap:wrap}
+.hero img{width:170px;height:170px;object-fit:cover;border-radius:10px}
+.stats{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center}
+.stat .n{font-family:Cinzel,serif;color:var(--gold);font-size:19px}
+.stat .l{font-size:11px;color:var(--muted)}
+.skill{display:flex;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;align-items:flex-start}
+.skill img{width:40px;height:40px;border-radius:8px;flex:none}
+.skill .nm{color:var(--gold);font-weight:700}
+.uniq{display:inline-block;font-size:10px;font-weight:700;color:#241a2e;background:var(--gold);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:2px}
+.skill .lv{margin-left:auto;font-family:ui-monospace,monospace;font-size:12px;color:var(--muted);white-space:nowrap}
+.skill .ds{color:var(--muted);font-size:13.5px}
+.note{color:var(--muted);font-size:13px}
+footer{max-width:1100px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:12.5px;text-align:center}
 </style>
 </head>
 <body>
-<header>
-<h1>コーデックス日本語訳</h1>
-<p class="sub">公式サイトの Codex（<a href="https://grimeage2.com/codex" target="_blank" rel="noopener">grimeage2.com/codex</a>）を巡回して日本語訳したページ。ゲームにもサイトにも日本語がないため、ここに日本語で残す。構成は公式コーデックスに沿う。<br>
-<a href="index.html">← 攻略ノート トップへ</a> ／ <a href="https://grimeage2.com/" target="_blank" rel="noopener">公式サイト</a></p>
+<header class="top">
+  <div class="logo">📖 GRIMEAGE CODEX 日本語訳</div>
+  <nav><a href="index.html">← 攻略ノート トップ</a><a href="codex-guides.html">ガイド</a><a href="https://grimeage2.com/codex" target="_blank" rel="noopener">公式コーデックス</a><a href="https://grimeage2.com/" target="_blank" rel="noopener">公式サイト</a></nav>
 </header>
 <main>
-<section>
-<h2>コーデックスの構成（公式）</h2>
-<p>公式コーデックスは8つのデータベースと5つのガイドでできている。翻訳の進み具合は各項目に併記。</p>
-<table>
-<tr><th>セクション</th><th>内容</th><th>翻訳状況</th></tr>
-<tr><td>モンスター</td><td>全モンスターの能力・出現場所・ドロップ</td><td>未着手</td></tr>
-<tr><td>アイテム</td><td>武器・防具・アクセサリー・消耗品・素材</td><td>未着手</td></tr>
-<tr><td>クラス</td><td>5種族48クラスと固有スキル</td><td>一覧＋ネクロマンサー詳細まで翻訳済み（下記）</td></tr>
-<tr><td>スキル</td><td>全スキルの性能・スケーリング・習得条件</td><td>未着手（規模大）</td></tr>
-<tr><td>レシピ</td><td>製作レシピ・材料・ゴールド費用</td><td>未着手</td></tr>
-<tr><td>ボス</td><td>ソロ／グループ／レイド／儀式召喚ボスの能力・怒り・再出現・ドロップ</td><td>未着手</td></tr>
-<tr><td>要塞</td><td>クランPvPの占領ルール・所有状況</td><td>未着手</td></tr>
-<tr><td>パッチノート</td><td>リリースごとの変更点</td><td>未着手</td></tr>
-<tr><td>ガイド類</td><td>ヒント集／オリンピアード／レイドボスの仕組み／パーティとダンジョン／運命のお守り</td><td>次に着手</td></tr>
-</table>
-</section>
+  <h1>Welcome to the Codex</h1>
+  <p class="sub">Grimeage の世界への総合ガイド ― 公式コーデックス（grimeage2.com/codex）の日本語訳。ゲームにも公式サイトにも日本語がないため、ここに日本語で残す。デザインと画像は可能な限り公式に寄せている（画像は公式のものを使用）。</p>
 
-<section>
-<h2>クラス一覧（5種族・48クラス）</h2>
-<p>クラス名はリネージュ2の日本語名に寄せ、原作と綴りが違うものは作中の名前をそのまま表記する方針。「解放」はそのクラスになれるレベル。</p>
+  <div class="grid">
+    <div class="card"><div class="icon">👹</div><div class="t">モンスター</div><div class="d">全モンスターの能力・出現場所・ドロップ</div><div class="st">翻訳状況：未着手</div></div>
+    <div class="card"><div class="icon">⚔️</div><div class="t">アイテム</div><div class="d">武器・防具・アクセサリー・消耗品・素材</div><div class="st">翻訳状況：未着手</div></div>
+    <div class="card"><div class="icon">🛡️</div><div class="t">クラス</div><div class="d">5種族48クラスと固有スキル</div><div class="st">翻訳状況：翻訳中（下記）</div></div>
+    <div class="card"><div class="icon">✨</div><div class="t">スキル</div><div class="d">全スキルの性能・スケーリング・習得条件</div><div class="st">翻訳状況：未着手</div></div>
+    <div class="card"><div class="icon">🔨</div><div class="t">レシピ</div><div class="d">製作レシピ・材料・ゴールド費用</div><div class="st">翻訳状況：未着手</div></div>
+    <div class="card"><div class="icon">💀</div><div class="t">ボス</div><div class="d">ソロ／グループ／レイド／儀式召喚ボスの能力・怒り・再出現・ドロップ</div><div class="st">翻訳状況：未着手</div></div>
+    <div class="card"><div class="icon">🚩</div><div class="t">要塞</div><div class="d">クランPvPの占領ルール・所有状況</div><div class="st">翻訳状況：未着手</div></div>
+    <div class="card"><div class="icon">📢</div><div class="t">パッチノート</div><div class="d">リリースごとの変更点</div><div class="st">翻訳状況：未着手</div></div>
+  </div>
 
-<h3>ヒューマン</h3>
-<table>
-<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
-<tr><td>ダークアベンジャー</td><td>ファイター</td><td>Lv.20</td><td>重装備で踏みとどまりながら、敵の生命力を吸い取る暗黒騎士。</td></tr>
-<tr><td>グラディエーター</td><td>ファイター</td><td>Lv.20</td><td>二刀流の剣士。高速の斬撃コンボで敵を圧倒する。</td></tr>
-<tr><td>ホークアイ</td><td>ファイター</td><td>Lv.20</td><td>弓の達人。遠距離から致命的な精度で矢を雨のように降らせる。</td></tr>
-<tr><td>ナイト</td><td>ファイター</td><td>Lv.1</td><td>盾と重装で前線を守る堅実な守護者。危険を味方から引き受ける。</td></tr>
-<tr><td>パラディン</td><td>ファイター</td><td>Lv.20</td><td>神聖な力を操る聖騎士。味方を守り、悪を討つ。</td></tr>
-<tr><td>ローグ</td><td>ファイター</td><td>Lv.1</td><td>素早く機敏。装甲より速度と精度を重んじ、急所を突く。</td></tr>
-<tr><td>トレジャーハンター</td><td>ファイター</td><td>Lv.20</td><td>影から襲う狡猾なローグ。短剣の技が致命的。</td></tr>
-<tr><td>ウォーロード</td><td>ファイター</td><td>Lv.20</td><td>大剣を振るう恐るべき戦士。薙ぎ払いの一撃が強力。</td></tr>
-<tr><td>ウォーリアー</td><td>ファイター</td><td>Lv.1</td><td>正面から殴り合う前衛。攻撃の勢いで敵を削り倒す。</td></tr>
-<tr><td>ビショップ</td><td>ウィザード</td><td>Lv.20</td><td>傷を癒やし、闇の勢力に神の怒りを向ける聖職者。</td></tr>
-<tr><td>クレリック</td><td>ウィザード</td><td>Lv.1</td><td>神の加護で味方を癒やし、闇を退ける献身的な侍祭。</td></tr>
-<tr><td>ウィザード</td><td>ウィザード</td><td>Lv.1</td><td>元素の力を自在に操る秘術の学徒。</td></tr>
-<tr><td>ネクロマンサー</td><td>ウィザード</td><td>Lv.20</td><td>生命力を吸い取り、骨の魔法で身を守る闇の術者。詳細は下記。</td></tr>
-<tr><td>プロフェット</td><td>ウィザード</td><td>Lv.20</td><td>神聖な祝福で味方を強化する、神の力を伝える者。</td></tr>
-<tr><td>ソーサラー</td><td>ウィザード</td><td>Lv.20</td><td>破壊的な火の魔法の達人。圧倒的な元素の力で敵を焼き尽くす。</td></tr>
-</table>
+  <h2>Guides ― ガイド</h2>
+  <div class="grid">
+    <a class="card" href="codex-guides.html" style="text-decoration:none"><div class="icon">💡</div><div class="t">ヒント集</div><div class="d">ゲームが序盤に表示するヒントを全部集めたもの</div><div class="st">翻訳済み →</div></a>
+    <a class="card" href="codex-guides.html" style="text-decoration:none"><div class="icon">🏆</div><div class="t">オリンピアード</div><div class="d">1v1 PvPアリーナ。参加条件・試合の流れ・ランキングと報酬</div><div class="st">翻訳済み →</div></a>
+    <a class="card" href="codex-guides.html" style="text-decoration:none"><div class="icon">💀</div><div class="t">レイドボスの仕組み</div><div class="d">出現・妨害の効き方・怒り・ヘイト・フェーズ・ドロップ規則</div><div class="st">翻訳済み →</div></a>
+    <a class="card" href="codex-guides.html" style="text-decoration:none"><div class="icon">🛡️</div><div class="t">パーティとダンジョン</div><div class="d">人数・経験値と戦利品の分配・ダンジョン一覧</div><div class="st">翻訳済み →</div></a>
+    <a class="card" href="codex-guides.html" style="text-decoration:none"><div class="icon">🔮</div><div class="t">運命のお守り</div><div class="d">ティア・リロール・結晶化・エンチャント・腐敗と通貨</div><div class="st">翻訳済み →</div></a>
+  </div>
 
-<h3>エルフ</h3>
-<table>
-<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
-<tr><td>ナイト（エルフ）</td><td>ファイター</td><td>Lv.1</td><td>エルフの神殿を守る規律ある守護者。剣と盾で前線を保つ訓練を受けている。</td></tr>
-<tr><td>スカウト</td><td>ファイター</td><td>Lv.1</td><td>森の斥候。地形を読み、敵が気づく前に襲う。</td></tr>
-<tr><td>プレインズウォーカー</td><td>ファイター</td><td>Lv.20</td><td>隠密の短剣使い。エルフの速さで影から襲う。</td></tr>
-<tr><td>シルバーレンジャー</td><td>ファイター</td><td>Lv.20</td><td>超自然的な速さと精度で致命的な矢を放つエルフの射手。</td></tr>
-<tr><td>ソードシンガー</td><td>ファイター</td><td>Lv.20</td><td>剣と盾で戦いながら、魔法の歌で味方を強化するエルフの戦士。</td></tr>
-<tr><td>テンプルナイト</td><td>ファイター</td><td>Lv.20</td><td>エルフの神殿に仕える聖なる守護者。剣と盾を携える。</td></tr>
-<tr><td>エルダー</td><td>ウィザード</td><td>Lv.20</td><td>賢いエルフの支援術者。味方のMPを回復し、神聖な癒やしを操る。</td></tr>
-<tr><td>ウィザード（エルフ）</td><td>ウィザード</td><td>Lv.1</td><td>水と風の流れを精密な斬撃の魔法に変えるエルフの学者。</td></tr>
-<tr><td>オラクル</td><td>ウィザード</td><td>Lv.1</td><td>森の祠で女神の言葉に耳を澄ます者。癒やしと光としてその言葉を運ぶ。</td></tr>
-<tr><td>スペルシンガー</td><td>ウィザード</td><td>Lv.20</td><td>水の魔法を操るエルフの魔術師。素早く打ち、敵の強化を解除する。</td></tr>
-</table>
+  <h2 id="classes">🛡️ Classes ― クラス一覧</h2>
+  <p class="note">5種族・48クラス。クラスを選ぶと固有スキルが見られる（公式）。ここでは全クラスの一覧と説明を翻訳し、ネクロマンサーは詳細まで掲載。肖像画は公式のものを使用（一部の基本クラスは系統の肖像で代用）。</p>
+  <h3 class="race">ヒューマン</h3>
+  <div class="classes">
+    <div class="cls"><img src="assets/codex/avatars/human_dark_avenger.webp" alt="Dark Avenger"><div><span class="nm">ダークアベンジャー</span><span class="pill f">FIGHTER</span><div class="en">Dark Avenger</div><div class="ds">重装備で踏みとどまりながら、敵の生命力を吸い取る暗黒騎士。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_gladiator.webp" alt="Gladiator"><div><span class="nm">グラディエーター</span><span class="pill f">FIGHTER</span><div class="en">Gladiator</div><div class="ds">二刀流の剣士。高速の斬撃コンボで敵を圧倒する。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_hawkeye.webp" alt="Hawkeye"><div><span class="nm">ホークアイ</span><span class="pill f">FIGHTER</span><div class="en">Hawkeye</div><div class="ds">弓の達人。遠距離から致命的な精度で矢を雨のように降らせる。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_fighter.webp" alt="Knight"><div><span class="nm">ナイト</span><span class="pill f">FIGHTER</span><div class="en">Knight</div><div class="ds">盾と重装で前線を守る堅実な守護者。危険を味方から引き受ける。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_paladin.webp" alt="Paladin"><div><span class="nm">パラディン</span><span class="pill f">FIGHTER</span><div class="en">Paladin</div><div class="ds">神聖な力を操る聖騎士。味方を守り、悪を討つ。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_fighter.webp" alt="Rogue"><div><span class="nm">ローグ</span><span class="pill f">FIGHTER</span><div class="en">Rogue</div><div class="ds">素早く機敏。装甲より速度と精度を重んじ、急所を突く。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_treasure_hunter.webp" alt="Treasure Hunter"><div><span class="nm">トレジャーハンター</span><span class="pill f">FIGHTER</span><div class="en">Treasure Hunter</div><div class="ds">影から襲う狡猾なローグ。短剣の技が致命的。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_warlord.webp" alt="Warlord"><div><span class="nm">ウォーロード</span><span class="pill f">FIGHTER</span><div class="en">Warlord</div><div class="ds">大剣を振るう恐るべき戦士。薙ぎ払いの一撃が強力。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_fighter.webp" alt="Warrior"><div><span class="nm">ウォーリアー</span><span class="pill f">FIGHTER</span><div class="en">Warrior</div><div class="ds">正面から殴り合う前衛。攻撃の勢いで敵を削り倒す。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_bishop.webp" alt="Bishop"><div><span class="nm">ビショップ</span><span class="pill w">WIZARD</span><div class="en">Bishop</div><div class="ds">傷を癒やし、闇の勢力に神の怒りを向ける聖職者。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_wizard.webp" alt="Cleric"><div><span class="nm">クレリック</span><span class="pill w">WIZARD</span><div class="en">Cleric</div><div class="ds">神の加護で味方を癒やし、闇を退ける献身的な侍祭。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_wizard.webp" alt="Wizard"><div><span class="nm">ウィザード</span><span class="pill w">WIZARD</span><div class="en">Wizard</div><div class="ds">元素の力を自在に操る秘術の学徒。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_necromancer.webp" alt="Necromancer"><div><span class="nm">ネクロマンサー</span><span class="pill w">WIZARD</span><div class="en">Necromancer</div><div class="ds">生命力を吸い取り、骨の魔法で身を守る闇の術者。詳細は下記。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_prophet.webp" alt="Prophet"><div><span class="nm">プロフェット</span><span class="pill w">WIZARD</span><div class="en">Prophet</div><div class="ds">神聖な祝福で味方を強化する、神の力を伝える者。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/human_sorcerer.webp" alt="Sorcerer"><div><span class="nm">ソーサラー</span><span class="pill w">WIZARD</span><div class="en">Sorcerer</div><div class="ds">破壊的な火の魔法の達人。圧倒的な元素の力で敵を焼き尽くす。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+  </div>
+  <h3 class="race">エルフ</h3>
+  <div class="classes">
+    <div class="cls"><img src="assets/codex/avatars/elf_fighter.webp" alt="Knight"><div><span class="nm">ナイト</span><span class="pill f">FIGHTER</span><div class="en">Knight</div><div class="ds">エルフの神殿を守る規律ある守護者。剣と盾で前線を保つ。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_fighter.webp" alt="Scout"><div><span class="nm">スカウト</span><span class="pill f">FIGHTER</span><div class="en">Scout</div><div class="ds">森の斥候。地形を読み、敵が気づく前に襲う。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_plains_walker.webp" alt="Plains Walker"><div><span class="nm">プレインズウォーカー</span><span class="pill f">FIGHTER</span><div class="en">Plains Walker</div><div class="ds">隠密の短剣使い。エルフの速さで影から襲う。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_silver_ranger.webp" alt="Silver Ranger"><div><span class="nm">シルバーレンジャー</span><span class="pill f">FIGHTER</span><div class="en">Silver Ranger</div><div class="ds">超自然的な速さと精度で致命的な矢を放つエルフの射手。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_swordsinger.webp" alt="Swordsinger"><div><span class="nm">ソードシンガー</span><span class="pill f">FIGHTER</span><div class="en">Swordsinger</div><div class="ds">剣と盾で戦いながら、魔法の歌で味方を強化するエルフの戦士。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_temple_knight.webp" alt="Temple Knight"><div><span class="nm">テンプルナイト</span><span class="pill f">FIGHTER</span><div class="en">Temple Knight</div><div class="ds">エルフの神殿に仕える聖なる守護者。剣と盾を携える。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_elder.webp" alt="Elder"><div><span class="nm">エルダー</span><span class="pill w">WIZARD</span><div class="en">Elder</div><div class="ds">賢いエルフの支援術者。味方のMPを回復し、神聖な癒やしを操る。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_wizard.webp" alt="Wizard"><div><span class="nm">ウィザード</span><span class="pill w">WIZARD</span><div class="en">Wizard</div><div class="ds">水と風の流れを精密な斬撃の魔法に変えるエルフの学者。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_wizard.webp" alt="Oracle"><div><span class="nm">オラクル</span><span class="pill w">WIZARD</span><div class="en">Oracle</div><div class="ds">森の祠で女神の言葉に耳を澄ます者。癒やしと光としてその言葉を運ぶ。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/elf_spellsinger.webp" alt="Spellsinger"><div><span class="nm">スペルシンガー</span><span class="pill w">WIZARD</span><div class="en">Spellsinger</div><div class="ds">水の魔法を操るエルフの魔術師。素早く打ち、敵の強化を解除する。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+  </div>
+  <h3 class="race">ドワーフ</h3>
+  <div class="classes">
+    <div class="cls"><img src="assets/codex/avatars/dwarf_artisan.webp" alt="Artisan"><div><span class="nm">アルチザン</span><span class="pill f">FIGHTER</span><div class="en">Artisan</div><div class="ds">鍛冶職人。武器は自分で作って覚える。自分で打ったメイスを振るう。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dwarf_fighter.webp" alt="Bounty Hunter"><div><span class="nm">バウンティハンター</span><span class="pill f">FIGHTER</span><div class="en">Bounty Hunter</div><div class="ds">両手武器に長けた狡猾な戦士。数々の破壊的な攻撃を繰り出す。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dwarf_scavenger.webp" alt="Scavenger"><div><span class="nm">スカベンジャー</span><span class="pill f">FIGHTER</span><div class="en">Scavenger</div><div class="ds">現実的な回収屋。金目のものを追い、戦場から持ち帰れるものは全部剥ぎ取る。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dwarf_artisan.webp" alt="Warsmith"><div><span class="nm">ウォースミス</span><span class="pill f">FIGHTER</span><div class="en">Warsmith</div><div class="ds">メイスを破壊的な精度で振るう名工。機械ゴーレムを召喚して共に戦える。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dwarf_wizard.webp" alt="Wizard"><div><span class="nm">ウィザード</span><span class="pill w">WIZARD</span><div class="en">Wizard</div><div class="ds">山の応えを聞き始めた石工。生ける岩を身にまとう。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dwarf_earth_lord.webp" alt="Earth Lord"><div><span class="nm">アースロード</span><span class="pill w">WIZARD</span><div class="en">Earth Lord</div><div class="ds">近接型の術者。生ける石で身を固め、受ける打撃のすべてを粉砕の土魔法に変える。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+  </div>
+  <h3 class="race">オーク</h3>
+  <div class="classes">
+    <div class="cls"><img src="assets/codex/avatars/orc_destroyer.webp" alt="Destroyer"><div><span class="nm">デストロイヤー</span><span class="pill f">FIGHTER</span><div class="en">Destroyer</div><div class="ds">巨大な両手武器を比類ない凶暴さで振るう野蛮なバーサーカー。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/orc_fighter.webp" alt="Monk"><div><span class="nm">モンク</span><span class="pill f">FIGHTER</span><div class="en">Monk</div><div class="ds">拳の修行者。骨そのものを武器になるまで鍛え、鋼を捨てて素手で戦う。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/orc_fighter.webp" alt="Raider"><div><span class="nm">レイダー</span><span class="pill f">FIGHTER</span><div class="en">Raider</div><div class="ds">一族の若きバーサーカー。前進あるのみで、守ることには興味がない。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/orc_tyrant.webp" alt="Tyrant"><div><span class="nm">タイラント</span><span class="pill f">FIGHTER</span><div class="en">Tyrant</div><div class="ds">規律ある武道家。原初のトーテムの精霊を拳に宿す。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/orc_wizard.webp" alt="Shaman"><div><span class="nm">シャーマン</span><span class="pill w">WIZARD</span><div class="en">Shaman</div><div class="ds">祖霊を祀るローブの術者。メイスからの遠距離ボルトで精霊（スピリット）を集め、鬨の声に使う。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/orc_warcryer.webp" alt="Warcryer"><div><span class="nm">ウォークライヤー</span><span class="pill w">WIZARD</span><div class="en">Warcryer</div><div class="ds">オークの祖霊術者。スピリットボルトが遠距離の鬨の声・守りの詠唱・精霊の大合唱を養う。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+  </div>
+  <h3 class="race">ダークエルフ</h3>
+  <div class="classes">
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_abyss_walker.webp" alt="Abyss Walker"><div><span class="nm">アビスウォーカー</span><span class="pill f">FIGHTER</span><div class="en">Abyss Walker</div><div class="ds">闇から襲う致命的な影の暗殺者。短剣の技が命を奪う。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_fighter.webp" alt="Assassin"><div><span class="nm">アサシン</span><span class="pill f">FIGHTER</span><div class="en">Assassin</div><div class="ds">闇で訓練された殺し屋。誰にも見られない一撃と、誰にも聞かれない退路が価値。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_bladedancer.webp" alt="Bladedancer"><div><span class="nm">ブレードダンサー</span><span class="pill f">FIGHTER</span><div class="en">Bladedancer</div><div class="ds">双剣を操る優美な戦士。神秘の舞で味方を強化する。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_fighter.webp" alt="Palus Knight"><div><span class="nm">パラスナイト</span><span class="pill f">FIGHTER</span><div class="en">Palus Knight</div><div class="ds">パラスの儀式を受けた剣と盾の新入り。「前線を保つことは残酷の一形態」と教わる。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_phantom_ranger.webp" alt="Phantom Ranger"><div><span class="nm">ファントムレンジャー</span><span class="pill f">FIGHTER</span><div class="en">Phantom Ranger</div><div class="ds">不吉な射手。影からスタンの矢で敵の足を止める。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_twilight_knight.webp" alt="Twilight Knight"><div><span class="nm">トワイライトナイト</span><span class="pill f">FIGHTER</span><div class="en">Twilight Knight</div><div class="ds">黄昏（トワイライト）に仕える暗黒騎士。生命力を吸い取り、挑発で敵を屈服させる。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_wizard.webp" alt="Dark Wizard"><div><span class="nm">ダークウィザード</span><span class="pill w">WIZARD</span><div class="en">Dark Wizard</div><div class="ds">破滅の魔法の学徒。風は壊して解き放つものと考える。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_phantom_summoner.webp" alt="Phantom Summoner"><div><span class="nm">ファントムサモナー</span><span class="pill w">WIZARD</span><div class="en">Phantom Summoner</div><div class="ds">溺れた者の渡し守。彼らの魂を器に縛り、その悲嘆を糧にする。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_spell_howler.webp" alt="Spell Howler"><div><span class="nm">スペルハウラー</span><span class="pill w">WIZARD</span><div class="en">Spell Howler</div><div class="ds">破壊的な風の魔法を操るダークエルフの魔術師。元素の怒りで敵を引き裂く。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_twilight_elder.webp" alt="Twilight Elder"><div><span class="nm">トワイライトエルダー</span><span class="pill w">WIZARD</span><div class="en">Twilight Elder</div><div class="ds">黄昏の巫女。闇の神聖な力で味方を癒やし、命を吸い、敵をその場に縛る。</div><div class="lv">Unlocks at Lv 20</div></div></div>
+    <div class="cls"><img src="assets/codex/avatars/dark_elf_wizard.webp" alt="Twilight Oracle"><div><span class="nm">トワイライトオラクル</span><span class="pill w">WIZARD</span><div class="en">Twilight Oracle</div><div class="ds">黄昏の新弟子。一つの体から力を血のように抜き、別の体へ注ぐことを学ぶ。</div><div class="lv">Unlocks at Lv 1</div></div></div>
+  </div>
 
-<h3>ドワーフ</h3>
-<table>
-<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
-<tr><td>アルチザン</td><td>ファイター</td><td>Lv.1</td><td>鍛冶職人。武器は自分で作って覚える。自分で打ったメイスを振るう。</td></tr>
-<tr><td>バウンティハンター</td><td>ファイター</td><td>Lv.20</td><td>両手武器に長けた狡猾な戦士。数々の破壊的な攻撃を繰り出す。</td></tr>
-<tr><td>スカベンジャー</td><td>ファイター</td><td>Lv.1</td><td>現実的な回収屋。金目のものを追い、戦場から持ち帰れるものは全部剥ぎ取る。</td></tr>
-<tr><td>ウォースミス</td><td>ファイター</td><td>Lv.20</td><td>メイスを破壊的な精度で振るう名工。機械ゴーレムを召喚して共に戦える。</td></tr>
-<tr><td>ウィザード（ドワーフ）</td><td>ウィザード</td><td>Lv.1</td><td>山の応えを聞き始めた石工。生ける岩を身にまとう。</td></tr>
-<tr><td>アースロード</td><td>ウィザード</td><td>Lv.20</td><td>近接型の術者。生ける石で身を固め、受ける打撃のすべてを粉砕の土魔法に変える。</td></tr>
-</table>
+  <h2>Necromancer ― ネクロマンサー詳細</h2>
+  <div class="hero">
+    <img src="assets/codex/avatars/human_necromancer.webp" alt="Necromancer">
+    <div>
+      <div style="font-family:Cinzel,serif;color:var(--gold);font-size:24px">NECROMANCER<span class="pill w">WIZARD</span></div>
+      <p style="color:var(--muted);margin:6px 0">生命力を吸い取り、骨の魔法で身を守る闇の術者。</p>
+      <div class="note">Human · Lv.20で解放 · ウィザードのアセンション（転職先）</div>
+      <div class="note">クラスパス：ウィザード Lv.1 → ネクロマンサー Lv.20</div>
+      <div class="stats">
+        <div class="stat"><div class="n">9</div><div class="l">固有スキル</div></div>
+        <div class="stat"><div class="n">20</div><div class="l">スキル総数</div></div>
+        <div class="stat"><div class="n">10</div><div class="l">最大スキルレベル</div></div>
+      </div>
+    </div>
+  </div>
+  <h3 class="race">アセンションスキル（アクティブ）</h3>
+  <div class="skill"><img src="assets/codex/skills/disrupt.webp" alt="Curse of Nulling"><div><span class="nm">無効化の呪い</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Curse of Nulling</div><div class="ds">対象の守りを無効化し、魔法防御を30秒間23%下げる。</div></div><div class="lv">Lv 20</div></div>
+  <div class="skill"><img src="assets/codex/skills/curse-poison.webp" alt="Curse: Poison"><div><span class="nm">毒の呪い</span><div class="en" style="color:var(--muted);font-size:11px">Curse: Poison</div><div class="ds">敵を毒に冒し、3秒ごとに30.2%威力のダメージを30秒間与える（合計302%威力）。</div></div><div class="lv">Lv 20</div></div>
+  <div class="skill"><img src="assets/codex/skills/death-spike.webp" alt="Death Spike"><div><span class="nm">デススパイク</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Death Spike</div><div class="ds">190%の魔法威力を闇ダメージとして与える。とどめを刺すと過剰ダメージを30秒間蓄え、次の4回のデススパイクにその1/4ずつが実ダメージとして上乗せされる。</div></div><div class="lv">Lv 20</div></div>
+  <div class="skill"><img src="assets/codex/skills/fear.webp" alt="Fear"><div><span class="nm">フィアー</span><div class="en" style="color:var(--muted);font-size:11px">Fear</div><div class="ds">対象を怯えさせ、3.5秒間逃走させる。基本成功率80%。</div></div><div class="lv">Lv 20</div></div>
+  <div class="skill"><img src="assets/codex/skills/life-drain.webp" alt="Life Drain"><div><span class="nm">ライフドレイン</span><div class="en" style="color:var(--muted);font-size:11px">Life Drain</div><div class="ds">対象の生命力を吸い取り、160%の魔法威力ダメージを与え、与えたダメージの40%分を回復する。</div></div><div class="lv">Lv 20</div></div>
+  <div class="skill"><img src="assets/codex/skills/summon-corrupted-man.webp" alt="Summon Corrupted Man"><div><span class="nm">堕落した男の召喚</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Summon Corrupted Man</div><div class="ds">Corrupted Man を召喚して傍らで戦わせる。能力値は自分のレベルに比例する。</div></div><div class="lv">Lv 20</div></div>
+  <div class="skill"><img src="assets/codex/skills/transfer-pain.webp" alt="Transfer Pain"><div><span class="nm">苦痛転送</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Transfer Pain</div><div class="ds">受けたダメージの10%を召喚獣に転送する。毎秒3MPを消費する。</div></div><div class="lv">Lv 20 · 全4ランク</div></div>
+  <div class="skill"><img src="assets/codex/skills/body-to-mind.webp" alt="Body to Mind"><div><span class="nm">ボディ・トゥ・マインド</span><div class="en" style="color:var(--muted);font-size:11px">Body to Mind</div><div class="ds">HPを300犠牲にしてMPを150回復する。</div></div><div class="lv">Lv 25 · 全4ランク</div></div>
+  <div class="skill"><img src="assets/codex/skills/curse-weakness.webp" alt="Curse: Weakness"><div><span class="nm">虚弱の呪い</span><div class="en" style="color:var(--muted);font-size:11px">Curse: Weakness</div><div class="ds">敵の物理攻撃力を30秒間20%下げる。</div></div><div class="lv">Lv 25</div></div>
+  <div class="skill"><img src="assets/codex/skills/rot.webp" alt="Curse of Atrophy"><div><span class="nm">萎縮の呪い</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Curse of Atrophy</div><div class="ds">対象を萎えさせ、その対象が受ける回復と吸収シールドを18秒間30%弱くする。</div></div><div class="lv">Lv 40</div></div>
+  <div class="skill"><img src="assets/codex/skills/dark-command.webp" alt="Dark Command"><div><span class="nm">ダークコマンド</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Dark Command</div><div class="ds">ペット用スキル。ペットバーでONにしている間、召喚獣が近接範囲で攻撃中、15秒ごとに通常攻撃の250%で攻撃する。</div></div><div class="lv">Lv 40</div></div>
+  <div class="skill"><img src="assets/codex/skills/death-link.webp" alt="Death Link"><div><span class="nm">デスリンク</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Death Link</div><div class="ds">150%の魔法威力を与え、自分の命を対象の死に結びつける。HPが満タンのときは弱いが、HPが失われるほど威力が増し、失ったHP1%ごとに最終ダメージが2%増える。</div></div><div class="lv">Lv 52</div></div>
+  <div class="skill"><img src="assets/codex/skills/soul-rupture.webp" alt="Soul Rupture"><div><span class="nm">ソウルラプチャー</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Soul Rupture</div><div class="ds">対象の魂を引き裂き、120%の魔法威力の闇ダメージ。対象にかかっている自分の呪い1つにつき+100%（呪い2つで最大+200%）。呪いは消費しない。</div></div><div class="lv">Lv 58</div></div>
+  <div class="skill"><img src="assets/codex/skills/cursed-ground.webp" alt="Cursed Ground"><div><span class="nm">呪われた大地</span><span class="uniq">UNIQUE</span><div class="en" style="color:var(--muted);font-size:11px">Cursed Ground</div><div class="ds">地面の一画を呪い、15秒間チャネリングする。範囲内の敵は15%スロウになり、1.5秒ごとに自分の呪いのうち1つを受ける。移動・妨害される・チャネリングを解くと場は崩壊する。</div></div><div class="lv">Lv 61</div></div>
 
-<h3>オーク</h3>
-<table>
-<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
-<tr><td>デストロイヤー</td><td>ファイター</td><td>Lv.20</td><td>巨大な両手武器を比類ない凶暴さで振るう野蛮なバーサーカー。</td></tr>
-<tr><td>モンク</td><td>ファイター</td><td>Lv.1</td><td>拳の修行者。骨そのものを武器になるまで鍛え、鋼を捨てて素手で戦う。</td></tr>
-<tr><td>レイダー</td><td>ファイター</td><td>Lv.1</td><td>一族の若きバーサーカー。前進あるのみで、守ることには興味がない。</td></tr>
-<tr><td>タイラント</td><td>ファイター</td><td>Lv.20</td><td>規律ある武道家。原初のトーテムの精霊を拳に宿す。</td></tr>
-<tr><td>シャーマン</td><td>ウィザード</td><td>Lv.1</td><td>祖霊を祀るローブの術者。メイスからの遠距離ボルトで精霊（スピリット）を集め、鬨の声に使う。</td></tr>
-<tr><td>ウォークライヤー</td><td>ウィザード</td><td>Lv.20</td><td>オークの祖霊術者。スピリットボルトが遠距離の鬨の声・守りの詠唱・精霊の大合唱を養う。</td></tr>
-</table>
-
-<h3>ダークエルフ</h3>
-<table>
-<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
-<tr><td>アビスウォーカー</td><td>ファイター</td><td>Lv.20</td><td>闇から襲う致命的な影の暗殺者。短剣の技が命を奪う。</td></tr>
-<tr><td>アサシン</td><td>ファイター</td><td>Lv.1</td><td>闇で訓練された殺し屋。誰にも見られない一撃と、誰にも聞かれない退路が価値。</td></tr>
-<tr><td>ブレードダンサー</td><td>ファイター</td><td>Lv.20</td><td>双剣を操る優美な戦士。神秘の舞で味方を強化する。</td></tr>
-<tr><td>パラスナイト</td><td>ファイター</td><td>Lv.1</td><td>パラスの儀式を受けた剣と盾の新入り。「前線を保つことは残酷の一形態」と教わる。</td></tr>
-<tr><td>ファントムレンジャー</td><td>ファイター</td><td>Lv.20</td><td>不吉な射手。影からスタンの矢で敵の足を止める。</td></tr>
-<tr><td>トワイライトナイト</td><td>ファイター</td><td>Lv.20</td><td>黄昏（トワイライト）に仕える暗黒騎士。生命力を吸い取り、挑発で敵を屈服させる。</td></tr>
-<tr><td>ダークウィザード</td><td>ウィザード</td><td>Lv.1</td><td>破滅の魔法の学徒。風は壊して解き放つものと考える。</td></tr>
-<tr><td>ファントムサモナー</td><td>ウィザード</td><td>Lv.20</td><td>溺れた者の渡し守。彼らの魂を器に縛り、その悲嘆を糧にする。</td></tr>
-<tr><td>スペルハウラー</td><td>ウィザード</td><td>Lv.20</td><td>破壊的な風の魔法を操るダークエルフの魔術師。元素の怒りで敵を引き裂く。</td></tr>
-<tr><td>トワイライトエルダー</td><td>ウィザード</td><td>Lv.20</td><td>黄昏の巫女。闇の神聖な力で味方を癒やし、命を吸い、敵をその場に縛る。</td></tr>
-<tr><td>トワイライトオラクル</td><td>ウィザード</td><td>Lv.1</td><td>黄昏の新弟子。一つの体から力を血のように抜き、別の体へ注ぐことを学ぶ。</td></tr>
-</table>
-</section>
-
-<section>
-<h2>ネクロマンサー詳細（アセンションスキル）</h2>
-<p class="orig">出典：公式コーデックス Necromancer のページ。固有スキル9種を含むアクティブ14種。「固有」はそのクラスだけのスキル。</p>
-<div class="entry"><h3>無効化の呪い（Curse of Nulling）</h3><p>Lv.20で習得。対象の守りを無効化し、魔法防御を30秒間23%下げる。</p></div>
-<div class="entry"><h3>毒の呪い（Curse: Poison）</h3><p>Lv.20で習得。敵を毒に冒し、3秒ごとに30.2%威力のダメージを30秒間与える（合計302%威力）。</p></div>
-<div class="entry"><h3>デススパイク（Death Spike）</h3><p>Lv.20で習得。190%の魔法威力を闇ダメージとして与える。とどめを刺すと、その過剰ダメージを30秒間蓄える。次の4回のデススパイクに、その1/4ずつが実ダメージ（防御無視）として上乗せされる。</p></div>
-<div class="entry"><h3>フィアー（Fear）</h3><p>Lv.20で習得。対象を怯えさせ、3.5秒間逃走させる。基本成功率80%。</p></div>
-<div class="entry"><h3>ライフドレイン（Life Drain）</h3><p>Lv.20で習得。対象の生命力を吸い取り、160%の魔法威力ダメージを与え、与えたダメージの40%分を回復する。</p></div>
-<div class="entry"><h3>堕落した男の召喚（Summon Corrupted Man）</h3><p>Lv.20で習得。Corrupted Man を召喚して傍らで戦わせる。能力値は自分のレベルに比例する。</p></div>
-<div class="entry"><h3>苦痛転送（Transfer Pain）</h3><p>Lv.20で習得。全4ランク（Lv.50まで）。受けたダメージの10%を召喚獣に転送する。毎秒3MPを消費する。</p></div>
-<div class="entry"><h3>ボディ・トゥ・マインド（Body to Mind）</h3><p>Lv.25で習得。全4ランク（Lv.52まで）。HPを300犠牲にしてMPを150回復する。</p></div>
-<div class="entry"><h3>虚弱の呪い（Curse: Weakness）</h3><p>Lv.25で習得。敵の物理攻撃力を30秒間20%下げる。</p></div>
-<div class="entry"><h3>萎縮の呪い（Curse of Atrophy）</h3><p>Lv.40で習得。対象を萎えさせ、その対象が受ける回復と吸収シールドを18秒間30%弱くする。</p></div>
-<div class="entry"><h3>ダークコマンド（Dark Command）</h3><p>Lv.40で習得。ペット用スキル。ペットバーでONにしている間、召喚獣が近接範囲で攻撃中、15秒ごとに通常攻撃の250%で攻撃する。</p></div>
-<div class="entry"><h3>デスリンク（Death Link）</h3><p>Lv.52で習得。150%の魔法威力を与え、自分の命を対象の死に結びつける。HPが満タンのときは弱いが、HPが失われるほど威力が増し、失ったHP1%ごとに最終ダメージが2%増える。</p></div>
-<div class="entry"><h3>ソウルラプチャー（Soul Rupture）</h3><p>Lv.58で習得。対象の魂を引き裂き、120%の魔法威力の闇ダメージ。対象にかかっている自分の呪い1つにつき+100%（呪い2つで最大+200%）。呪いは消費しない。</p></div>
-<div class="entry"><h3>呪われた大地（Cursed Ground）</h3><p>Lv.61で習得。地面の一画を呪い、15秒間チャネリングする。範囲内の敵は15%スロウになり、1.5秒ごとに自分の呪いのうち1つを受ける。移動・妨害される・チャネリングを解くと場は崩壊する。</p></div>
-</section>
+  <p class="note">パッシブ（名称のみ確認済み、説明は追って追加）：Power of Soul／Greater Focus／Arcane Power／Greater Critical Boost。ほかに Unholy Aura、Corpse Explosion、Vampiric Touch、Curse: Gloom の存在を公式ページで確認済み（説明は取得中）。</p>
 </main>
-<footer>Grimeage II 攻略ノート — コーデックス日本語訳（出典：公式コーデックス grimeage2.com/codex）</footer>
+<footer>Grimeage II 攻略ノート ― コーデックス日本語訳（出典：公式コーデックス grimeage2.com/codex／画像は公式のものを使用）</footer>
 </body>
 </html>
