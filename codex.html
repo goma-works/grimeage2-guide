@@ -5,39 +5,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>コーデックス日本語訳 | Grimeage II 攻略ノート</title>
 <style>
-  :root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#9da7b1;--accent:#d4a94e}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75}
-  header{padding:28px 20px 8px;max-width:960px;margin:0 auto}
-  h1{font-size:26px;margin:0 0 6px}
-  .sub{color:var(--muted)}
-  main{max-width:960px;margin:0 auto;padding:10px 20px 48px}
-  section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:18px 0}
-  h2{font-size:19px;margin:0 0 10px;color:var(--accent)}
-  a{color:var(--accent)}
-  .entry{border-top:1px solid var(--line);padding:10px 0}
-  .entry:first-of-type{border-top:none}
-  .entry h3{margin:0 0 4px;font-size:16px}
-  .orig{color:var(--muted);font-size:13px}
-  footer{max-width:960px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:13px}
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#9da7b1;--accent:#d4a94e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.75}
+header{padding:28px 20px 8px;max-width:960px;margin:0 auto}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:var(--muted)}
+main{max-width:960px;margin:0 auto;padding:10px 20px 48px}
+section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:18px 0}
+h2{font-size:19px;margin:0 0 10px;color:var(--accent)}
+h3{font-size:16px;margin:16px 0 6px}
+a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-top:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.entry{border-top:1px solid var(--line);padding:10px 0}
+.orig{color:var(--muted);font-size:13px}
+footer{max-width:960px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
 <header>
-  <h1>コーデックス日本語訳</h1>
-  <p class="sub">Grimeage II のゲーム内コーデックス（Codex）の項目を巡回して全文翻訳したページ。ゲームには日本語設定がなく、ブラウザ翻訳も効かないため、ここに日本語で残す。<br>
-  <a href="index.html">← 攻略ノート トップへ</a> ／ <a href="https://grimeage2.com/" target="_blank" rel="noopener">公式サイト</a></p>
+<h1>コーデックス日本語訳</h1>
+<p class="sub">公式サイトの Codex（<a href="https://grimeage2.com/codex" target="_blank" rel="noopener">grimeage2.com/codex</a>）を巡回して日本語訳したページ。ゲームにもサイトにも日本語がないため、ここに日本語で残す。構成は公式コーデックスに沿う。<br>
+<a href="index.html">← 攻略ノート トップへ</a> ／ <a href="https://grimeage2.com/" target="_blank" rel="noopener">公式サイト</a></p>
 </header>
 <main>
-  <section>
-    <h2>収集状況</h2>
-    <p>2026年11月20日 12:32 — 巡回を開始予定。項目が集まり次第、ゲーム内の構成に沿ってここへ追加していく。</p>
-  </section>
-  <section>
-    <h2>項目一覧</h2>
-    <p>（収集中）</p>
-  </section>
+<section>
+<h2>コーデックスの構成（公式）</h2>
+<p>公式コーデックスは8つのデータベースと5つのガイドでできている。翻訳の進み具合は各項目に併記。</p>
+<table>
+<tr><th>セクション</th><th>内容</th><th>翻訳状況</th></tr>
+<tr><td>モンスター</td><td>全モンスターの能力・出現場所・ドロップ</td><td>未着手</td></tr>
+<tr><td>アイテム</td><td>武器・防具・アクセサリー・消耗品・素材</td><td>未着手</td></tr>
+<tr><td>クラス</td><td>5種族48クラスと固有スキル</td><td>一覧＋ネクロマンサー詳細まで翻訳済み（下記）</td></tr>
+<tr><td>スキル</td><td>全スキルの性能・スケーリング・習得条件</td><td>未着手（規模大）</td></tr>
+<tr><td>レシピ</td><td>製作レシピ・材料・ゴールド費用</td><td>未着手</td></tr>
+<tr><td>ボス</td><td>ソロ／グループ／レイド／儀式召喚ボスの能力・怒り・再出現・ドロップ</td><td>未着手</td></tr>
+<tr><td>要塞</td><td>クランPvPの占領ルール・所有状況</td><td>未着手</td></tr>
+<tr><td>パッチノート</td><td>リリースごとの変更点</td><td>未着手</td></tr>
+<tr><td>ガイド類</td><td>ヒント集／オリンピアード／レイドボスの仕組み／パーティとダンジョン／運命のお守り</td><td>次に着手</td></tr>
+</table>
+</section>
+
+<section>
+<h2>クラス一覧（5種族・48クラス）</h2>
+<p>クラス名はリネージュ2の日本語名に寄せ、原作と綴りが違うものは作中の名前をそのまま表記する方針。「解放」はそのクラスになれるレベル。</p>
+
+<h3>ヒューマン</h3>
+<table>
+<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
+<tr><td>ダークアベンジャー</td><td>ファイター</td><td>Lv.20</td><td>重装備で踏みとどまりながら、敵の生命力を吸い取る暗黒騎士。</td></tr>
+<tr><td>グラディエーター</td><td>ファイター</td><td>Lv.20</td><td>二刀流の剣士。高速の斬撃コンボで敵を圧倒する。</td></tr>
+<tr><td>ホークアイ</td><td>ファイター</td><td>Lv.20</td><td>弓の達人。遠距離から致命的な精度で矢を雨のように降らせる。</td></tr>
+<tr><td>ナイト</td><td>ファイター</td><td>Lv.1</td><td>盾と重装で前線を守る堅実な守護者。危険を味方から引き受ける。</td></tr>
+<tr><td>パラディン</td><td>ファイター</td><td>Lv.20</td><td>神聖な力を操る聖騎士。味方を守り、悪を討つ。</td></tr>
+<tr><td>ローグ</td><td>ファイター</td><td>Lv.1</td><td>素早く機敏。装甲より速度と精度を重んじ、急所を突く。</td></tr>
+<tr><td>トレジャーハンター</td><td>ファイター</td><td>Lv.20</td><td>影から襲う狡猾なローグ。短剣の技が致命的。</td></tr>
+<tr><td>ウォーロード</td><td>ファイター</td><td>Lv.20</td><td>大剣を振るう恐るべき戦士。薙ぎ払いの一撃が強力。</td></tr>
+<tr><td>ウォーリアー</td><td>ファイター</td><td>Lv.1</td><td>正面から殴り合う前衛。攻撃の勢いで敵を削り倒す。</td></tr>
+<tr><td>ビショップ</td><td>ウィザード</td><td>Lv.20</td><td>傷を癒やし、闇の勢力に神の怒りを向ける聖職者。</td></tr>
+<tr><td>クレリック</td><td>ウィザード</td><td>Lv.1</td><td>神の加護で味方を癒やし、闇を退ける献身的な侍祭。</td></tr>
+<tr><td>ウィザード</td><td>ウィザード</td><td>Lv.1</td><td>元素の力を自在に操る秘術の学徒。</td></tr>
+<tr><td>ネクロマンサー</td><td>ウィザード</td><td>Lv.20</td><td>生命力を吸い取り、骨の魔法で身を守る闇の術者。詳細は下記。</td></tr>
+<tr><td>プロフェット</td><td>ウィザード</td><td>Lv.20</td><td>神聖な祝福で味方を強化する、神の力を伝える者。</td></tr>
+<tr><td>ソーサラー</td><td>ウィザード</td><td>Lv.20</td><td>破壊的な火の魔法の達人。圧倒的な元素の力で敵を焼き尽くす。</td></tr>
+</table>
+
+<h3>エルフ</h3>
+<table>
+<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
+<tr><td>ナイト（エルフ）</td><td>ファイター</td><td>Lv.1</td><td>エルフの神殿を守る規律ある守護者。剣と盾で前線を保つ訓練を受けている。</td></tr>
+<tr><td>スカウト</td><td>ファイター</td><td>Lv.1</td><td>森の斥候。地形を読み、敵が気づく前に襲う。</td></tr>
+<tr><td>プレインズウォーカー</td><td>ファイター</td><td>Lv.20</td><td>隠密の短剣使い。エルフの速さで影から襲う。</td></tr>
+<tr><td>シルバーレンジャー</td><td>ファイター</td><td>Lv.20</td><td>超自然的な速さと精度で致命的な矢を放つエルフの射手。</td></tr>
+<tr><td>ソードシンガー</td><td>ファイター</td><td>Lv.20</td><td>剣と盾で戦いながら、魔法の歌で味方を強化するエルフの戦士。</td></tr>
+<tr><td>テンプルナイト</td><td>ファイター</td><td>Lv.20</td><td>エルフの神殿に仕える聖なる守護者。剣と盾を携える。</td></tr>
+<tr><td>エルダー</td><td>ウィザード</td><td>Lv.20</td><td>賢いエルフの支援術者。味方のMPを回復し、神聖な癒やしを操る。</td></tr>
+<tr><td>ウィザード（エルフ）</td><td>ウィザード</td><td>Lv.1</td><td>水と風の流れを精密な斬撃の魔法に変えるエルフの学者。</td></tr>
+<tr><td>オラクル</td><td>ウィザード</td><td>Lv.1</td><td>森の祠で女神の言葉に耳を澄ます者。癒やしと光としてその言葉を運ぶ。</td></tr>
+<tr><td>スペルシンガー</td><td>ウィザード</td><td>Lv.20</td><td>水の魔法を操るエルフの魔術師。素早く打ち、敵の強化を解除する。</td></tr>
+</table>
+
+<h3>ドワーフ</h3>
+<table>
+<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
+<tr><td>アルチザン</td><td>ファイター</td><td>Lv.1</td><td>鍛冶職人。武器は自分で作って覚える。自分で打ったメイスを振るう。</td></tr>
+<tr><td>バウンティハンター</td><td>ファイター</td><td>Lv.20</td><td>両手武器に長けた狡猾な戦士。数々の破壊的な攻撃を繰り出す。</td></tr>
+<tr><td>スカベンジャー</td><td>ファイター</td><td>Lv.1</td><td>現実的な回収屋。金目のものを追い、戦場から持ち帰れるものは全部剥ぎ取る。</td></tr>
+<tr><td>ウォースミス</td><td>ファイター</td><td>Lv.20</td><td>メイスを破壊的な精度で振るう名工。機械ゴーレムを召喚して共に戦える。</td></tr>
+<tr><td>ウィザード（ドワーフ）</td><td>ウィザード</td><td>Lv.1</td><td>山の応えを聞き始めた石工。生ける岩を身にまとう。</td></tr>
+<tr><td>アースロード</td><td>ウィザード</td><td>Lv.20</td><td>近接型の術者。生ける石で身を固め、受ける打撃のすべてを粉砕の土魔法に変える。</td></tr>
+</table>
+
+<h3>オーク</h3>
+<table>
+<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
+<tr><td>デストロイヤー</td><td>ファイター</td><td>Lv.20</td><td>巨大な両手武器を比類ない凶暴さで振るう野蛮なバーサーカー。</td></tr>
+<tr><td>モンク</td><td>ファイター</td><td>Lv.1</td><td>拳の修行者。骨そのものを武器になるまで鍛え、鋼を捨てて素手で戦う。</td></tr>
+<tr><td>レイダー</td><td>ファイター</td><td>Lv.1</td><td>一族の若きバーサーカー。前進あるのみで、守ることには興味がない。</td></tr>
+<tr><td>タイラント</td><td>ファイター</td><td>Lv.20</td><td>規律ある武道家。原初のトーテムの精霊を拳に宿す。</td></tr>
+<tr><td>シャーマン</td><td>ウィザード</td><td>Lv.1</td><td>祖霊を祀るローブの術者。メイスからの遠距離ボルトで精霊（スピリット）を集め、鬨の声に使う。</td></tr>
+<tr><td>ウォークライヤー</td><td>ウィザード</td><td>Lv.20</td><td>オークの祖霊術者。スピリットボルトが遠距離の鬨の声・守りの詠唱・精霊の大合唱を養う。</td></tr>
+</table>
+
+<h3>ダークエルフ</h3>
+<table>
+<tr><th>クラス</th><th>系統</th><th>解放</th><th>説明</th></tr>
+<tr><td>アビスウォーカー</td><td>ファイター</td><td>Lv.20</td><td>闇から襲う致命的な影の暗殺者。短剣の技が命を奪う。</td></tr>
+<tr><td>アサシン</td><td>ファイター</td><td>Lv.1</td><td>闇で訓練された殺し屋。誰にも見られない一撃と、誰にも聞かれない退路が価値。</td></tr>
+<tr><td>ブレードダンサー</td><td>ファイター</td><td>Lv.20</td><td>双剣を操る優美な戦士。神秘の舞で味方を強化する。</td></tr>
+<tr><td>パラスナイト</td><td>ファイター</td><td>Lv.1</td><td>パラスの儀式を受けた剣と盾の新入り。「前線を保つことは残酷の一形態」と教わる。</td></tr>
+<tr><td>ファントムレンジャー</td><td>ファイター</td><td>Lv.20</td><td>不吉な射手。影からスタンの矢で敵の足を止める。</td></tr>
+<tr><td>トワイライトナイト</td><td>ファイター</td><td>Lv.20</td><td>黄昏（トワイライト）に仕える暗黒騎士。生命力を吸い取り、挑発で敵を屈服させる。</td></tr>
+<tr><td>ダークウィザード</td><td>ウィザード</td><td>Lv.1</td><td>破滅の魔法の学徒。風は壊して解き放つものと考える。</td></tr>
+<tr><td>ファントムサモナー</td><td>ウィザード</td><td>Lv.20</td><td>溺れた者の渡し守。彼らの魂を器に縛り、その悲嘆を糧にする。</td></tr>
+<tr><td>スペルハウラー</td><td>ウィザード</td><td>Lv.20</td><td>破壊的な風の魔法を操るダークエルフの魔術師。元素の怒りで敵を引き裂く。</td></tr>
+<tr><td>トワイライトエルダー</td><td>ウィザード</td><td>Lv.20</td><td>黄昏の巫女。闇の神聖な力で味方を癒やし、命を吸い、敵をその場に縛る。</td></tr>
+<tr><td>トワイライトオラクル</td><td>ウィザード</td><td>Lv.1</td><td>黄昏の新弟子。一つの体から力を血のように抜き、別の体へ注ぐことを学ぶ。</td></tr>
+</table>
+</section>
+
+<section>
+<h2>ネクロマンサー詳細（アセンションスキル）</h2>
+<p class="orig">出典：公式コーデックス Necromancer のページ。固有スキル9種を含むアクティブ14種。「固有」はそのクラスだけのスキル。</p>
+<div class="entry"><h3>無効化の呪い（Curse of Nulling）</h3><p>Lv.20で習得。対象の守りを無効化し、魔法防御を30秒間23%下げる。</p></div>
+<div class="entry"><h3>毒の呪い（Curse: Poison）</h3><p>Lv.20で習得。敵を毒に冒し、3秒ごとに30.2%威力のダメージを30秒間与える（合計302%威力）。</p></div>
+<div class="entry"><h3>デススパイク（Death Spike）</h3><p>Lv.20で習得。190%の魔法威力を闇ダメージとして与える。とどめを刺すと、その過剰ダメージを30秒間蓄える。次の4回のデススパイクに、その1/4ずつが実ダメージ（防御無視）として上乗せされる。</p></div>
+<div class="entry"><h3>フィアー（Fear）</h3><p>Lv.20で習得。対象を怯えさせ、3.5秒間逃走させる。基本成功率80%。</p></div>
+<div class="entry"><h3>ライフドレイン（Life Drain）</h3><p>Lv.20で習得。対象の生命力を吸い取り、160%の魔法威力ダメージを与え、与えたダメージの40%分を回復する。</p></div>
+<div class="entry"><h3>堕落した男の召喚（Summon Corrupted Man）</h3><p>Lv.20で習得。Corrupted Man を召喚して傍らで戦わせる。能力値は自分のレベルに比例する。</p></div>
+<div class="entry"><h3>苦痛転送（Transfer Pain）</h3><p>Lv.20で習得。全4ランク（Lv.50まで）。受けたダメージの10%を召喚獣に転送する。毎秒3MPを消費する。</p></div>
+<div class="entry"><h3>ボディ・トゥ・マインド（Body to Mind）</h3><p>Lv.25で習得。全4ランク（Lv.52まで）。HPを300犠牲にしてMPを150回復する。</p></div>
+<div class="entry"><h3>虚弱の呪い（Curse: Weakness）</h3><p>Lv.25で習得。敵の物理攻撃力を30秒間20%下げる。</p></div>
+<div class="entry"><h3>萎縮の呪い（Curse of Atrophy）</h3><p>Lv.40で習得。対象を萎えさせ、その対象が受ける回復と吸収シールドを18秒間30%弱くする。</p></div>
+<div class="entry"><h3>ダークコマンド（Dark Command）</h3><p>Lv.40で習得。ペット用スキル。ペットバーでONにしている間、召喚獣が近接範囲で攻撃中、15秒ごとに通常攻撃の250%で攻撃する。</p></div>
+<div class="entry"><h3>デスリンク（Death Link）</h3><p>Lv.52で習得。150%の魔法威力を与え、自分の命を対象の死に結びつける。HPが満タンのときは弱いが、HPが失われるほど威力が増し、失ったHP1%ごとに最終ダメージが2%増える。</p></div>
+<div class="entry"><h3>ソウルラプチャー（Soul Rupture）</h3><p>Lv.58で習得。対象の魂を引き裂き、120%の魔法威力の闇ダメージ。対象にかかっている自分の呪い1つにつき+100%（呪い2つで最大+200%）。呪いは消費しない。</p></div>
+<div class="entry"><h3>呪われた大地（Cursed Ground）</h3><p>Lv.61で習得。地面の一画を呪い、15秒間チャネリングする。範囲内の敵は15%スロウになり、1.5秒ごとに自分の呪いのうち1つを受ける。移動・妨害される・チャネリングを解くと場は崩壊する。</p></div>
+</section>
 </main>
-<footer>Grimeage II 攻略ノート — コーデックス日本語訳</footer>
+<footer>Grimeage II 攻略ノート — コーデックス日本語訳（出典：公式コーデックス grimeage2.com/codex）</footer>
 </body>
 </html>
