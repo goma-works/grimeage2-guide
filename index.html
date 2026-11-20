@@ -81,6 +81,9 @@
 <section id="history">
   <h2>更新履歴</h2>
   <ul class="history">
+    <li><time>2026-11-20 19:10</time><span>画面ガイドにテレポートとブラックマーケット（闇市）を追加。武器強化スクロールの仕様も掲載</span></li>
+    <li><time>2026-11-20 19:04</time><span>メイン画面をハンターズビレッジの街並みの実写に、ワールドマップを大陸全体図に差し替え。領地ごとのレベル帯を掲載</span></li>
+    <li><time>2026-11-20 19:02</time><span>スペルブック下部の実画面を追加し、パッシブ5種とTransfer Painの正確な効果数値をスキル表に反映</span></li>
     <li><time>2026-11-20 18:54</time><span>画面ガイドにキャラクター・装備画面の注釈つきスクリーンショットを追加し、全7画面が揃った。ステータス実数（INT 41、M.ATK 171など）も掲載</span></li>
     <li><time>2026-11-20 18:46</time><span>画面ガイドにクエスト画面の注釈つきスクリーンショットを追加。「見習いの儀式」と「深淵の怒り」の内容をクエスト画面の文面で更新</span></li>
     <li><time>2026-11-20 18:45</time><span>画面ガイドにパッシブツリーの注釈つきスクリーンショットを追加</span></li>
@@ -179,17 +182,17 @@
     <table>
       <tr><th>スキル</th><th>効果</th></tr>
       <tr><td>Wind Strike（ウィンドストライク）</td><td>主力の魔法攻撃。魔法力の130%、詠唱2秒、クールダウン1秒、消費MP 30（Lv.28時点）</td></tr>
-      <tr><td>Summon Corrupted Man</td><td>ペット「Corrupted Man」を召喚（消費MP 227）。召喚し直すとペットが全快する</td></tr>
+      <tr><td>Summon Corrupted Man</td><td>ペット「Corrupted Man」を召喚（消費MP 277、詠唱5秒、CD 1秒。ステータスはレベル連動）。召喚し直すとペットが全快する</td></tr>
       <tr><td>Death Spike（デス・スパイク）</td><td>魔法力190%の闇ダメージ（消費MP 23、詠唱2秒、CD 1秒）。とどめを刺すとオーバーキル分を蓄積し、次の4回に真ダメージとして追加。習得80,000ゴールド</td></tr>
       <tr><td>Life Drain（ライフ・ドレイン）</td><td>魔法力160%のダメージ＋与ダメージの40%を回復（消費MP 19、詠唱2秒、CD 10秒）。習得80,000ゴールド</td></tr>
       <tr><td>Curse of Nulling（無効化の呪い）</td><td>対象の魔法防御−23%（30秒）。消費MP 33、詠唱1.5秒、CD 6秒。習得80,000ゴールド</td></tr>
       <tr><td>Fear（恐怖）</td><td>80%の確率で対象を3.5秒間逃走させる。消費MP 39、詠唱3秒、CD 10秒。習得50,000ゴールド</td></tr>
-      <tr><td>Transfer Pain（痛みの転移）</td><td>トグル。受けたダメージの10%を召喚物へ転移（維持に毎秒MPを消費）。習得50,000ゴールド</td></tr>
+      <tr><td>Transfer Pain（痛みの転移）</td><td>トグル。受けたダメージの10%を召喚物へ転移。維持コスト毎秒3MP、CD 1秒。習得50,000ゴールド</td></tr>
       <tr><td>Body to Mind（体から心へ）</td><td>HP300を消費してMP150を回復。詠唱1秒、CD 5秒。習得80,000ゴールド</td></tr>
       <tr><td>Curse: Poison（毒の呪い）</td><td>3秒ごとに魔法力30.2%のダメージを30秒間（合計302%）。Rank 2でMASTERED。消費MP 20、詠唱1.5秒、CD 1秒</td></tr>
       <tr><td>Heal（ヒール）</td><td>対象のHPを67回復。消費MP 11、CD 0.2秒。習得5,000ゴールド</td></tr>
     </table>
-    <p class="note">スキルパッシブ：Magic Training Rank 3（魔法攻撃+15、MASTERED）、Magic Mastery Rank 2（魔法攻撃+15）、Anti Magic Rank 3（魔法防御+20、魔法ダメージ−5%）、Robe Mastery Rank 3（ローブ装備時：物理防御+16、最大MP上昇）。ホットバー：1=Wind Strike、4=Summon Corrupted Man、5=Death Spike、6=Life Drain。</p>
+    <p class="note">スキルパッシブ：Spellcraft（ローブ着用で詠唱速度100%。軽装・重装では詠唱時間が2倍）、Magic Training Rank 3（M.ATK +15）、Magic Mastery Rank 2（M.ATK +10）、Anti Magic Rank 3（M.Def +16）、Robe Mastery Rank 3（ローブ一式で P.DEF +12、最大MP +280）。ホットバー：1=Wind Strike、4=Summon Corrupted Man、5=Death Spike、6=Life Drain。</p>
   </div>
   <h3>装備</h3>
   <div class="card">
@@ -216,7 +219,7 @@
     <tr><td>② ペット情報</td><td>召喚獣のHP。クリックで対象をペットに切り替え</td></tr>
     <tr><td>③ クエスト表示（上部中央）</td><td>次の目的と進捗（例：「金色のモンスターを5体倒せ」1/5）</td></tr>
     <tr><td>④ ミニマップ（右上）</td><td>現在地と部屋の配置。青丸が自分</td></tr>
-    <tr><td>⑤ モンスター一覧（右）</td><td>周囲の敵リストと Auto Farm（自動狩り）のON/OFF。<strong>NPCと話す前は必ずOFF</strong>（ONのままだと戦闘に引き離されて会話・報告が失敗する）</td></tr>
+    <tr><td>⑤ 周囲リスト（右）</td><td>周囲の敵リスト（街ではNPC一覧に切り替わる）と Auto Farm（自動狩り）のON/OFF。<strong>NPCと話す前は必ずOFF</strong>（ONのままだと戦闘に引き離されて会話・報告が失敗する）</td></tr>
     <tr><td>⑥ チャットログ（左下）</td><td>全体／取引／ログのタブ。イベント告知もここに出る</td></tr>
     <tr><td>⑦ ホットバー（下部中央）</td><td>スキルアイコン。アイコン下の数字は消費MP。その下の細いバーが経験値（EXP）</td></tr>
     <tr><td>⑧ メニュー（右下）</td><td>職業（釣り・製図）、インベントリ（荷物 28/40）、設定などのアイコン群</td></tr>
@@ -231,6 +234,8 @@
   </table></div>
   <h3>スキル</h3>
   <img src="assets/screen-skills-annotated.png" alt="スキル画面（スペルブック）の注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
+  <img src="assets/screen-skills-bottom.png" alt="スペルブック下部（バフ・召喚・パッシブ）" style="width:100%;border:1px solid var(--line);border-radius:8px;margin-top:8px">
+  <p class="note">下までスクロールすると BUFFS（Transfer Pain）、SUMMONS（召喚）、PASSIVE（常時効果スキル）が出る。</p>
   <div class="card"><table>
     <tr><td>① カテゴリ</td><td>ATTACKS（攻撃）／DEBUFFS（弱体化）／HEALS（回復）／BUFFS（強化）に分かれている</td></tr>
     <tr><td>② スキルカード</td><td>名前・種別タグ（MAGIC、DEBUFFなど）・説明文と、MP（消費MP）／CAST（詠唱時間）／CD（再使用までの時間）。消費MPはレベルで増える</td></tr>
@@ -259,12 +264,30 @@
     <tr><td>③ アイテム格子</td><td>枠の色はレアリティ（R表示あり）、右下の数字は所持数。ポーション類はここから使う</td></tr>
   </table></div>
   <h3>ワールドマップ</h3>
-  <img src="assets/screen-map-annotated.png" alt="ワールドマップ（クロマ・タワーF1）の注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
+  <img src="assets/screen-map-annotated.png" alt="ワールドマップの注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
   <div class="card"><table>
-    <tr><td>① HERE／WORLD（左上）</td><td>現在地の詳細と世界全体の切り替え</td></tr>
-    <tr><td>② 拠点・ボス一覧（左）</td><td>要塞・城の攻城戦タイマー、レイドボスの生存状況（ALIVE＝出現中）</td></tr>
-    <tr><td>③ フロアマップ（中央）</td><td>クロマ・タワーF1は全5部屋。部屋ごとに敵レベル帯が違う（部屋1：20-21、部屋2：22-23、部屋3：24-25、部屋4：26-27、部屋5：28-29）。中央の「you」が現在地</td></tr>
+    <tr><td>① HERE／WORLD（上部）</td><td>HERE は今いる場所の詳細マップ、WORLD は大陸全体。WORLD 側で領地をクリックすると Travel（自動移動）できる</td></tr>
+    <tr><td>② 拠点・攻城戦（左パネル上）</td><td>FORTRESS（砦）と CASTLE（城）の攻城戦までの時間、OLYMPIAD SEASON の残り日数</td></tr>
+    <tr><td>③ レイドボス一覧（左パネル下）</td><td>ボス名・レベル・生息地・生存状態（ALIVE）。「Near my level」で自分のレベル帯に絞れる</td></tr>
+    <tr><td>④ 領地とレベル帯</td><td>狩場の目安：Whispering Woods 2-5、Devastated Plains 6-18、Darkmist Hollow 11-15、Abyssal Passage／Spiders Forest 16-20、Windmill Plains 20-22、Marshland Crossing 26-30、Forsaken Garrison 28-32、Death Pass 31-39、Dragonfang Camp 41-45。街は Hunters Village と Gilran</td></tr>
   </table></div>
+</table></div>
+  <h3>テレポート</h3>
+  <img src="assets/screen-teleport-annotated.png" alt="ゲートキーパーのテレポート画面" style="width:100%;border:1px solid var(--line);border-radius:8px">
+  <div class="card"><table>
+    <tr><td>① 行き先と料金</td><td>ゲートキーパーに話しかけると行き先リストが出る。ハンターズビレッジのレナからは5か所（ギルラン／グルーディオス／ダークエルフ村／オーク村／ドワーフ村）へ、一律25,000ゴールド</td></tr>
+    <tr><td>② BACK</td><td>やめる（移動しない）</td></tr>
+  </table></div>
+  <p class="note">ワールドマップからの Travel は無料の自動移動で、距離によって時間がかかる（塔→ハンターズビレッジで約53秒）。急ぐ時はテレポート、のんびりなら Travel。</p>
+  <h3>ブラックマーケット（闇市）</h3>
+  <img src="assets/screen-market-annotated.png" alt="ブラックマーケットの注釈つきスクリーンショット" style="width:100%;border:1px solid var(--line);border-radius:8px">
+  <div class="card"><table>
+    <tr><td>① DEALERS（左）</td><td>街ごとの出品枠。各3件、時間制で入れ替わる</td></tr>
+    <tr><td>② 出品一覧（中央）</td><td>アイテム名・数量・価格または最低入札額・残り時間。SIGNATURE／COMMON はレアリティ</td></tr>
+    <tr><td>③ 詳細・入札（右）</td><td>現在の入札額、最低入札額、終了までの時間、直近10件の落札相場（平均・最安・最高）。「YOUR MAXIMUM BID」に上限を入れると、その範囲で自動で競り勝つ方式</td></tr>
+    <tr><td>④ RECENT CLOSES（下）</td><td>終了した取引。落札価格と購入者、Unsold は売れ残り</td></tr>
+  </table></div>
+  <p class="note">出品物の説明で判明した強化仕様：Blessed Enchant Weapon Scroll は武器を1段階上げるごとに P.Atk／M.Atk +4（両手武器は +5）、+3を超えると伸びが2倍。失敗しても壊れず +0 に戻るだけ。+5以上には使えない。</p>
 </section>
 
 <section id="glossary">
