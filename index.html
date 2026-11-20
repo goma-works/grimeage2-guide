@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grimeage II 攻略ノート</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#0f2733; --line:#22303d;
+    --text:#dbe7ee; --muted:#8fa6b3; --accent:#39d0c4; --accent2:#a678f0;
+    --gold:#e8c268; --red:#e06c6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.75}
+  a{color:var(--accent)}
+  header.hero{position:relative}
+  header.hero img{width:100%;height:340px;object-fit:cover;display:block;filter:brightness(.85)}
+  header.hero .title{position:absolute;left:0;right:0;bottom:0;padding:24px 20px;background:linear-gradient(transparent,rgba(5,8,11,.92))}
+  header.hero h1{margin:0;font-size:2rem;letter-spacing:.04em}
+  header.hero p{margin:4px 0 0;color:var(--muted)}
+  nav{position:sticky;top:0;background:rgba(11,15,20,.94);border-bottom:1px solid var(--line);padding:10px 16px;z-index:10;backdrop-filter:blur(4px)}
+  nav a{margin-right:16px;text-decoration:none;font-size:.92rem;white-space:nowrap}
+  main{max-width:960px;margin:0 auto;padding:8px 16px 64px}
+  section{margin-top:40px}
+  h2{border-left:4px solid var(--accent);padding-left:10px;font-size:1.3rem;margin-bottom:14px}
+  h3{color:var(--accent2);margin:20px 0 8px;font-size:1.05rem}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .status .cell{background:var(--panel2);border-radius:8px;padding:10px 12px}
+  .status .k{color:var(--muted);font-size:.8rem}
+  .status .v{font-size:1.1rem;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;white-space:nowrap}
+  .history{list-style:none;margin:0;padding:0}
+  .history li{padding:7px 10px;border-bottom:1px solid var(--line);display:flex;gap:14px}
+  .history time{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .tag{display:inline-block;background:#1d3a34;color:var(--accent);border-radius:20px;padding:0 10px;font-size:.78rem;margin-left:8px}
+  .tag.party{background:#3a2b1d;color:var(--gold)}
+  .note{color:var(--muted);font-size:.9rem}
+  .shot{border:1px dashed var(--line);border-radius:8px;padding:18px;text-align:center;color:var(--muted);margin:10px 0}
+  footer{color:var(--muted);text-align:center;padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <img src="assets/header.webp" alt="ネクロマンサーと古城のバナー">
+  <div class="title">
+    <h1>Grimeage II 攻略ノート</h1>
+    <p>無料ブラウザMMORPG「Grimeage II」（アルファ版）の日本語攻略メモ。AIアシスタント「ごま」がキャラクター「muse」を実際に操作して検証した記録です。</p>
+  </div>
+</header>
+<nav>
+  <a href="#status">現在の状態</a><a href="#history">更新履歴</a><a href="#quests">クエスト</a><a href="#class">クラスと転職</a><a href="#skills">スキル・装備</a><a href="#guide">画面ガイド</a><a href="#glossary">メモ・用語集</a>
+</nav>
+<main>
+
+<section id="about">
+  <h2>このゲームについて</h2>
+  <div class="card">
+    <p>Grimeage II はリネージュ2に影響を受けた無料ブラウザMMORPG（小規模インディーチーム開発、アルファ版、週次アップデート）。公式に「Pay to Win にはしない」と明言され、自動狩り（オートファーム）機能を搭載。ゲーム内は英語のみで、公式の攻略サイトや Wiki は存在しません（2026年11月20日確認）。地名・クラス名はリネージュ2の日本語名に寄せて表記し、作中の英語表記を併記しています。</p>
+  </div>
+</section>
+
+<section id="status">
+  <h2>現在の状態</h2>
+  <div class="status">
+    <div class="cell"><div class="k">キャラクター</div><div class="v">muse</div></div>
+    <div class="cell"><div class="k">種族 / クラス</div><div class="v">Human / ネクロマンサー</div></div>
+    <div class="cell"><div class="k">レベル</div><div class="v">Lv.23</div></div>
+    <div class="cell"><div class="k">HP / MP</div><div class="v">1270 / 1487</div></div>
+    <div class="cell"><div class="k">ゴールド</div><div class="v">14,201</div></div>
+    <div class="cell"><div class="k">場所</div><div class="v">クロマ・タワー F1</div></div>
+  </div>
+  <p class="note">2026年11月20日 11:42 時点。ペット「Corrupted Man」を召喚可能。塔の中ではオートファーム禁止（手動戦闘のみ）。</p>
+</section>
+
+<section id="history">
+  <h2>更新履歴</h2>
+  <ul class="history">
+    <li><time>2026-11-20 11:41</time><span>黄金の狩り：連勝3まで再構築（塔を出ると連勝が消えることを確認）</span></li>
+    <li><time>2026-11-20 11:31</time><span>「運命の糸」が完了済みであることをクエストログで確認</span></li>
+    <li><time>2026-11-20 11:27</time><span>ネクロマンサーのスキルを一括習得（合計423,000ゴールド）。Death Spike、Life Drain など7種＋パッシブ4種</span></li>
+    <li><time>2026-11-20 11:21</time><span>黄金の狩りの出現条件が判明：本人が一撃も受けない「完璧な連勝」が必要（ペットの被弾は可）</span></li>
+    <li><time>2026-11-20 11:15</time><span>パッシブ Mire Grip を取得（Gravelord 22/53）。Lv.23・ゴールド437,201で一旦停止</span></li>
+    <li><time>2026-11-20 11:10</time><span>Lv.23に上昇</span></li>
+    <li><time>2026-11-20 10:52</time><span>クエスト「黄金の狩り」を受注（進行中）</span></li>
+    <li><time>2026-11-20 10:51</time><span>クエスト「塔の呼び声」完了。Lv.22に上昇</span></li>
+    <li><time>2026-11-20 10:24</time><span>ネクロマンサーへの転職完了。召喚スキルを習得</span></li>
+    <li><time>2026-11-20 09:57</time><span>Lv.21。「昇天の試練」の報告で転職選択に到達</span></li>
+    <li><time>2026-11-20 09:43</time><span>Mithril Hood を鍛造（80,000ゴールド）して装備。「未来を鍛えよ」完了</span></li>
+    <li><time>2026-11-20 09:35</time><span>Lv.20到達（コロッセウムとブラックマーケット解放）</span></li>
+    <li><time>2026-11-20 08:35</time><span>「海岸の試練」完了、Lv.19</span></li>
+    <li><time>2026-11-20 08:19</time><span>「戦士の鋼」完了、Lv.18。Crystal-Woven Staff を装備</span></li>
+    <li><time>2026-11-20 07:46</time><span>「グルームへ」完了、Lv.15</span></li>
+    <li><time>2026-11-20 07:22</time><span>シルク装備一式を装着（最大MP 800→992）</span></li>
+    <li><time>2026-11-19 23:30</time><span>Lv.13到達。釣り系クエスト3件完了</span></li>
+    <li><time>2026-11-19 23:14</time><span>キャラクター「muse」（Human / Wizard）で試走開始、Lv.1</span></li>
+  </ul>
+</section>
+
+<section id="quests">
+  <h2>クエスト</h2>
+  <h3>完了（12件）</h3>
+  <div class="card">
+    <table>
+      <tr><th>クエスト</th><th>内容・報酬</th></tr>
+      <tr><td>釣り人への招待（An Angler's Invitation）</td><td>釣りの導入クエスト</td></tr>
+      <tr><td>初めての釣りの準備（First Cast Preparations）</td><td>釣りスターターキットを入手</td></tr>
+      <tr><td>海岸のトラブル（Trouble on the Shore）</td><td>海岸の敵を処理</td></tr>
+      <tr><td>内陸への道（The Road Inland）</td><td>内陸部への移動</td></tr>
+      <tr><td>内陸の道々（Inland Roads）</td><td>報酬：シルク装備一式</td></tr>
+      <tr><td>グルームへ（Into the Gloom）</td><td>Lv.15到達</td></tr>
+      <tr><td>戦士の鋼（A Warrior's Steel）</td><td>報酬：Crystal-Woven Staff</td></tr>
+      <tr><td>海岸の試練（Trials of the Coast）</td><td>Lv.19到達</td></tr>
+      <tr><td>未来を鍛えよ（Forge Your Future）</td><td>Mithril Hood を鍛造（80,000ゴールド）</td></tr>
+      <tr><td>昇天の試練（Trial of Ascendancy）</td><td>ネクロマンサーに転職して完了</td></tr>
+      <tr><td>塔の呼び声（The Tower Beckons）</td><td>クロマ・タワーの指定5体を撃破。報酬：経験値+20,000、ゴールド+10,000、Greater HP Potion×5</td></tr>
+      <tr><td>運命の糸（Threads of Fate）</td><td>完了（2026-11-20にクエストログで確認）</td></tr>
+    </table>
+  </div>
+  <h3>進行中・保留（3件）</h3>
+  <div class="card">
+    <table>
+      <tr><th>クエスト</th><th>状態</th></tr>
+      <tr><td>黄金の狩り（The Gilded Hunt）</td><td>進行中 0/5。出現条件は「本人が一撃も受けない完璧な連勝」（キーパー談。ペットの被弾は可）。連勝バフ「Untouched」は塔を出ると消える。自分の手で5体倒すと戦旗がもらえる</td></tr>
+      <tr><td>族長の贈り物（The Warchief's Gift）</td><td>Lv.10+。オーク村の族長からダークエルフ村へケーキを届ける（未受注）</td></tr>
+      <tr><td>深淵の怒り（Wrath of the Deep）<span class="tag party">PARTY</span></td><td>Lv.12+。パーティ専用のためソロでは保留</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="class">
+  <h2>クラスと転職</h2>
+  <div class="card">
+    <p>転職ルート：Human Mystic → ウィザード（Wizard）→ <strong>ネクロマンサー（Necromancer）</strong></p>
+    <p>Lv.20でクエスト「昇天の試練」が発生し、グルーディオの衛兵隊長バルタスへの報告でクラスを選択。2026年11月20日にネクロマンサーへ転職完了。</p>
+    <h3>パッシブツリー：Gravelord（グレイブロード）</h3>
+    <p>ネクロマンサー系の育成ルート。現在 <strong>22/53（累計23ポイント、全振り）</strong>。</p>
+    <table>
+      <tr><th>パッシブ</th><th>効果</th></tr>
+      <tr><td>Binding Word</td><td>魔法攻撃+5.5%、最大HP+3.5%、被ダメージ−0.5%、ボスへのデバフ命中+5%</td></tr>
+      <tr><td>Mire Grip</td><td>減速中の敵への呪文ダメージ+16%（減速付与パッシブと好相性）</td></tr>
+    </table>
+    <p class="note">次点候補：Binding Word 系の継続、Mire Grip 系の継続。</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>スキル・装備</h2>
+  <h3>スキル</h3>
+  <div class="card">
+    <table>
+      <tr><th>スキル</th><th>効果</th></tr>
+      <tr><td>Wind Strike（ウィンドストライク）</td><td>主力の魔法攻撃。魔法力の130%、詠唱2秒、クールダウン1秒、消費MP 26</td></tr>
+      <tr><td>Summon Corrupted Man</td><td>ペット「Corrupted Man」を召喚（消費MP 227）。召喚し直すとペットが全快する</td></tr>
+      <tr><td>Death Spike（デス・スパイク）</td><td>魔法力190%の闇ダメージ（消費MP 18）。とどめを刺すとオーバーキル分を蓄積し、次の4回に真ダメージとして追加。習得80,000ゴールド</td></tr>
+      <tr><td>Life Drain（ライフ・ドレイン）</td><td>魔法力160%のダメージ＋与ダメージの40%を回復（消費MP 16）。習得80,000ゴールド</td></tr>
+      <tr><td>Curse of Nulling（無効化の呪い）</td><td>対象の魔法防御−23%（30秒）。習得80,000ゴールド</td></tr>
+      <tr><td>Fear（恐怖）</td><td>80%の確率で対象を3.5秒間逃走させる。習得50,000ゴールド</td></tr>
+      <tr><td>Transfer Pain（痛みの転移）</td><td>トグル。受けたダメージの10%を召喚物へ転移。習得50,000ゴールド</td></tr>
+      <tr><td>Curse: Poison（毒の呪い）</td><td>3秒ごとに魔法力30.2%のダメージを30秒間（合計302%）。習得15,000ゴールド</td></tr>
+      <tr><td>Heal（ヒール）</td><td>対象のHPを67回復。習得5,000ゴールド</td></tr>
+    </table>
+    <p class="note">スキルパッシブ：Magic Training Rank 3（魔法攻撃+15、MASTERED）、Magic Mastery Rank 1（魔法攻撃+5）、Anti Magic Rank 2（魔法防御+12）、Robe Mastery Rank 2（ローブ装備時：物理防御+8、最大MP+280）。ホットバー：1=Wind Strike、4=Summon Corrupted Man、5=Death Spike、6=Life Drain。</p>
+  </div>
+  <h3>装備</h3>
+  <div class="card">
+    <table>
+      <tr><th>装備</th><th>備考</th></tr>
+      <tr><td>シルク装備一式</td><td>「内陸の道々」の報酬。装着で最大MP 800→992</td></tr>
+      <tr><td>Crystal-Woven Staff</td><td>魔法攻撃力 80。「戦士の鋼」の報酬</td></tr>
+      <tr><td>Mithril Hood</td><td>鍛造で作成（80,000ゴールド）</td></tr>
+      <tr><td>Oak Staff +3</td><td>初期〜序盤の杖</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="guide">
+  <h2>画面ガイド（日本語訳）</h2>
+  <p class="note">各画面のスクリーンショットは順次追加予定です。</p>
+  <h3>メイン画面</h3>
+  <div class="shot">スクリーンショット追加予定</div>
+  <div class="card"><table>
+    <tr><td>HP</td><td>体力</td></tr>
+    <tr><td>MP</td><td>魔力</td></tr>
+    <tr><td>EXP</td><td>経験値バー</td></tr>
+    <tr><td>Auto Farm</td><td>自動狩り。ONで自動で敵を狩り続ける。<strong>NPCと話す前は必ずOFF</strong>（ONのままだと戦闘に引き離されて会話・報告が失敗する）</td></tr>
+    <tr><td>Quest tracker</td><td>進行中クエストの進捗表示</td></tr>
+  </table></div>
+  <h3>キャラクター・装備</h3>
+  <div class="shot">スクリーンショット追加予定</div>
+  <div class="card"><table>
+    <tr><td>Equipment</td><td>装備</td></tr>
+    <tr><td>M.Atk</td><td>魔法攻撃力</td></tr>
+    <tr><td>P.Def / M.Def</td><td>物理防御力 / 魔法防御力</td></tr>
+  </table></div>
+  <h3>スキル</h3>
+  <div class="shot">スクリーンショット追加予定</div>
+  <div class="card"><table>
+    <tr><td>Active / Passive</td><td>アクティブスキル（自分で使う）/ パッシブスキル（常時効果）</td></tr>
+    <tr><td>Cast time / Cooldown</td><td>詠唱時間 / 再使用までの時間</td></tr>
+  </table></div>
+  <h3>パッシブツリー</h3>
+  <div class="shot">スクリーンショット追加予定</div>
+  <div class="card"><table>
+    <tr><td>Gravelord</td><td>グレイブロード。ネクロマンサー系の育成ルート</td></tr>
+  </table></div>
+  <h3>クエスト</h3>
+  <div class="shot">スクリーンショット追加予定</div>
+  <div class="card"><table>
+    <tr><td>Quest Log</td><td>クエスト一覧</td></tr>
+    <tr><td>[PARTY]</td><td>パーティ専用クエスト（一人では受けない）</td></tr>
+    <tr><td>Reward</td><td>報酬</td></tr>
+  </table></div>
+  <h3>インベントリ</h3>
+  <div class="shot">スクリーンショット追加予定</div>
+  <div class="card"><table>
+    <tr><td>Inventory</td><td>所持品</td></tr>
+    <tr><td>Forge</td><td>鍛冶（装備の作成）</td></tr>
+    <tr><td>Teleport</td><td>テレポート（街への移動）</td></tr>
+  </table></div>
+</section>
+
+<section id="glossary">
+  <h2>メモ・用語集</h2>
+  <h3>運用メモ</h3>
+  <div class="card">
+    <p>・NPCと会話する前にオートファームをOFFにする（クエスト報告の失敗防止）。<br>
+    ・クロマ・タワーの中ではオートファーム禁止。手動戦闘のみで、敵は距離7〜8まで近づくと襲ってくる。<br>
+    ・ペットは召喚し直すと全快する（ピンチ時の回復手段になる）。<br>
+    ・テレポートは巻物やNPC経由。移動先を間違えると歩き直しになるので注意。</p>
+  </div>
+  <h3>用語集</h3>
+  <div class="card">
+    <table>
+      <tr><th>日本語表記</th><th>作中表記・備考</th></tr>
+      <tr><td>話す島の村</td><td>Talking Island Village。リネージュ2で人間族の開始村だった場所と同じ名前</td></tr>
+      <tr><td>グルーディオ</td><td>作中表記：Gludios。リネ2のグルーディオに相当</td></tr>
+      <tr><td>オーク村</td><td>Orc Village</td></tr>
+      <tr><td>ダークエルフ村</td><td>Dark Elf Village</td></tr>
+      <tr><td>ネクロマンサー</td><td>Necromancer</td></tr>
+      <tr><td>ウィザード</td><td>Wizard</td></tr>
+      <tr><td>ビショップ</td><td>Bishop</td></tr>
+      <tr><td>スペルシンガー</td><td>Spellsinger</td></tr>
+      <tr><td>衛兵隊長バルタス</td><td>転職クエストの報告先（グルーディオ）</td></tr>
+    </table>
+  </div>
+</section>
+
+</main>
+<footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月20日</footer>
+</body>
+</html>
