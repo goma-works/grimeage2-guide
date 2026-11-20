@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grimeage II 攻略ノート</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#0f2733; --line:#22303d;
+    --text:#dbe7ee; --muted:#8fa6b3; --accent:#39d0c4; --accent2:#a678f0;
+    --gold:#e8c268; --red:#e06c6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.75}
+  a{color:var(--accent)}
+  header.hero{position:relative}
+  header.hero img{width:100%;height:340px;object-fit:cover;display:block;filter:brightness(.85)}
+  header.hero .title{position:absolute;left:0;right:0;bottom:0;padding:24px 20px;background:linear-gradient(transparent,rgba(5,8,11,.92))}
+  header.hero h1{margin:0;font-size:2rem;letter-spacing:.04em}
+  header.hero p{margin:4px 0 0;color:var(--muted)}
+  nav{position:sticky;top:0;background:rgba(11,15,20,.94);border-bottom:1px solid var(--line);padding:10px 16px;z-index:10;backdrop-filter:blur(4px)}
+  nav a{margin-right:16px;text-decoration:none;font-size:.92rem;white-space:nowrap}
+  main{max-width:960px;margin:0 auto;padding:8px 16px 64px}
+  section{margin-top:40px}
+  h2{border-left:4px solid var(--accent);padding-left:10px;font-size:1.3rem;margin-bottom:14px}
+  h3{color:var(--accent2);margin:20px 0 8px;font-size:1.05rem}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .status .cell{background:var(--panel2);border-radius:8px;padding:10px 12px}
+  .status .k{color:var(--muted);font-size:.8rem}
+  .status .v{font-size:1.1rem;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;white-space:nowrap}
+  .history{list-style:none;margin:0;padding:0}
+  .history li{padding:7px 10px;border-bottom:1px solid var(--line);display:flex;gap:14px}
+  .history time{color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .btn{display:inline-block;margin-top:14px;padding:10px 22px;border:1px solid var(--accent);border-radius:999px;color:var(--accent);text-decoration:none;font-weight:700}.btn:hover{background:var(--accent);color:#0d1117}
+    .tag{display:inline-block;background:#1d3a34;color:var(--accent);border-radius:20px;padding:0 10px;font-size:.78rem;margin-left:8px}
+  .tag.party{background:#3a2b1d;color:var(--gold)}
+  .note{color:var(--muted);font-size:.9rem}
+  .shot{border:1px dashed var(--line);border-radius:8px;padding:18px;text-align:center;color:var(--muted);margin:10px 0}
+  footer{color:var(--muted);text-align:center;padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<main>
+<section id="history">
+  <h2>更新履歴（全件）</h2>
+  <p class="note"><a href="index.html">&larr; 攻略ノートに戻る</a></p>
+  <ul class="history">
+    <li><time>2026-11-20 20:02</time><span>「狩場データ」の記録を開始。狩場ごとの効率（経験値・ゴールドの時給）をセッション単位で計測していく</span></li>
+    <li><time>2026-11-20 19:10</time><span>画面ガイドにテレポートとブラックマーケット（闇市）を追加。武器強化スクロールの仕様も掲載</span></li>
+    <li><time>2026-11-20 19:04</time><span>メイン画面をハンターズビレッジの街並みの実写に、ワールドマップを大陸全体図に差し替え。領地ごとのレベル帯を掲載</span></li>
+    <li><time>2026-11-20 19:02</time><span>スペルブック下部の実画面を追加し、パッシブ5種とTransfer Painの正確な効果数値をスキル表に反映</span></li>
+    <li><time>2026-11-20 18:54</time><span>画面ガイドにキャラクター・装備画面の注釈つきスクリーンショットを追加し、全7画面が揃った。ステータス実数（INT 41、M.ATK 171など）も掲載</span></li>
+    <li><time>2026-11-20 18:46</time><span>画面ガイドにクエスト画面の注釈つきスクリーンショットを追加。「見習いの儀式」と「深淵の怒り」の内容をクエスト画面の文面で更新</span></li>
+    <li><time>2026-11-20 18:45</time><span>画面ガイドにパッシブツリーの注釈つきスクリーンショットを追加</span></li>
+    <li><time>2026-11-20 18:41</time><span>画面ガイドにスキル画面（スペルブック）の注釈つきスクリーンショットを追加。スキル表の消費MP・詠唱・CDを実画面の数値に更新</span></li>
+    <li><time>2026-11-20 18:39</time><span>画面ガイドにインベントリの注釈つきスクリーンショットを追加。所持金が1,102,852ゴールドに到達</span></li>
+    <li><time>2026-11-20 18:32</time><span>画面ガイドにワールドマップ（クロマ・タワーF1）の注釈つきスクリーンショットを追加。F1に部屋4（26-27）・部屋5（28-29）があることが判明</span></li>
+    <li><time>2026-11-20 18:25</time><span>画面ガイドにメイン画面の実物スクリーンショット（番号注釈つき）を追加</span></li>
+    <li><time>2026-11-20 16:58</time><span>Kroma Keeperから金色の出現ヒントを得た（死者の中から現れる）。部屋3の方が経験値効率が良いため主戦場を変更</span></li>
+    <li><time>2026-11-20 16:45</time><span>Lv.28に到達（Gravelord 27/53、所持金890,126）</span></li>
+    <li><time>2026-11-20 15:42</time><span>「族長の贈り物」完了（ケーキ配達とメダリオン返却、報酬ゴールド+100,200）</span></li>
+    <li><time>2026-11-20 15:27</time><span>スキル5種を習得（合計260,000ゴールド）：毒の呪い Rank 2、Body to Mind、Magic Mastery Rank 2、Anti Magic Rank 3、Robe Mastery Rank 3</span></li>
+    <li><time>2026-11-20 15:16</time><span>「黄金の狩り」のクエスト文を確認：Gildedはクリーンキルから生まれ、短時間で消える</span></li>
+    <li><time>2026-11-20 15:29</time><span>アクセスカウンター（hits.shバッジ）を設置</span></li>
+    <li><time>2026-11-20 13:53</time><span>パッシブ3点をGravelordへ配分（25/53）。連勝8到達後、遠距離型デッドアイの攻撃で連勝リセット。以後の対策は距離40以上</span></li>
+    <li><time>2026-11-20 13:44</time><span>Lv.26到達。黄金の狩りは1/5と判明。連勝10でも金色は出現せず、カイト戦術を確立</span></li>
+    <li><time>2026-11-20 12:56</time><span>コーデックス日本語訳を公式デザインに改装（公式の肖像画・アイコン55点、ガイド5本の全文翻訳を追加）</span></li>
+    <li><time>2026-11-20 12:40</time><span>コーデックス日本語訳へのリンクをトップとナビに追加（あわせて未反映だった更新履歴を補完）</span></li>
+    <li><time>2026-11-20 12:35</time><span>コーデックス日本語訳にクラス一覧（5種族48クラス）とネクロマンサー詳細（固有スキル含む14種）を追加</span></li>
+    <li><time>2026-11-20 12:32</time><span>「コーデックス日本語訳」ページを新設。公式サイトのコーデックスを巡回して全文翻訳を載せていく</span></li>
+    <li><time>2026-11-20 12:29</time><span>メモに「日本語設定なし・ブラウザ翻訳も効かない」件を追記</span></li>
+    <li><time>2026-11-20 12:27</time><span>公式サイト（grimeage2.com）への誘導リンクをトップに追加</span></li>
+    <li><time>2026-11-20 12:19</time><span>用語方針を変更：原作と1文字違いの地名は意図的な別名とみて、そのまま表記（クロマ・タワー、グルーディオス）</span></li>
+    <li><time>2026-11-20 11:41</time><span>黄金の狩り：連勝3まで再構築（塔を出ると連勝が消えることを確認）</span></li>
+    <li><time>2026-11-20 11:31</time><span>「運命の糸」が完了済みであることをクエストログで確認</span></li>
+    <li><time>2026-11-20 11:27</time><span>ネクロマンサーのスキルを一括習得（合計423,000ゴールド）。Death Spike、Life Drain など7種＋パッシブ4種</span></li>
+    <li><time>2026-11-20 11:21</time><span>黄金の狩りの出現条件が判明：本人が一撃も受けない「完璧な連勝」が必要（ペットの被弾は可）</span></li>
+    <li><time>2026-11-20 11:15</time><span>パッシブ Mire Grip を取得（Gravelord 22/53）。Lv.23・ゴールド437,201で一旦停止</span></li>
+    <li><time>2026-11-20 11:10</time><span>Lv.23に上昇</span></li>
+    <li><time>2026-11-20 10:52</time><span>クエスト「黄金の狩り」を受注（進行中）</span></li>
+    <li><time>2026-11-20 10:51</time><span>クエスト「塔の呼び声」完了。Lv.22に上昇</span></li>
+    <li><time>2026-11-20 10:24</time><span>ネクロマンサーへの転職完了。召喚スキルを習得</span></li>
+    <li><time>2026-11-20 09:57</time><span>Lv.21。「昇天の試練」の報告で転職選択に到達</span></li>
+    <li><time>2026-11-20 09:43</time><span>Mithril Hood を鍛造（80,000ゴールド）して装備。「未来を鍛えよ」完了</span></li>
+    <li><time>2026-11-20 09:35</time><span>Lv.20到達（コロッセウムとブラックマーケット解放）</span></li>
+    <li><time>2026-11-20 08:35</time><span>「海岸の試練」完了、Lv.19</span></li>
+    <li><time>2026-11-20 08:19</time><span>「戦士の鋼」完了、Lv.18。Crystal-Woven Staff を装備</span></li>
+    <li><time>2026-11-20 07:46</time><span>「グルームへ」完了、Lv.15</span></li>
+    <li><time>2026-11-20 07:22</time><span>シルク装備一式を装着（最大MP 800→992）</span></li>
+    <li><time>2026-11-19 23:30</time><span>Lv.13到達。釣り系クエスト3件完了</span></li>
+    <li><time>2026-11-19 23:14</time><span>キャラクター「muse」（Human / Wizard）で試走開始、Lv.1</span></li>
+  </ul>
+  <p class="note"><a href="index.html">&larr; 攻略ノートに戻る</a></p>
+</section>
+</main>
+<footer>Grimeage II 攻略ノート — 更新履歴</footer>
+</body>
+</html>
