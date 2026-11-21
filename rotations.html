@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ネクロマンサーの状況別スキル回し | Grimeage II 攻略ノート</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#0f2733; --line:#22303d;
+    --text:#dbe7ee; --muted:#8fa6b3; --accent:#39d0c4; --accent2:#a678f0;
+    --gold:#e8c268; --red:#e06c6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.75}
+  a{color:var(--accent)}
+  nav{position:sticky;top:0;background:rgba(11,15,20,.94);border-bottom:1px solid var(--line);padding:10px 16px;z-index:10;backdrop-filter:blur(4px)}
+  nav a{margin-right:16px;text-decoration:none;font-size:.92rem;white-space:nowrap}
+  main{max-width:960px;margin:0 auto;padding:8px 16px 64px}
+  section{margin-top:40px}
+  h2{border-left:4px solid var(--accent);padding-left:10px;font-size:1.3rem;margin-bottom:14px}
+  h3{color:var(--accent2);margin:20px 0 8px;font-size:1.05rem}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .status .cell{background:var(--panel2);border-radius:8px;padding:10px 12px}
+  .status .k{color:var(--muted);font-size:.8rem}
+  .status .v{font-size:1.1rem;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;white-space:nowrap}
+  .note{color:var(--muted);font-size:.9rem}
+  footer{color:var(--muted);text-align:center;padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">&larr; 攻略ノート トップ</a><a href="#basic">基本形</a><a href="#direct">本体が直接狙われる狩場</a><a href="#pain">被ダメが痛い場</a><a href="#tower">タワー（手動）</a><a href="#fa">FAの注意点</a><a href="#mp">MP管理</a><a href="#aggro">ヘイト</a><a href="crafting.html">制作</a><a href="blog.html">日誌</a><a href="codex.html">コーデックス日本語訳</a>
+</nav>
+<main>
+
+<section id="top">
+  <h2>ネクロマンサーの状況別スキル回し</h2>
+  <div class="card">
+    <p>ネクロマンサー「muse」のオートファーム用スキル回転（ローテーション）を、狩場の状況別にまとめたページ。2026年11月21日に実測と試行錯誤を重ねて確定した運用で、確定形は 2026-11-22 00:10 のもの。数値はすべて実機確認ベースです。</p>
+    <p class="note">前提：オートファームのスキル回転は、上から順に「条件を満たし、クールダウンが明けたスキル」を詠唱し、空きを主力スキルで埋める仕組み。並び順と条件設定で効率が大きく変わります。</p>
+  </div>
+</section>
+
+<section id="basic">
+  <h2>基本形（安全な野外・ペットがタンクする場）</h2>
+  <div class="card">
+    <table>
+      <tr><th>順番</th><th>スキル</th><th>発動条件</th><th>役目</th></tr>
+      <tr><td>1</td><td>Fear（恐怖）</td><td>無条件（CD 10秒ごとに）</td><td>敵を3.5秒逃走させる群衆制御。殴られる回数そのものを減らす</td></tr>
+      <tr><td>2</td><td>Life Drain（ライフ・ドレイン）</td><td>自分の HP が 90% 未満</td><td>与ダメージの40%を回復。Body to Mind が消費する HP を相殺する</td></tr>
+      <tr><td>3</td><td>Body to Mind（体から心へ）</td><td>HP 70% 超 かつ MP 80% 未満</td><td>HP 300 → MP 150 の変換。MP 切れによる座り休憩を防ぐ</td></tr>
+      <tr><td>4</td><td>Death Spike（デス・スパイク）</td><td>無条件</td><td>主力。魔法力190%の闇ダメージで残りを埋める</td></tr>
+    </table>
+    <p>・<strong>なぜこの並びか</strong>：Fear で被弾を減らし、Life Drain で Body to Mind のコスト（1回 HP 300）を打ち消し、Body to Mind で MP を維持する。3つが噛み合うと、HP・MP どちらの休憩も消える。<br>
+    ・ペット（Corrupted Man）が敵を引き受ける通常の野外ではこの基本形で安定する。拠点の Death Pass West では XP 約44%/時を実測。<br>
+    ・<strong>試して不採用になったもの</strong>：Curse of Nulling（魔法防御 −23%）を回転に入れると、Death Spike のダメージは約+6%伸びたものの、詠唱の手数が増えて XP/時が約30%低下した（2026-11-21 実測）。雑魚狩りではデバフを入れる暇に骨（Death Spike）を撃った方が速い。</p>
+  </div>
+</section>
+
+<section id="direct">
+  <h2>本体が直接狙われる狩場（Ent・Dragon Valley など）</h2>
+  <div class="card">
+    <p>・Twilight Grove の Twilight Ent や Dragon Valley Entrance の敵は、ペットではなく <strong>muse 本人を直接狙う</strong>（戦闘表示が「Attacking: You」になり、ペットは無傷のまま）。<br>
+    ・このタイプの狩場では <strong>Life Drain が生命線</strong>。自己回復のない構成だと HP が徐々に削れ、自動休憩ライン（HP 60%）を割って座り込む（Twilight Ent 狩りで実測）。<br>
+    ・Dragon Valley Entrance では1戦闘で HP を 200〜500 削られる。基本形のまま戦えるが、HP の右肩下がりが見えたら無理をせず狩場を変える判断が要る。</p>
+  </div>
+</section>
+
+<section id="pain">
+  <h2>被ダメが痛い場（Transfer Pain の使いどころ）</h2>
+  <div class="card">
+    <p>・<strong>Transfer Pain Rank 2</strong>：受けたダメージの20%を召喚物へ転移するトグル。維持コストは毎秒 5MP。<br>
+    ・<strong>扱いの注意（すべて実測）</strong>：ゾーン移動とオートファーム開始で OFF にリセットされる。ペットの再召喚でも切れる可能性が高く、再開・移動・再召喚なしでも理由なく自然に OFF になることがある（ペット瀕死のタイミングと重なる例が複数回観測された）。<br>
+    ・オートファームの戦闘中はスキルボタンのクリックが無効化されるため、確実な入れ直し手順は「<strong>ファーム一時停止 → ON → アイコンが光ったか確認 → 再開 → 再確認</strong>」。<br>
+    ・被ダメージが痛い場所（Dragonfang Camp、クロマ・タワー）では、定期チェックのたびに状態を確認して入れ直す運用にする。逆に被ダメージが軽い場所（Death Pass West）では、維持コストだけが無駄になるため <strong>OFF が正解</strong>。</p>
+  </div>
+</section>
+
+<section id="tower">
+  <h2>タワー・ダンジョン（手動ゾーン）</h2>
+  <div class="card">
+    <p>・クロマ・タワー内は <strong>オートファーム禁止</strong>（ゾーン仕様）。戦闘はすべて手動になる。<br>
+    ・タワー内ではペットは自動で交戦しない。毎回「<strong>敵をクリック → Attack</strong>」で指示が要り、スタンスの持続表示もない（野外の自動交戦とは別挙動）。<br>
+    ・ペットの HP が <strong>7割を切ったら再召喚</strong>（詠唱5秒・MP約287で全快）。ペットへの Heal は1回 60〜90HP しか回復せず、再召喚に遠く及ばない。ペットが死んだら即再召喚。<br>
+    ・<strong>Kroma Deadeye への警告</strong>：こちらが「Ignored（無視）」設定にしていても、Deadeye は自分から近づいて撃ってくる（Ignored はこちらのターゲット選択を外すだけで、向こうの敵対化は防げない。敵対範囲も長い）。2026年11月21日には数秒で 886 ダメージを受けて死亡した。射程 40 以上を保ち、Deadeye 系には絶対に加勢しないこと。<br>
+    ・タワーの部屋の通常ドロップはアダマンチンオア（Adamantine Ore）22.5% とストーンオブピュリティ（Stone of Purity）10% で、ダーククリスタルは通常モンスターからは落ちない（入手源は Gilded とレイドボス Malgrath）。</p>
+  </div>
+</section>
+
+<section id="fa">
+  <h2>FA（ファーストアタック）の注意点</h2>
+  <div class="card">
+    <p>・オートファーム設定の先頭にある「Basic attack（FA）」枠に Life Drain などの遠距離魔法を設定しても、<strong>距離を取って戦う運用では発動しない</strong>（実測：多数の戦闘で一度もクールダウン表示が出なかった）。<br>
+    ・あの枠は近接の通常攻撃用の仕組みで、「準備できたスキルが常に先に行く（Checked first · skills that are ready still go before it）」ため、ローテーション側のスキルが優先されてしまう。<br>
+    ・遠距離魔法を確実に使わせたい場合は、FA ではなく <strong>ローテーションの中に入れる</strong>こと。Life Drain はローテーション内でのみ機能する。</p>
+  </div>
+</section>
+
+<section id="mp">
+  <h2>MP 管理（Body to Mind の置き場所）</h2>
+  <div class="card">
+    <p>・Body to Mind は「ローテーションのどこに置くか」で働きが全く変わる。Death Spike より下に置いていた時期は、骨が常に優先されて一度も発動せず、MP 切れの座り休憩が 2〜3 分に1回（45〜60秒）発生していた。<br>
+    ・骨より上に移し、条件を <strong>HP 70% 超・MP 80% 未満</strong> に調整したところ、MP 休憩は実測で消えた（46分間休憩ゼロを確認）。HP 側の下限条件は、HP が低いときに変換で自滅しないための安全弁。<br>
+    ・MP の節約そのものが目的ではなく、あくまで「休憩で止まらない＝XP/時を落とさない」ことが基準。</p>
+  </div>
+</section>
+
+<section id="aggro">
+  <h2>ヘイト（アグロ）の基本</h2>
+  <div class="card">
+    <p>・このゲームのヘイト（敵のターゲット決定）は、ダメージ量ではなく <strong>距離（接近）が引き金</strong>（2026-11-20 実測）。射程 40〜47 を保てば、ペットと戦っている敵は muse が呪文を撃ってもペットに残る。距離 17〜21 まで詰めると、呪文が当たる前に muse へ振り向く。<br>
+    ・安全な型は「<strong>ペットが交戦 → 敵の HP が8割以下になったら、本体は距離 40 以上を保って Death Spike で加勢</strong>」。本体に一撃で大ダメージを与えた実績のある敵種（現時点では Kroma Deadeye 系のみ）は、この加勢の対象からも外す。<br>
+    ・敵が詰めてきたら、少しだけ下がって距離 40 前後を取り直す。大きく逃げると部屋や狩場から外れてしまう。</p>
+  </div>
+</section>
+
+</main>
+<footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月22日</footer>
+</body>
+</html>
