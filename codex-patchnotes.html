@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>パッチノート 日本語訳 | Grimeage II 攻略ノート</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#241a2e;--panel:#3d3242;--panel2:#352b3d;--line:#5a4a6b;--gold:#d8b25c;--text:#ece5f0;--muted:#b8a9c4;--red:#e06c5c;--redbg:#4a2320;--blue:#6ca8e0;--bluebg:#1f3049}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP",sans-serif;line-height:1.7}
+a{color:var(--gold)}
+header.top{max-width:1100px;margin:0 auto;padding:26px 20px 4px}
+.logo{font-family:Cinzel,serif;font-size:22px;color:var(--gold);letter-spacing:.08em}
+.top nav{margin-top:8px;font-size:14px}
+.top nav a{margin-right:16px;text-decoration:none}
+.top nav a:hover{text-decoration:underline}
+main{max-width:1100px;margin:0 auto;padding:10px 20px 48px}
+h1{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:30px;text-align:center;margin:18px 0 2px}
+.sub{text-align:center;color:var(--muted);margin:0 0 22px}
+h2{font-family:Cinzel,serif;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-size:21px;margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3.race{font-family:Cinzel,serif;color:var(--gold);font-size:18px;margin:22px 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center;transition:border-color .15s}
+.card:hover{border-color:var(--gold)}
+.card .icon{font-size:34px}
+.card .t{font-family:Cinzel,serif;color:var(--gold);font-size:16px;margin:6px 0 4px}
+.card .d{color:var(--muted);font-size:13px}
+.card .st{font-size:12px;margin-top:8px;color:var(--text)}
+.note{color:var(--muted);font-size:13px}
+footer{max-width:1100px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:12.5px;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0}
+th,td{border-top:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{color:var(--gold);background:var(--panel2);font-weight:600}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 18px;margin:16px 0;font-size:13.5px}
+.toc .tt{font-family:Cinzel,serif;color:var(--gold);letter-spacing:.05em;display:block;margin-bottom:2px}
+.toc a{margin-right:12px;text-decoration:none;line-height:2.1;white-space:nowrap}
+.toc a:hover{text-decoration:underline}
+.toc .grp{display:block;margin-top:6px;color:var(--muted);font-size:12.5px}
+.entry{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+.entry h3{margin:0 0 6px;font-size:17px;color:var(--gold)}
+.entry table{font-size:12.5px;margin:6px 0}
+.en{color:var(--muted);font-size:13px;font-style:italic;margin:8px 0 2px}
+.jp{margin:2px 0 6px}
+h2,h3{scroll-margin-top:14px}
+main ul{margin:6px 0 6px 18px;padding:0}
+main li{margin:4px 0}
+hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+.guide{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:16px 0}
+.guide h2{border:none;margin-top:0}
+.guide h3{color:var(--gold);font-size:16px;margin:18px 0 6px}
+.guide table{font-size:14px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">📖 GRIMEAGE CODEX 日本語訳</div>
+  <nav><a href="index.html">← 攻略ノート トップ</a><a href="codex.html">コーデックス目次</a><a href="codex-skills.html">スキルDB</a><a href="codex-classes.html">クラス詳細</a><a href="codex-monsters.html">モンスター</a><a href="codex-bosses.html">ボス</a><a href="codex-items.html">アイテム</a><a href="codex-fortresses.html">要塞</a><a href="codex-patchnotes.html">パッチノート</a><a href="codex-guides.html">ガイド</a><a href="https://grimeage2.com/codex" target="_blank" rel="noopener">公式コーデックス</a></nav>
+</header>
+<main>
+  <h1>Patch Notes ― パッチノート</h1>
+  <p class="sub">公式パッチノート全44件（2026-10-24〜2026-11-16）の日本語訳。新しい順。</p>
+<div class="toc"><span class="tt">目次 ― パッチノート（日付別）</span><a href="#n-2026-11-16">2026-11-16</a><a href="#n-2026-11-15">2026-11-15</a><a href="#n-2026-11-14">2026-11-14</a><a href="#n-2026-11-13">2026-11-13</a><a href="#n-2026-11-12">2026-11-12</a><a href="#n-2026-11-11">2026-11-11</a><a href="#n-2026-11-08">2026-11-08</a><a href="#n-2026-11-07">2026-11-07</a><a href="#n-2026-11-06">2026-11-06</a><a href="#n-2026-11-05">2026-11-05</a><a href="#n-2026-11-02">2026-11-02</a><a href="#n-2026-11-01">2026-11-01</a><a href="#n-2026-10-31">2026-10-31</a><a href="#n-2026-10-30">2026-10-30</a><a href="#n-2026-10-29">2026-10-29</a><a href="#n-2026-10-28">2026-10-28</a><a href="#n-2026-10-27">2026-10-27</a><a href="#n-2026-10-26">2026-10-26</a><a href="#n-2026-10-25">2026-10-25</a><a href="#n-2026-10-24">2026-10-24</a></div>
+<ul><li>翻訳日：2026-11-22（JST）</li><li>出典：公式API https://grimeage2.com/api/codex/patch-notes （公式ページ：https://grimeage2.com/codex/patch-notes）</li><li>件数：全44件（2026-10-24〜2026-11-16、新しい順）</li><li>凡例：1行だけの変更は種別ラベル付きで記載する（[feat]＝新機能、[fix]＝修正、[balance]＝バランス調整）。数値・固有名詞は原文どおり保持した。</li></ul>
+<hr>
+<h2 id="n-2026-11-16">2026-11-16</h2>
+<ul><li>[fix] ゲームに入ってもキャラクター選択画面に戻されなくなった。サーバー再起動後、街へ送られた後、死亡中の場合も含む。</li></ul>
+<h2 id="n-2026-11-15">2026-11-15</h2>
+<h3 id="s1">パフォーマンスの改善</h3>
+<ul><li>Talking Island（話す島）の地面と水の描画コストが全デバイスで大幅に下がった。特に歩行中と水辺で効果が大きい。</li><li>恩恵が最も大きいのは低性能なスマートフォンで、歩行中のフレームレートが最大で約3倍になる。</li><li>低性能なスマートフォンは、より軽い初期設定で開始するようになった：エフェクト軽減、地面の詳細軽減、描画解像度の低下。保存済みの設定がある場合はそちらが優先される。</li><li>30秒間10 fps未満の状態が続いたスマートフォンは、そのセッションに限り低グラフィックに切り替わり、「タップで元に戻す（Tap to undo）」のトーストが表示される。</li><li>混雑した街でのプレイヤー・NPC・モンスターの描画が全デバイスで高速化した。</li></ul>
+<ul><li>[fix] 低性能デバイスで歩行してもラバーバンド（位置の巻き戻し）が起きなくなった。</li><li>[fix] ワールドの構築が終わる前にローディング画面が解除されなくなった。</li></ul>
+<h2 id="n-2026-11-15-2">2026-11-15</h2>
+<h3 id="s2">パーティポータルの戦利品を修正</h3>
+<ul><li>Goblin Shrines（ゴブリンの祠）、Goblin Treasury（ゴブリンの宝物庫）のゴブリン、秘密の部屋のボス、最終ポータルボスが、デュオおよびグループで正しい数量の報酬を与えるようになった。</li></ul>
+<h2 id="n-2026-11-15-3">2026-11-15</h2>
+<h3 id="s3">ダンジョンボスのアビリティを調整</h3>
+<ul><li>Aurelion の Falling Choir（落下する聖歌隊）の炎は60秒で消えるようになった。同じ場所に再詠唱すると持続時間が更新される。</li><li>Aurelion は、選んだターゲットが30ユニット以内にいるときだけ Heaven's Edge（天の刃）を詠唱する。2回目の振りも含む。</li><li>Rootmaw の Strangling Grasp（締め付ける掌握）に2秒の詠唱時間が付き、警告範囲が広くなった。</li></ul>
+<h2 id="n-2026-11-14">2026-11-14</h2>
+<h3 id="s4">ワールドの読み込みを改善</h3>
+<ul><li>ローディング画面は、8秒経過で未完成のシーンを見せるのではなく、地形と視界内のキャラクターの準備が整うまで待つようになった。</li><li>まだ読み込み中のもの（残りのキャラクターモデルを含む）が表示される。読み込みが遅い場合は、リロードを促すのではなく読み込みが続いていることが説明される。</li><li>読み込み中の再接続でも、未完成のワールドは覆われたままになる。</li><li>チュートリアルは読み込み完了まで待つ。</li></ul>
+<h2 id="n-2026-11-14-2">2026-11-14</h2>
+<h3 id="s5">要塞（Fortress）を再設計</h3>
+<ul><li>荒廃した塔、攻城場（siege yards）、4方向から中庭へ至るアプローチを備えた、新しい広い戦場で戦う。</li><li>最大のライバルクランより多くの生存クランメンバーで中庭を保持することで占領する。同数では進行が止まる。全員が移動・戦闘できる。</li><li>1人のリードで5分で占領、妨害なしの5人では2分で占領。防御側も同じルールに従う。</li><li>メンバーがいなくなったクランは15秒間進行度を保持し、その後は誰かが戻るまで1秒あたり1%ずつ失う。</li><li>各クランの支配率と生存プレイヤー数を、PCとモバイルの両方で追跡できる。</li></ul>
+<h2 id="n-2026-11-14-3">2026-11-14</h2>
+<ul><li>[fix] 移動時のラバーバンドの問題を修正した。</li></ul>
+<h2 id="n-2026-11-14-4">2026-11-14</h2>
+<h3 id="s6">発見（discovery）の報酬を再設計</h3>
+<ul><li>Sealed Treasure（封印された宝）は戦利品ロール（抽選回数）が増えた。</li><li>Ancient Shrines（古代の祠）は戦利品ロールが少し増えた。</li><li>祠の「100キル素材の祝福（material blessing）」を削除した。近くの「1時間 +5% XP」バフは残る。</li><li>祠の修復は45秒から10秒になった。守護者との戦闘時間は別にかかる。</li></ul>
+<h2 id="n-2026-11-13">2026-11-13</h2>
+<h3 id="s7">新しいキャラクターの体</h3>
+<ul><li>ヒューマン、オーク、エルフ、ダークエルフ、ドワーフの全員が、その種族の新しい3Dボディを着用するようになった。装備した防具はすべてその上に描画される。</li><li>女性キャラクターは、自身の体が用意できるまで、その種族の男性の体の「ひげなしの傑作」を着用する。</li><li>一部のアニメーションを作り直した。</li></ul>
+<ul><li>[feat] 装備（Equipment）パネルに「ヘルメットを隠す（Hide helmet）」トグルを追加。ヘルメットの能力値は維持されるが、見た目では誰にも見えなくなる。</li><li>[fix] 物理スキルも呪文と同じクールダウン短縮スケーリングに従うようになり、想定より速く再使用可能になることがなくなった。</li><li>[fix] AoEや追加ヒットで倒されたモンスターが、HPを残したまま立ったままになることがなくなった。</li></ul>
+<h2 id="n-2026-11-13-2">2026-11-13</h2>
+<ul><li>[fix] コーデックスに、Slaughter Pens（屠殺場）における Fracture Sigil（破砕の印）のドロップ率0.02%が掲載されるようになった。</li></ul>
+<h2 id="n-2026-11-13-3">2026-11-13</h2>
+<h3 id="s8">チャンピオンを公開型の「発見」に置き換え</h3>
+<ul><li>狩りの最中に Sealed Treasure（封印された宝）、Ancient Shrines（古代の祠）、Monster Nests（モンスターの巣）を発見できる。それぞれ固有のエンカウントと効果を持つ。</li><li>発見をクリックすると歩いて近づいて開始でき、他の冒険者と合流すれば戦利品とXPを共有できる。オートファームは発見を放置する。</li><li>Ancient Shrines は貢献者に素材の祝福を与え、対象となる100キルの間持続する（ログアウトをまたいでも持続）。</li><li>Ancient Shrine を完了すると、60ユニット以内の全員に1時間 +5% XP が付く。別の祠で持続時間が更新される。</li><li>Monster Nests は大きなボーナスXPを与える。</li></ul>
+<h2 id="n-2026-11-12">2026-11-12</h2>
+<h3 id="s9">召喚パッシブを修正</h3>
+<ul><li>Pack Leader（群れの長）は Binding（束縛）+1 を与え、レベル61から4種の異なるファントムを使えるようになる。</li><li>Overkill（オーバーキル）は近くの待機中の敵にも届き、ペット、キュービック、継続ダメージによるキルでも機能する（連鎖はしない）。</li><li>Last Rites（終油の秘跡）は召喚獣が死ぬと爆発し、4ユニット以内に最大HPの30%のダメージを与える。待機中の敵にも当たる。</li></ul>
+<h3 id="talking-island">Talking Island（話す島）に訓練用ダミーを追加</h3>
+<ul><li>ギルドホールにレベル10、20、30、40、50、60、70、75のターゲットが8体。</li><li>ダミーには3Dモデルと2Dポートレートがあり、ノックバックと引き寄せから保護されている。</li></ul>
+<ul><li>[feat] /mark がマクロのターゲット修飾子と条件に対応した。</li></ul>
+<h2 id="n-2026-11-11">2026-11-11</h2>
+<h3 id="s11">パッシブツリーを再設計</h3>
+<ul><li>ホイールは新しいパッシブツリーに置き換えられた：キャンバスをパン・ズームし、マスタリーを選び、ルートを計画し、確定前に合計値を確認できる。</li><li>パッシブツリーはリセットされた：ポイントを振り直すこと。リスペックは無料。</li><li>100を超える新しいルールノード：キル、クリティカル、低HP、戦闘外で発動するボーナス、DoTの拡散、オーバーキル、反射、シールド、召喚とオーラのライン、休息とポーションの強化。</li><li>ビルドを決定づけるノード（Glass Cannon、Berserker's Pact、Split Stroke、Steady Hand、Unbowed など）：大きな利点と、戦闘のたびに感じる欠点を併せ持つ。</li><li>範囲ラインは各体の中心ではなく端から測る。</li><li>跳弾・飛散・拡散（Ricochet、Cleaving Swing、Contagion など）は、味方の誰かがすでに戦っているモンスターにしか当たらないため、待機中のモブを引くことは決してない。</li><li>Brittle Edge の2撃目、Double Tap、Shockwave のような追加ヒットは、ヒットの下に独自の数値を表示し、戦闘ログにも1行表示される。</li><li>バフバー上のツリー効果はノードのアイコンとテキストを表示する。Stubborn Life のような条件付き再生は、発動中に表示される。</li><li>ノードカードは繰り返される能力値を1行に合算する。例：Oak and Iron は「+12.5% Max HP」と表示される。</li><li>計画全体をステージングし、Apply（適用）か Undo（取り消し）ができる。Reset all（すべてリセット）で一度に全額返金される。</li><li>全クラス向けの推奨ルート：コンパクトなルートカード、Follow（追従）モードで次のステップをステージングし、ステップやマイルストーンをタップするとツリー上に表示される。</li><li>空のソケットは将来の追加が入る場所を示す。</li><li>トラックパッドのスクロールでツリーが滑らかにズームし、ジャンプしなくなった。</li><li>スマートフォンでは、ノードをタップでステージング、長押しで内容を読む。</li><li>PCではパネルのホットキー（C、I など）がツリーの上に開き、Escapeで先にパネルが閉じる。</li><li>オリンピアード：セットアップをロックする際に、どの保存ツリーで戦うか選べる。</li></ul>
+<h3 id="s12">バフを再設計</h3>
+<ul><li>Surge（サージ）は、その持続時間＋15秒の間、その能力値の Surge スロットをロックする。</li><li>祝福（Blessings）は Prophet（プロフェット）と Warcryer（ウォークライヤー）からのみ得られるようになった。クランホールの祝福、Clan Buffer（クランバッファー）、Colosseum（コロッセウム）のバッファー、Kroma Tower（クロマ・タワー）のキル祝福は廃止された。</li><li>Clan Unity（クランの結束）、歌、踊り、キュービック、ワールドバフは残る。</li></ul>
+<h3 id="s13">速度と能力値を再設計</h3>
+<ul><li>スローは歩行速度にも歩行の途中で届くようになった。</li><li>Dodge（回避）は25%まで全額カウントされ、上限は70%。Block（ブロック）は40%まで全額カウントされ、上限は80%。</li><li>クリティカル率は上限50%。</li><li>キャラクターシートとオリンピアードのビルドカードにはツリー適用後のクリティカル率が表示される：Brittle Edge は÷3、Hair Trigger は×2、Steady Hand は0%。</li><li>シートには Berserker Stance のブロック率半減が表示される（戦闘中は常時適用されていた）。</li><li>キャラクターシートには、ボーナスが装備の上に何を加えるかが表示される。例：P.Atk 319 (+66)。装備・レベル・ツリー変更の瞬間に更新される。</li></ul>
+<h3 id="s14">バーストスキルを再設計</h3>
+<ul><li>単発のヒットがローブ職のHPの約3分の1を超えることは平均してなくなった。ダメージは短いクールダウン側へ移された。</li><li>Aimed Shot：詠唱2.5秒、7秒ごとに使用可能（以前は30秒）。ヒットを受けても中断しない。+10% P.Atk は4秒持続。</li><li>Power Shot は2.5秒ごとに発射、引き絞り0.5秒で、ヒットは弱くなった。</li><li>Double Shot：引き絞り1秒、3秒ごとに使用可能。2本の矢はそれぞれ80% Power。</li><li>Power Smash は P.Def の40%を無視し、6秒ごとに使用可能。</li><li>クールダウン短縮・ヒット弱体化：Annihilate 13秒（以前30秒）、Fatal Strike 34秒（以前40秒）、Overcommit 40秒（以前60秒）、Tribunal 14秒（以前20秒）、First Blood 12秒（以前20秒）、Cutting Blow 10秒（以前12秒）、Backstab 10秒（以前12秒）、Armor Crush 10秒（以前15秒）。</li><li>Killing Blow と Deadly Blow はオーバーヒットが増え、その分弱くなった。</li><li>Lifesiphon は全ランクで同じ割合のダメージを与え、毒として扱われる。</li><li>Spike は、ワールドでもオリンピアードでも、物理ヒットが当たるたびにスタンさせる。</li></ul>
+<h3 id="s15">ボスの仕組みを再設計</h3>
+<ul><li>最大HPの割合を奪っていた攻撃は、モンスターのレベル基準のダメージになり、防具で軽減される：HPと防御が多いほど守られる。</li><li>Gravitic Yoke（重力の軛）の中に単独で立つことは常に致命的。</li><li>Khorvash の Crushing Sweep は攻撃速度を30%低下させる。Stonebound の Petrifying Grasp は移動を40%低下させる。</li></ul>
+<ul><li>[fix] First Blood、Marked Weakness、Nerve Strike は、プレイヤーのヒットを受けた後10秒間（オリンピアードでは最初のヒット前）使用を拒否され、スキルバーにもそれが表示される。</li><li>[fix] タンクが Aggression（アグレッション）を2つ持つことがなくなった。初心者用 Shield Bash は Dazing Bash になった。</li><li>[fix] Unspeakable Truth はツールチップが約束するランクごとに1〜1.5%を与えるようになった。Delver's Resolve は +10% M.Atk を与える。</li></ul>
+<h3 id="vorzhan-the-crimson-oracle">Vorzhan, the Crimson Oracle（真紅の神託者ヴォルザン）を追加</h3>
+<ul><li>Three Warriors Rock（3戦士の岩）に登場する新しいレベル75ボス。重力の岩塊（gravity boulders）、Flame Pillars（炎の柱）、そして破壊的な「持ち上げて叩きつける」攻撃を持つ。</li><li>離陸前に Gravity Anchor（重力のアンカー）に到達すると、持ち上げられて叩きつけられるのを回避できる。</li><li>Crimson Pursuers（真紅の追跡者）は1人のプレイヤーに固着し、時間とともに速くなる。Flame Pillars や落下する岩塊に誘い込むと破壊できる。</li></ul>
+<ul><li>[balance] Fireball、Water Arrow、Hurricane、Stoneshatter は 200% Power を共有するようになった。</li></ul>
+<h3 id="fate-amulets">Fate Amulets（運命のアミュレット）を再設計</h3>
+<ul><li>ゴールドと Weaving Sigils（織りの印）で +16 までエンチャントできる。耐久は Mending Threads（修繕の糸）で修理する。</li><li>ボーナスは低下し、Eternal +16 の P.Atk は現在20%。</li><li>Corruption（腐敗）は3つ目のランダムな修飾子を追加し、エンチャントとリロールを永久に閉ざす。</li><li>フルレイドボスは30%の確率でアミュレットをドロップする。</li><li>Fateshards（運命の欠片）100個を Unraveling Thread（ほつれの糸）1本と交換でき、未エンチャントのアミュレットをリロールできる。Chrono Sigils（時の印）は現在5,000万ゴールドで売れる。</li></ul>
+<h3 id="s18">狩りスキルを改善</h3>
+<ul><li>Smite は 90% Power（75%から上昇）。Holy Bolt は 400% Power（300%から上昇）で、マナ消費が減った。</li><li>Mind Spike は 220% Power（160%から上昇）で、マナコストが下がった。</li><li>Wrath of God はマナコストが50%減少。Bloodspike と Lifesiphon はマナコストが25%減少。</li><li>Cutting Blow と Chop Head はマナコストが75%減少。</li><li>Storm Cubic はランクごとに P.Atk の 200% / 280% / 400% / 600%。</li></ul>
+<h3 id="s19">釣り（Fishing）の進行を再調整</h3>
+<ul><li>釣りレベル31超は31にリセットされる。低いレベルは進行を保持する。ボート、装備、魚、ジャーナルは保持される。</li><li>進行は遅くなった：Fishing Boat（釣り船）クエストの解放まで約60時間の放置釣り、Guru（達人）到達まで1,000時間。後段の Guru ランクはますます高コストになる。</li><li>船の海の魚群から魚を釣り上げることに成功すると獲得XPが20倍になる。食用魚は最低2,000 XP、グルメ魚は最低8,000 XP を与える。</li><li>既存の釣りの外出（outing）はアップデート到着時に終了する。新しいレベルで装備可能なロッドを装備して新しい外出を始めること。Artisan（職人）ロッドは引き続きレベル41が必要。</li></ul>
+<h3 id="s20">戦闘のヒットタイミングを再設計</h3>
+<ul><li>矢、呪文、ボレーは、発射時ではなく到達時にダメージ・キル・戦利品が発生する。すでに空中に放たれた一撃は、自身が死んでも着弾する。</li><li>オートファームは、キルショットがまだ飛んでいる間に次のモンスターへ歩き去らなくなった。</li><li>スプラッシュ呪文は着弾時に爆発範囲内にいる者に当たる。ターゲットが死んだ後に到達した一撃は不発になる。</li><li>遠隔モンスターの矢と単体対象モンスターのボルトも、到達時に当たる。</li><li>ダメージ数値、HPバー、ヒット時の閃光、ノックバックはすべてヒットと同時に発生する。近接も同様。</li><li>近接の振りはキビキビしたものになった：打撃は約0.1秒以内に接続し、その後のフォロースルーが長くなった。</li><li>レジストされたメイスの打撃も振りが実行され、接触時に「Resisted」と表示される。</li></ul>
+<ul><li>[fix] Kasaka と Vaelric は近接の振りで幻の矢を撃たなくなった。Deflect Arrow は両者の近接ヒットを軽減しなくなった。</li><li>[fix] Orc Highlands（オーク高地）の Barbed Shot は本物の矢を飛ばすようになった。</li><li>[fix] ボスの範囲攻撃が被害者全員に偽のファイアボールを投げることがなくなった。</li></ul>
+<h3 id="s21">レベル75クラスを再調整</h3>
+<ul><li>Destroyer（デストロイヤー）：Frenzy は50秒持続（以前60秒）。Unstoppable Fury は8秒持続（以前20秒）。</li><li>Necromancer（ネクロマンサー）：Death Spike 190%（以前230%）。</li><li>Elder（エルダー）：Nature's Wrath 320%（以前340%）、Thornvine 160%（以前170%）。</li><li>Phantom Ranger（ファントムレンジャー）：Dead Eye は50秒持続（以前60秒）。</li><li>Warcryer（ウォークライヤー）：Spirit Bolt 225%（以前150%）、MPは3分の1減少。</li><li>Phantom Summoner（ファントムサモナー）：Grief Tide 180%（以前160%）、MPは約23%減少。</li><li>Plains Walker（プレインズウォーカー）：Pressure Strike 280%（以前200%）、MP減少。</li><li>Warlord（ウォーロード）：Head First と Power Shout はMP半分、Lightning Strike は40%減少。</li><li>Heroic Strike は全種族共通で 250%（以前200%）、MP減少。</li><li>Bladedancer（ブレードダンサー）：Rupture 360%（以前260%）。Sting を消費して残りの出血を一度に与える。Rupture が外れても出血は残る。</li><li>Dark Panther（ダークパンサー）と Mechanical Golem（メカニカルゴーレム）はレベルに応じて成長し、レベル75で P.Atk 1,104。どちらもMPコスト25%減少。</li></ul>
+<h3 id="s22">回復（Healing）</h3>
+<ul><li>自身の Healing Power（回復力）が、ペットの回復と、自分自身への Bloom、Atonement、detonate（起爆）回復も強化するようになった。</li><li>Frenzy の回復カットは、自身のペットからの回復にも適用されるようになった。</li><li>オリンピアードの継続回復呪文に詠唱者の Healing Power が適用されるようになった。</li><li>被回復バーには回復の全量が表示される。</li></ul>
+<ul><li>[fix] ライフスティールがオーバーキルダメージから回復しなくなった。</li><li>[fix] プレイヤー、ペット、モンスターが、攻撃速度を切り上げず正確な速度で振るようになった。</li><li>[fix] 休息のために座っているときにオートファームが敵を引かなくなった。</li><li>[fix] Ironskin がオリンピアードで機能するようになり、Blood Resilience の M.Def と詠唱保護がワールドで機能するようになった。</li><li>[fix] Storm Cubic がオリンピアードで物理ダメージとして扱われるようになった。</li><li>[fix] Elven Fortitude を Temple Knight（テンプルナイト）と Swordsinger（ソードシンガー）が習得可能になり、Magic Resistance をドワーフが習得可能になった。</li><li>[fix] 多くのスキルのツールチップと説明文を修正した。</li></ul>
+<h3 id="sonic-charge">Sonic Charge（ソニックチャージ）を改善</h3>
+<ul><li>移動しながら詠唱でき、詠唱0.5秒、緑色の電気的なチャージエフェクト付き。</li><li>チャージを追加すると、3スタック時も含め、全スタックが30秒に更新される。</li><li>Whirlwind Slash と Fatal Strike のアイコンは、クールダウン中でもチャージ不足のときは暗いままになる。</li></ul>
+<h3 id="rootmaw">Rootmaw（ルートモー）を改善</h3>
+<ul><li>アリーナを拡張し、攻撃範囲を50uに広げ、レーンを広くし、茨のパッチを配置した。</li><li>Thornlash（茨の鞭）は即時発動になった。</li><li>Idol（偶像）には4秒の溜めがあり、特徴的な琥珀色の蓄積エフェクトがある。</li></ul>
+<h3 id="s25">レベル差ペナルティを軽減</h3>
+<ul><li>高レベルモンスターに対する追加のミス率は10/20/30%から8/16/24%に低下した。</li><li>PvE、PvP、オリンピアードにおいて、スキルレジスト率は対象のレベルが1高いごとに4パーセントポイント上昇する（5から低下）。</li></ul>
+<ul><li>[balance] Warsmith（ウォースミス）のゴーレムが、Necromancer の召喚獣と同じHPスケーリングを使うようになった。</li><li>[fix] Sonic Charge と Delver's Momentum のバフアイコンを復旧した。</li><li>[fix] Hero（英雄）の名前から王冠の絵文字を削除した。Hero 効果自体は残る。</li></ul>
+<h3 id="s26">呪文の着弾タイミングを改善</h3>
+<ul><li>呪文の飛翔体は2倍速で飛ぶ。</li><li>Water Arrow、Smite、Wrath of God、Earth Dive、Stormfall には飛翔体の移動遅延がなくなった。</li><li>Aura Flare は飛翔体の移動なしで命中し、射程30ユニット、新しい秘術の閃光エフェクトを持つ。</li></ul>
+<ul><li>[feat] Hurricane は、キャラクターモデル有効時に、乱流の3Dサイクロンを放ち、着弾時にほどけるようになった。</li><li>[feat] レベル75以上のレイドボスが Sovereign Fate Amulets（至高の運命のアミュレット）をドロップするようになった。レベル75が必要な新しいティアで、既存の共有30%の Fate Amulet ドロップ率を使う。</li><li>[feat] Vorzhan が Crimson Crucible（真紅の坩堝）に戻り、10%の確率で The Oracle's Anchor（神託者の錨）をドロップする。これはレベル1から Gravity Pull（重力牽引）を付与するキャスター用指輪。Kharzug が Slaughter Pens（屠殺場）に戻った。</li></ul>
+<h3 id="unraveling-thread">Unraveling Thread（ほつれの糸）のドロップを追加</h3>
+<ul><li>ポータルの通貨キャッシュは30%の確率で糸をドロップする：ソロで1本、デュオで2本、グループダンジョンで5本。</li><li>パーティダンジョンの Treasure Chests（宝箱）は30%の確率で糸を3本ドロップする。</li></ul>
+<h3 id="defensive-stance">Defensive Stance（防御スタンス）を削除</h3>
+<ul><li>Paladin（パラディン）、Dark Avenger（ダークアベンジャー）、Temple Knight（テンプルナイト）、Twilight Knight（トワイライトナイト）、Warsmith（ウォースミス）からスタンスを削除した。</li></ul>
+<ul><li>[fix] Dawnblade Covenant（暁刃の盟約）、Signet of the Silent Choir（静寂の聖歌隊の印章）、Seal of the Eternal Vigil（永遠の徹夜の封印）が、既存のボーナスに加えて +25 P.Def と +50 M.Def を付与するようになった。</li><li>[fix] Void Whisper（虚空の囁き）の増加するデバフスタックが表示されるようになった：ダメージ呪文ごとに M.Def -3%、最大12%、最後の適用から6秒持続。</li></ul>
+<h3 id="s29">オリンピアードのミニウィンドウを追加</h3>
+<ul><li>AIをオリンピアードの試合に送ると、両ファイターのHPとMP、タイマー、Expand（展開）/Close（閉じる）を備えた小さな移動可能なパネルが開く。</li><li>スマートフォンでは上部の細い帯状になり、タップすると試合全体の表示になる。</li><li>Options（オプション）→ Interface（インターフェース）でオフにできる。</li></ul>
+<h3 id="s30">ワールドマップ検索を改善</h3>
+<ul><li>アイテムとゾーンが1つのリストに表示されるようになった。</li><li>複数のアイテムを同時に検索して、それらすべてをドロップするゾーンを探せる。</li><li>徘徊レイドのドロップも出現ゾーンでカウントされるようになった。</li></ul>
+<ul><li>[feat] 各エフェクトバーを Options で中央寄せできるようになり、バフが中央から広がるようになった。</li><li>[feat] プレイヤーの投獄（jailing）がチャットで告知されるようになった。</li><li>[fix] 戦利品カードがワールドへのクリックを妨げなくなった。読めるものを除く。</li><li>[fix] モンスターのネームプレートやHPバーをクリックすると、その後ろにいる体ではなくそのモンスターをターゲットするようになった。</li><li>[fix] キャラクター選択が 2D/3D モデル設定を尊重するようになった。</li><li>[fix] プリセットメニューが戦闘中に勝手に閉じなくなった。</li><li>[fix] モンスターに Rest（休息）を中断された後、オートファームが再び休息するようになった。</li><li>[fix] スマートフォンでワールドマップ検索のチップが外しやすくなった。</li></ul>
+<h2 id="n-2026-11-08">2026-11-08</h2>
+<h3 id="rootmaw-the-forgotten-idol">Rootmaw, the Forgotten Idol（忘れられた偶像ルートモー）を追加</h3>
+<ul><li>新しく生成されるジャングルのポータルダンジョンは、新しいボスで終わるようになった。</li><li>Rootmaw は、50u以内に生存プレイヤーがいない間、1秒ごとに最大HPの1%を回復する。</li></ul>
+<h3 id="s32">攻撃キュービックを修正</h3>
+<ul><li>Viper Cubic（毒蛇キュービック）が可視の毒を付与し、遅延ダメージを確実に与えるようになった。</li><li>攻撃キュービックがオリンピアード外の対象プレイヤーにも機能するようになった（通常のPvP保護を尊重する）。</li><li>オリンピアードにおけるキュービックのダメージタイプと、シールドおよび瀕死のターゲットに対する Vampire Cubic（吸血キュービック）の回復を修正した。</li></ul>
+<ul><li>[fix] Resurrection（復活）は自動で死体に近づき、50u以内で詠唱し、詠唱者の位置にプレイヤーを蘇らせるようになった。</li><li>[fix] バフの掛け直しで、すでに延長されたバフが短縮されなくなった。</li><li>[fix] キル後のレベルアップ時にゴールドが二重に付与されたように見えることがなくなった。</li><li>[fix] Shield Mastery（盾マスタリー）のアイコンを復旧した。</li><li>[fix] 自己回復のメッセージが「yourself（自分自身）」と表示されるようになり、クランボスの召喚で Castle Heart（城の心臓）に言及しなくなった。</li><li>[fix] デバフの戦闘ログリンクが、正しいプレイヤーまたはモンスターを開くようになった。</li></ul>
+<h2 id="n-2026-11-07">2026-11-07</h2>
+<h3 id="s33">パーティとウォーバンドのボイスを追加</h3>
+<ul><li>パーティまたはウォーバンドのフレームからボイスに参加できる。</li><li>Vキーを押している間話すか、モバイルではトークボタンを長押しする。プッシュトゥトークのキーは Options（オプション）で変更できる。</li><li>マイクボタンとヘッドセットボタンで、自分のマイクや受信ボイスをミュートできる。</li><li>Options → Sound（サウンド）で入出力デバイスを選んだり、ボイス機能を無効化できる。</li></ul>
+<h2 id="n-2026-11-06">2026-11-06</h2>
+<h3 id="aurelion-the-broken-halo">Aurelion, the Broken Halo（砕けた光輪アウレリオン）を追加</h3>
+<ul><li>新しく生成される天使テーマのポータルマップに Aurelion が登場する。聖なる槍の攻撃、なぎ払う刃、持続する炎の地面を持つ。</li><li>Judgment（審判）を3つの封印に誘導すると、10秒間よろめかせて2倍のダメージを与えられる。</li><li>ソロ、デュオ、5人マップ向けにスケールする。</li></ul>
+<h3 id="s35">戦闘サウンドを洗練</h3>
+<ul><li>新しい近接ヒットと3種の異なる物理クリティカルヒット。クリティカルの「バン」という音の前に通常ヒットの導入が入る。</li><li>呪文のチャージ音は柔らかくなり、弓の引き絞り、炎・水・雷・聖・闇・回復のサウンドを刷新した。</li><li>盾ブロック、外れた攻撃、足音、ボスエフェクトを刷新した。</li></ul>
+<ul><li>[balance] 要塞（Fortress）のチャンネル時間は、攻城5分目から1分ごとに30秒ずつ短くなり、9分目で30秒に達する。進行中のチャンネルも短縮される。</li></ul>
+<h3 id="defensive-stance-2">Defensive Stance（防御スタンス）を修正</h3>
+<ul><li>タンク中にHPが変動することなく、即時の最大HP +40% ボーナスが復旧した。</li><li>スタンスの解除・切り替えでも現在のHPが保持され、新しい最大値でキャップされる。</li></ul>
+<ul><li>[fix] Dread the Mind（心を恐れよ）の回復が、Channel the Void（虚空の流し込み）と併用した場合も正しくHPを回復するようになった。ミニボスとポータルボスに対しても含む。</li><li>[fix] Slaughter Pens（屠殺場）の Kharzug が、攻撃者を追って移動するようになった。</li><li>[fix] プレイヤーが視界から出入りしても、女性のポートレートがランダムに男性に変わらなくなった。</li><li>[fix] Wyvern Lair（ワイバーンの巣）のイベントメッセージと Avatar of the Pact（契約のアバター）のバリア粉砕の告知が、ローカルに留まるようになった。</li><li>[fix] Baluem（バルエム）から降りると、ダンジョン入口ではなく上昇側の門番（gatekeeper）のところに戻るようになった。</li><li>[balance] マップの欠片（map shard）のドロップ率を上げた。</li></ul>
+<h2 id="n-2026-11-05">2026-11-05</h2>
+<h3 id="baluem">Baluem（バルエム）を再設計</h3>
+<ul><li>Tower of Insolence（傲慢の塔）のモンスターを倒すと、Troll Cave（トロール洞窟）のボスのように Baluem が召喚されるようになった。</li><li>ボスの戦利品を追加。塔の3つの指輪のいずれか1つが入った袋が20%の確率で得られる。</li><li>Brand of Insolence（傲慢の烙印）の炎の地面はダメージが2倍になり、刻印されたプレイヤーは頭上にアイコンが表示されるようになった。</li></ul>
+<h3 id="s38">塔の指輪を更新</h3>
+<ul><li>Signet of the Silent Choir（静寂の聖歌隊の印章）：M.Atk +2%、M.Pen +4%。</li><li>Dawnblade Covenant（暁刃の盟約）：P.Atk +3%、Crit Rate（クリティカル率）+25%。</li><li>Seal of the Eternal Vigil（永遠の徹夜の封印）：Max HP +4%、M.Def +6%。</li></ul>
+<ul><li>[fix] ボスハントの告知が、グローバルチャットではなくローカルチャットに表示されるようになった。</li><li>[fix] Destroyer（デストロイヤー）の Earthrend（大地裂き）のパーティクルが、攻撃終了後も残らなくなった。</li><li>[fix] 移動中にダンジョンの照明が不必要に再読み込みされなくなった。</li></ul>
+<h2 id="n-2026-11-05-2">2026-11-05</h2>
+<h3 id="tower-of-insolence">Tower of Insolence（傲慢の塔）を追加</h3>
+<ul><li>Abyssal Passage West（深淵の通路・西）の西にある塔に、新しいレベル66〜70のパーティダンジョンを追加。キャスター・物理・防御ビルド向けの新しい指輪が3つ。</li><li>拡散する炎、壊せる枷、致命的な Final Judgment（最後の審判）を備えた専用アリーナで Baluem（バルエム）と対決する。戦闘中はアリーナへのテレポートは使えない。</li></ul>
+<h3 id="s40">ゲームプレイの問題を修正</h3>
+<ul><li>ダンジョンとポータルマップを退出する際のフリーズを修正した。</li><li>Cinderblood Signet（燃え血の印章）が、告知どおりのMPコスト軽減を完全に付与するようになった。</li><li>Defensive Stance（防御スタンス）がタンク中に最大HPを変動させなくなった。</li><li>オフライン移動で残りの移動時間が保持されるようになった。</li><li>ポータルのエンカウント告知がそのマップ内に留まるようになった。</li></ul>
+<h3 id="warcryer">Warcryer（ウォークライヤー）を更新</h3>
+<ul><li>Mass Root（集団ルート）は5秒持続するようになった。</li><li>Chant of Battle（戦いの詠唱）は Spirit（スピリット）を3必要として消費し、常に完全な効果を付与する。</li><li>Spirit Bolt（スピリットボルト）はレジストされても Spirit を付与するようになった。</li></ul>
+<ul><li>[balance] Prophet（プロフェット）の Dread the Mind の発動率が15%から30%に倍増した。</li><li>[fix] Map Shards（地図の欠片）と Tokens of Noble Blood（貴血のトークン）が取引可能になった。</li></ul>
+<h2 id="n-2026-11-02">2026-11-02</h2>
+<h3 id="anvilfall">Anvilfall（アンビルフォール、Bounty Hunter／バウンティハンター、レベル40）を追加</h3>
+<ul><li>狙った地面へ最大28u跳躍し、大剣を叩きつけて11u以内の全敵に 320% Power を与える。</li><li>クールダウン25秒、大剣が必要。</li><li>敵を選択している場合は照準なし：射程まで走ってそのまま敵の上へ跳躍する。</li></ul>
+<h2 id="n-2026-11-02-2">2026-11-02</h2>
+<h3 id="s43">キャラクターモデルの所持武器と盾を修正</h3>
+<ul><li>盾が全種族で外側を向くようになった。一部の体で裏面が見えたり前腕に食い込んだりしなくなった。</li><li>剣、短剣、二刀の刃は、走行中に胴体へ振り返らず、前を向いたままになった。</li><li>二刀の刃は、スキルの溜め中は横に真っ直ぐ突き出さず、上に構えられるようになった。</li><li>ダークエルフの後方へ流れるような走りでは、刃を低く持ち、盾を横に出すようになった。</li></ul>
+<h2 id="n-2026-11-01">2026-11-01</h2>
+<h3 id="aureate-sanctum">Aureate Sanctum（金色の聖域）を追加</h3>
+<ul><li>ポータルマップが、石灰岩の聖域に開くようになった。新しい聖なる小道具（props）付き。</li><li>アニメーションするモデル、ポートレート、5つの聖なるアビリティを持つ、天使の敵を3種追加した。</li></ul>
+<h3 id="s45">ダンジョンの照明を追加</h3>
+<ul><li>松明、ランタン、ろうそく、魔法の光など、光源を10種追加した。</li><li>Dungeon Studio（ダンジョンスタジオ）で各ライトの強さを0〜300%に設定できる。</li></ul>
+<h3 id="slaughter-pens">Slaughter Pens（屠殺場）を修正</h3>
+<ul><li>Kharzug を確実に攻撃できるようになり、アリーナの位置に留まるようになった。</li><li>退出や死亡でHPが即座に回復しなくなった。緩やかな再生は引き続き適用される。</li><li>Kharzug の装甲した処刑人のモデルと斧のアニメーションを追加し、大きさが2倍になった。</li></ul>
+<h3 id="s47">釣り（fishing）を修正</h3>
+<ul><li>AI操作のオリンピアード戦の間も釣りが続くようになった。手動操作に切り替えると止まる。</li><li>釣り中にログアウトしたキャラクターが、他のプレイヤーから見えるままになった。</li></ul>
+<h3 id="talking-island-2">Talking Island（話す島）のモデルを追加</h3>
+<ul><li>残っていたモンスターとボス全10種に、アニメーションする3Dモデルを追加した。</li></ul>
+<ul><li>[feat] Dungeon Studio で Shift を押しながらブラシを使うと、水平または垂直の線を描けるようになった。</li><li>[fix] ジャングルポータルの猿に、適切な類人猿のポートレートが付いた。</li></ul>
+<h2 id="n-2026-10-31">2026-10-31</h2>
+<h3 id="wind-slash">Wind Slash（風斬）を再設計</h3>
+<ul><li>Swordsinger（ソードシンガー）はターゲットへ最大25u回転しながら進み、そのすぐ後ろで止まる。通過できないほど遠い場合は手前で止まる。</li><li>ターゲットに3回ヒットし、各ヒットは 90% Power。さらに回転が通過する全敵にも当たる：経路の両側12.5u、開始地点と着地点を含む。</li><li>移動中に回転へ足を踏み入れた敵にも当たる。自動詠唱はターゲットにのみ当たる。</li><li>Riposte（リポスト）発動中は、各ヒットが50%増しのダメージを与える。</li></ul>
+<h3 id="tempest-slash">Tempest Slash（嵐斬）を追加</h3>
+<ul><li>レベル40の新しい Swordsinger スキル：敵の上へ最大22u跳躍して 200% Power、クールダウン12秒。</li><li>Riposte と Sylvan Guard が発動中ならそれらを消費し、それぞれ50%のダメージを追加する。</li><li>ヒットでキルするとクールダウンがリセットされる。</li></ul>
+<ul><li>[balance] Reprise（リプリーズ）は、ターゲットに対する Swordsinger の全スキルヒット（Heroic Strike、Wind Slash、Tempest Slash）で Tempo（テンポ）を回復するようになった。以前は Wind Slash のみだった。ランク1でヒットごとに0.6、ランク2で1（以前は0.3 / 0.5）。</li><li>[feat] エルフの Elder（エルダー）の見た目が新しくなり、動くと流れるローブと袖を持つようになった。</li><li>[fix] アニメーションがループするたびにキャラクターがTポーズに滑り込むことがなくなった。</li></ul>
+<h2 id="n-2026-10-31-2">2026-10-31</h2>
+<h3 id="3d">3Dの武器と盾を洗練</h3>
+<ul><li>キャラクターモデルに合わせて黒い輪郭線を追加した。</li><li>キャラクターの照明に合わせて、色と陰影の一貫性を高めた。</li></ul>
+<h2 id="n-2026-10-31-3">2026-10-31</h2>
+<h3 id="s52">クランホールを再設計</h3>
+<ul><li>Gludios（グルーディオス）と Gilran（ギルラン）の全12ホールが、より大きな荘園（manor）の内装を持つようになった。王座の通路、暖炉、家具付きのNPCステーションを備える。</li><li>両方の受付ギャラリーを再設計した。新しい石細工、寄木細工の床、カーペット、中世風の調度品を備える。</li></ul>
+<h2 id="n-2026-10-30">2026-10-30</h2>
+<ul><li>[feat] Oldroot Grove（古根の林）と Scarlet Rotfield（緋腐れの野）の赤い菌類モンスター全6種に、アニメーションする3Dモデルが付いた。Reaver（リーバー）と Brute（ブルート）で異なる外見を持つ。</li></ul>
+<h2 id="n-2026-10-30-2">2026-10-30</h2>
+<h3 id="cartography">Cartography（地図作成）を再設計</h3>
+<ul><li>生成ダンジョンの最終ボスから、アカウント共有のXPを1回のランにつき1度得られる。自然なマップも制作マップも対象だが、制作自体ではXPは得られない。</li><li>Common / Uncommon / Rare / Epic の完了で 100 / 125 / 175 / 225 XP を得る。レベル超過時は減額される。</li><li>Beginner（初心者）から Guru（達人）へ進み、Guru のプレステージが続く。制作のレアリティ恩恵は Guru 10 で上限。</li><li>既存のレベルは対応する Apprentice（見習い）ランクになる：旧レベル7は Apprentice 7 になる。</li></ul>
+<h3 id="slaughter-pens-2">Slaughter Pens（屠殺場）を再設計</h3>
+<ul><li>より大きな監獄の部屋を探索できるようになった。テーマ付きの新しい小道具10種と、より分離されたモンスターの群れを備える。</li></ul>
+<h3 id="s55">ダンジョンの入口を再設計</h3>
+<ul><li>Forgotten Temple（忘れられた神殿）、Mycelium Depths（菌糸の深淵）、Emberforge（残り火の鍛冶場）に、テレポートガイドなしで歩いて出入りできるようになった。</li><li>Forgotten Temple は入口クエストが不要になった。</li></ul>
+<ul><li>[fix] Mキーを押すと、手作りのパーティダンジョンで全体レイアウトを見られるようになった。</li><li>[fix] Walk To Shore（岸へ歩く）を削除した。内陸で釣りをすると「岸でしか釣りできない（Can only fish at the shore）」と表示されるようになった。</li><li>[fix] 専門職（Profession）のリーダーボードにクランのロゴが表示され、クラスレベルランキングの直前に即座に表示されるようになった。</li></ul>
+<h2 id="n-2026-10-29">2026-10-29</h2>
+<h3 id="s56">パーティダンジョンを大改修</h3>
+<ul><li>Troll Cave（トロール洞窟）、Wyvern Lair（ワイバーンの巣）、Lair of Stark（スタークの巣）、Forgotten Temple（忘れられた神殿）、Mycelium Depths（菌糸の深淵）、Emberforge（残り火の鍛冶場）を、テーマ付きのマップ、小道具、照明で再構築した。</li><li>アニメーションする3Dの敵とボスを追加し、青と紫のドラゴンのバリエーションも追加した。</li><li>Mycelium と Emberforge は部屋が大きくなり、モブが減り、引き（pull）が分かりやすくなった。Vulkarn にはより大きく隔離されたアリーナができた。</li><li>Forgotten Temple は連続した構造になり、Malachar（マラカール）到達に鍵が不要になった。</li><li>再制作されたダンジョンは Troll Cave と同じアグロ範囲を共有するようになった。</li></ul>
+<ul><li>[feat] Dungeon Studio の共有ライブラリにカスタムマップを保存し、リンクを共有し、JSONをダウンロードできるようになった。</li><li>[fix] エディタの地形が、マップのエクスポート済み地面素材と一致するようになった。</li></ul>
+<h2 id="n-2026-10-29-2">2026-10-29</h2>
+<h3 id="s57">制作素材を再調整</h3>
+<ul><li>Runed Hide（ルーンの皮）、Hunter's Sinew（狩人の腱）、Keening Edge（嘆きの刃）、Jotun Corestone（ヨトゥンの核石）、Wyrmsteel Plate（竜鋼の板）、Warded Weave（守護の織物）、Runewood Focus（ルーン木の焦点具）は、それぞれ重さ0.5になった。</li><li>レベル70〜75のオーク高地モンスターからのドロップ率を、キルごとに10〜12.5%に下げた。</li></ul>
+<h2 id="n-2026-10-29-3">2026-10-29</h2>
+<ul><li>[fix] キューに入ったポータルのXPと戦利品報酬の間の不要な待ち時間をなくした。</li><li>[fix] ダンジョンの地図を開き直すと、準備済みの地形を再利用して表示が速くなった。</li></ul>
+<h3 id="s58">釣り（Fishing）を改善</h3>
+<ul><li>近くのプレイヤーの釣りアニメーションが見えるようになった。</li><li>最後の5秒間に Reel In（巻き上げ）をスキルバーに追加して漁獲を回収できるようになった。準備ができると光る。</li></ul>
+<ul><li>[feat] ヒューマン女性のソーサラーに新しい3Dモデルが付いた。</li></ul>
+<h3 id="s59">専門職（Profession）のリーダーボードを修正</h3>
+<ul><li>ゲーム内の Refresh（更新）ボタンが上部に来た。</li></ul>
+<h2 id="n-2026-10-29-4">2026-10-29</h2>
+<h3 id="s60">秘密の部屋の鍵を追加</h3>
+<ul><li>Portal Loot Goblins（ポータルの戦利品ゴブリン）は、20〜26%の確率で Per（ペル）または Keke（ケケ）の鍵の欠片のいずれかをドロップする。ダンジョンのレアリティが高いほど確率が上がる。</li><li>インベントリで同種の欠片を10個使うと、Pers Key（ペルの鍵）または Kekes Key（ケケの鍵）に組み合わせられる。</li><li>ダンジョンのポータルをクリックすると、所持している鍵か「鍵なし（No key）」を選べる。Pers Key は Overseer Per（監督者ペル）の Goblin Treasury（ゴブリンの宝物庫）を保証し、Kekes Key は Overseer Keke（監督者ケケ）の Chamber（部屋）を保証する。選択した鍵はダンジョンごとに1つ消費され、再入場時に再び尋ねられることはない。</li><li>保証された秘密ポータルは到着地点の左に出現するようになり、出口や儀式のオブジェクトと重ならない。</li></ul>
+<h2 id="n-2026-10-29-5">2026-10-29</h2>
+<h3 id="s61">釣り（Fishing）と専門職（Professions）を追加</h3>
+<ul><li>レベル1のクエストで Fishing Master Nereo（釣り師範ネレオ）に会い、最初のロッドとルアー1,000個を受け取る。</li><li>ロッドを装備し、ルアーを有効化して、岸辺で Fish（釣り）を使う。釣りはオフラインでも最大24時間続く。</li><li>3つの釣り場、変化するコンディション、レアな漁獲を探る。ルアーは1個50ゴールド。</li><li>Nereo のクエスト後、Fishing（釣り）11で River（川）ロッドを250,000ゴールド、Fishing 41で Artisan（職人）ロッドを750,000ゴールドで購入できる。</li><li>漁獲をジャーナルと戦利品ログで追跡し、余った魚を売り、依頼（commissions）を完了する。</li><li>Weekly Catch（週間漁獲）で競い、Professions → Leaderboards（リーダーボード）内で Fishing と Cartography（地図作成）のランキングを切り替えられる。</li></ul>
+<h2 id="n-2026-10-28">2026-10-28</h2>
+<h3 id="s62">スマートフォンでダンジョンが滑らかに</h3>
+<ul><li>ダンジョンに入っても、低速なスマートフォンが1秒近くの間フリーズしなくなった（約0.7秒から0.15秒へ）。</li><li>ダンジョンのミニマップと「Way out（出口）」ポータルの毎フレームのコストが大幅に下がり、混雑した高レベルダンジョンが滑らかに動く。</li></ul>
+<ul><li>[fix] ダンジョン洞窟内の壁に囲まれた岩の島が、床ではなく岩として表示されるようになった。</li><li>[fix] アップデートをまたいでゲームを開いたままでも、キャラクターのアニメーションが保持されるようになった。</li></ul>
+<h2 id="n-2026-10-28-2">2026-10-28</h2>
+<h3 id="s63">オリンピアードのペットを修正</h3>
+<ul><li>敵ペットに向けたデバフ、継続ダメージ、ブランドがペットに着弾するようになり、その継続ダメージがペットを傷つけるようになった（ファントムへの毒で自分を毒することがなくなった）。</li><li>ペットは召喚者ではなく、自身の回避・ブロック・ウォードで防御する。</li><li>ペットがプレイヤーから受けるダメージは、オープンワールドと比べて1.2〜1.9倍にはならなくなった。</li><li>自分のペットへの継続回復が、そのペットを回復するようになった。</li></ul>
+<ul><li>[feat] Riposte（リポスト）がペットとファントムの攻撃も受け流し（parry）、カウンターをそのペットに向けるようになった。オープンワールドとオリンピアードの両方で有効。</li><li>[fix] Abyssal Bulwark（深淵の防壁）がオープンワールドで機能するようになった：Dark Avenger（ダークアベンジャー）は Dark Panther（ダークパンサー）が生きている間、受けるダメージが15%少なくなる。</li><li>[fix] クリティカルの継続ダメージティックが、直接クリティカルと同様にクリティカルダメージ軽減を尊重するようになった。</li><li>[balance] ペットは自身のレベルでデバフとスタンに抵抗する。同レベルのペットへのスタンは約70%の確率で当たる（以前は90%）。</li><li>[balance] オリンピアードで回避（evasion）がデバフ詠唱を回避しなくなった。</li></ul>
+<h2 id="n-2026-10-28-3">2026-10-28</h2>
+<h3 id="astral">Astral（アストラル）と Empyrean（エンピリアン）武器を再設計</h3>
+<ul><li>新しい詳細な3Dモデルにより、両武器セットに実質的な形状と特徴的な天体のデザインが付いた。</li><li>大型の Warbows（戦弓）と適切な比率の短剣は、戦闘中も細部が見える。</li></ul>
+<h3 id="s65">エンチャントの輝きを改善</h3>
+<ul><li>柔らかなハロー（光暈）が武器の形状に沿い、細部は見えるままになった。</li><li>輝きは +4 で白、+7 で水色、+10 で深い青、+15 で最も明るい青、+16 で明るい赤へと増していく。</li></ul>
+<h3 id="group-finder">Group Finder（グループ検索）を改善</h3>
+<ul><li>ダンジョン名とモンスターのレベルを備えた、イラスト付きのダンジョン一覧を閲覧できる。</li><li>リーダーは誰かが申請すると音と通知を受け取る。</li><li>モバイルの Group Finder は展開メニュー内に移り、有効な掲載数（listing count）が表示される。</li></ul>
+<ul><li>[fix] クラン掲載はデフォルトでオープン募集になり、最近更新された募集広告が先に来るようになった。</li></ul>
+<h2 id="n-2026-10-28-4">2026-10-28</h2>
+<h3 id="group-finder-2">Group Finder（グループ検索）を追加</h3>
+<ul><li>オートファームしながら、Duo Portals（デュオポータル）、Group Portals（グループポータル）、Party Dungeons（パーティダンジョン）のプレイヤーを探せる。</li><li>申請者のレベルと任意の場所を設定でき、リーダーは申請を承認・拒否できる。</li><li>グループが満員になる前に開始して募集を続けられる。開始するとパーティが結成され狩りが止まる。後からの参加者も同じパーティに入る。</li><li>PCとモバイル専用のボタンに、有効な掲載数（listing）が表示される。</li></ul>
+<h3 id="s68">クラン募集を追加</h3>
+<ul><li>クラン、メンバー数、リーダー、募集広告を閲覧できる。</li><li>リーダーとオフィサーは募集を開始し、申請を承認・拒否できる。</li><li>一度に1つのクランにのみ申請でき、撤回して他へ申請したり、募集を閉じたクランのリーダーにウィスパーできる。</li></ul>
+<h3 id="s69">秘密ポータルの監督者（Overseers）を改善</h3>
+<ul><li>Per（ペル）の Whip（鞭）と Ke'ke（ケケ）の Cleave（薙ぎ払い）は、回避に2.2秒の猶予ができた。</li><li>Per の Rush（突進）は、着弾時に Whip の向きを変えなくなった。</li><li>両ボスは、同レベル・同モードのミニボスの3倍のXPを与える。</li></ul>
+<h3 id="s70">武器の輝きと待機アニメーションを改善</h3>
+<ul><li>リネージュ2風のエンチャントの輝きは武器の細部を保ち、細い縁取り、ウィスプ（wisps）、火花を備える。</li><li>高エンチャントの雷は、暗い核と赤い鞘を持つ。</li><li>華美なダークエルフの待機姿勢を緩め、短剣の握りを修正した。</li></ul>
+<h3 id="s71">戦闘と回復を修正</h3>
+<ul><li>Stone Drop（石落とし）はオートファーム中は単体対象のままになった。手動詠唱は主ターゲットが死んだ場合に今も飛散する。</li><li>Life Cubic（命のキュービック）が、戦闘外でも最大HPボーナスがある場合でも正しく回復するようになった。</li><li>プレイヤーの攻撃は休息中の自動反撃（auto-retaliation）を尊重する。有効な場合、即座に防御し、中断された休息を終えてから狩りを再開する。</li></ul>
+<h2 id="n-2026-10-27">2026-10-27</h2>
+<h3 id="s72">新しいクラスモデル</h3>
+<ul><li>Destroyer（デストロイヤー）：新しい3Dモデル。</li><li>Twilight Knight（トワイライトナイト）：新しい3Dモデル。</li><li>Bladedancer（ブレードダンサー）：新しい3Dモデル。</li><li>Phantom Ranger（ファントムレンジャー）：新しい3Dモデル。</li><li>Abyss Walker（アビスウォーカー）：新しい3Dモデル。</li><li>Destroyer は Frenzy（フレンジー）発動中、赤くなって10%大きくなる。</li></ul>
+<h2 id="n-2026-10-27-2">2026-10-27</h2>
+<h3 id="wyvern-lair">Wyvern Lair（ワイバーンの巣）の3Dモンスター</h3>
+<ul><li>Wyvern Lair の全モンスターと Vyrnax（ヴィルナクス）にアニメーションモデルを追加した。共有ボディには異なる氷のテクスチャを持つ。</li><li>Vyrnax は翼の爪の上で休息し移動し、炎と氷の外見とカスタム攻撃アニメーションを持つ。</li><li>3Dモデル有効時に、Vyrnax と Thrumgrim（スラムグリム）の3D呪文エフェクトを追加した。</li></ul>
+<h3 id="troll-cave">Troll Cave（トロール洞窟）の3Dモンスター</h3>
+<ul><li>Troll Cave の通常モンスター全種と Thrumgrim にアニメーションモデルを追加した。共有ボディには異なるテクスチャを持つ。</li><li>Brutes（ブルート）と Warlords（ウォーロード）は木を担ぎ、ダイアウルフはより大きく、巨人は小さいクリーチャーを見下ろす。</li><li>モンスターは多様な方向を向いて出現するようになった。</li><li>森と氷の Fae（フェイ）のモデルを追加した。Rimeweaver（霜織り）、Frostweaver（氷織り）、Hailsong（雹歌）のバリエーションを含む。</li></ul>
+<h2 id="n-2026-10-26">2026-10-26</h2>
+<h3 id="elder">Elder（エルダー）を再設計</h3>
+<ul><li>Nature's Blessing（自然の祝福）は Dew（露）に置き換えられた：最大5つの涙（tear）が少しずつ満ち、決して消えない。自分の Ward（守護）がダメージを吸収すると最も満ち、Nature's Wrath はヒットごとに涙の15%を満たし、Bloom、Spring Rain、Thornvine は少し満たす。</li><li>Nature's Ward は主要な支援手段になった：ランクごとに Power の132〜198%を10秒間吸収する。ターゲットが保持できる Ward は一度に1つ。</li><li>Overgrowth（過成長）はパッシブ Deep Roots（深い根）に置き換えられた：自分が置いた Ward は、ダメージを吸収するにつれて Dew の涙を最大28%まで満たし、壊れたときにそのMPが戻る。</li><li>Wellspring（泉）は、満ちた Dew の涙をすべて消費し、涙ごとに基本最大MPの7.5%を味方（または自分）に回復するようになった。クールダウンなし、MPコストなし、レベル20で習得する。</li><li>Bloom（開花）は味方に蕾を植え、6秒後に 220% Power で回復する。すでに開花中の味方には詠唱できない。</li><li>Wildgrowth（野生の成長）は Spring Rain（春の雨）になった：パーティ全体を12秒かけて 120% Power で回復する。</li><li>レベル20で Thornvine（茨の蔦）を追加：足元に30秒間蔦を生やし、2秒ごとに最も近い敵のレーンを叩いて 170% Power と30%スローを与える。クールダウン60秒。その根は今いるゾーンに合わせたものになる。</li><li>Nature's Wrath は強化された：340% Power（300%から上昇）、MPコストは同じ。</li><li>レベル70で Quiet Spring（静かな泉）を追加：パーティのスキルMPコストが15秒間30%少なくなる。クールダウン2分。</li><li>Lifebloom、Harvest、Sheltering Grove、Blight、Heal を削除した。それらに対する保存済みの戦闘ルールは、仕事を引き継いだスキルへ移る。</li><li>Elder の全呪文に新しいエフェクトが付き、Dew は HUD、モバイル、オリンピアードでゲージとして表示される。</li></ul>
+<ul><li>[feat] Crystal Caverns（水晶の洞窟）に氷の洞窟の床が付いた。</li></ul>
+<h2 id="n-2026-10-26-2">2026-10-26</h2>
+<h3 id="warcryer-2">Warcryer（ウォークライヤー）を再設計</h3>
+<ul><li>Spirit Bolt（スピリットボルト）は遠距離から Spirit（スピリット）を構築する。それを祖先の呪文、回復、シールド、パーティバフに使う。</li><li>Ashen Chorus（灰の合唱）、Ancestral Reproach（祖先の叱責）、Rally the Spirits（霊を集めよ）、Ancestral Convergence（祖先の収束）を追加した。</li><li>Spirit Bolt と Ashen Chorus には緑色の3Dスピリットエフェクトがあり、輪郭がはっきりし、頭蓋骨が上を向く。</li><li>ワンド級の魔法攻撃力と盾支援を持つ Spirit Maces（スピリットメイス）を7種追加した。ローブがキャスターの攻撃をリードする。</li><li>Physical Crushers（物理クラッシャー）は、アップグレードを保持したまま、同等の Spirit Mace と無料で交換できる。</li><li>Earth Lord（アースロード）の呪文と Stone Barrier（石の障壁）を Spirit Maces 向けに再調整した。</li></ul>
+<h2 id="n-2026-10-26-3">2026-10-26</h2>
+<h3 id="earth-lord">Earth Lord（アースロード）を再設計</h3>
+<ul><li>Stoneshatter（石砕き）はMPのみを回復し、ルート中のターゲットへの2倍ダメージは維持する。Stone Drop（石落とし）はHPを回復するようになり、20u以内の近くの敵を50%ダメージで薙ぐ（cleave）。</li><li>Stone Drop の詠唱は0.75秒、Earth Dive（地潜り）は0.5秒、Upheaval（隆起）は Stone Drop の直後に即座に繋げると即時詠唱になる。</li><li>Seismic Crush（震撃）は攻撃速度と詠唱速度を10%低下させる。Stone Barrier（石の障壁）は発動中、物理防御を20%付与する。</li><li>新しい着想の3D呪文エフェクト。20uの範囲に合わせた Stone Drop の噴出を含む。</li></ul>
+<h3 id="warcryer-3">Warcryer（ウォークライヤー）を洗練</h3>
+<ul><li>Chant of Battle（戦いの詠唱）は即時発動になり、Spirit Bolt は Spirit を2生成する。</li></ul>
+<ul><li>[balance] オリンピアードのダメージは、戦闘開始から最初の60秒を過ぎると1秒ごとに5%増加し、膠着を解消する。</li><li>[fix] Gorath（ゴラス）が World Tracker（ワールドトラッカー）に表示されるようになり、通常の8〜12時間のボスリスポーンを使うようになった。</li><li>[fix] 要塞のコンテストウィンドウ（contest window）の告知が、バナーのチャンネル（banner-channeling）告知より前に表示されるようになった。</li><li>[balance] Corzos アカウントのダメージが30%弱体化（nerf）された。</li></ul>
+<h2 id="n-2026-10-25">2026-10-25</h2>
+<h3 id="gludio-gaol">Gludio Gaol（グルーディオ牢獄）のいたずらを追加</h3>
+<ul><li>投獄されたプレイヤーは、釈放されるまで虹色のピエロのかつらと赤い鼻を着ける。</li><li>牢獄ホールのバケツから Rotten Tomatoes（腐ったトマト）を最大5個まで掴める：バケツをクリックするか、隣でEキーを押す。</li><li>バッグまたはアクションバーから1個を使うと、ターゲットにした囚人に投げられる。ログアウト中の者も含む。必ず顔に当たる。</li><li>トマトは取引・売却・銀行預けができず、牢獄を出ると落とす。</li></ul>
+<ul><li>[feat] Eキーが新しい Interact（対話）キーになった。まずトマトのバケツから。</li><li>[fix] ダンスは、歩いて離れるかログアウトすると終了するようになった。</li></ul>
+<h2 id="n-2026-10-25-2">2026-10-25</h2>
+<h3 id="s80">レベルキャップを80に引き上げ</h3>
+<ul><li>レベル75〜80は 10b/20b/40b/80b/160b XP が必要。エンドゲームへの入口は75のまま。</li><li>通常の死亡時XPロスは5,000万でキャップされる。</li><li>レベル75のプライベートダンジョンボスからXPが欠けていた問題を修正した。</li></ul>
+<h3 id="s81">ポータル戦闘を修正</h3>
+<ul><li>Vaelric（ヴァエルリック）は5秒間、または最大HPの20%を失うまで、10倍のダメージを受ける。</li><li>死亡するとボスのアグロが解除される。再び攻撃すると戦闘に復帰する。</li><li>Vaelric の Challenge（挑戦）は壁と18uの到達範囲を尊重する。</li><li>Kasaka（カサカ）の突進と唾吐きは衝撃ダメージを与えなくなった。</li></ul>
+<h3 id="warcryer-4">Warcryer（ウォークライヤー）のスキルを改善</h3>
+<ul><li>Mass Root（集団ルート）はターゲット不要になり、クールダウン60秒。</li><li>Chant of Battle（戦いの詠唱）の詠唱は1.5秒。</li><li>Battle Rhythm（戦いの律動）にレベル58/62/66のランクができ、33/44/55 MP を回復する。</li></ul>
+<h3 id="earthrend">Earthrend（大地裂き）を強化</h3>
+<ul><li>係数2.6、幅15u、射程40u、クールダウン20秒。</li><li>Earthrend と Vaelric の円錐／叩きつけに新しい詠唱アニメーション。</li></ul>
+<h3 id="map-shards">Map Shards（地図の欠片）をバインド化</h3>
+<ul><li>個人の倉庫保管は引き続き可能。取引とクランへの預け入れはブロックされる。</li><li>バインドアイテムは取引の選択とクラン預け入れから除外される。</li></ul>
+<h3 id="chains-of-avarice">Chains of Avarice（強欲の鎖）を修正</h3>
+<ul><li>誰でも宝箱を開けられる。最も高いダメージを与えたソロ／パーティ／ウォーバンドが石（stones）を勝ち取る。同点の場合は誰にも与えられない。</li></ul>
+<ul><li>[fix] 蘇生スクロールが、パーティとウォーバンドのフレーム経由で選択したターゲットにも機能するようになった。</li></ul>
+<h2 id="n-2026-10-24">2026-10-24</h2>
+<h3 id="gludio-gaol-2">Gludio Gaol（グルーディオ牢獄）を追加</h3>
+<ul><li>スタッフに捕まったボットは、装備、アデナ、倉庫、レベルを剥奪され、Gludio Gaol に閉じ込められる。</li><li>Gludio（グルーディオ）の広場の西側にある新しい階段を下りると、オフラインのときでも鉄格子の向こうに彼らを見られる。</li><li>囚人は、GMが外に出すまで、退出、取引、パーティ、ローカル以外のチャットができない。</li></ul>
+<h2 id="n-2026-10-24-2">2026-10-24</h2>
+<h3 id="s87">秘密の部屋におけるダンジョンのバフを修正</h3>
+<ul><li>Delver's Resolve（探掘者の決意）、祠と祭壇の祝福、Delver's Momentum（探掘者の勢い）が、タイマーとキルカウントを含め、ダンジョンの秘密の部屋を通しても保持されるようになった。</li><li>ダンジョンを出ると引き続き終了する。</li></ul>
+<ul><li>[feat] コーデックスのパッチノートページに、最新のパッチノートが表示されるようになった。</li><li>[fix] モンスターとポータルの名前がネームプレートで途中で切れなくなった。</li><li>[fix] ゾーンに入ると、すでに誰かと戦っているモンスターが即座に分かるようになった。</li><li>[fix] ダンジョンの最後の1枠を巡る競争に負けても、騎乗が解除されたり戦闘から外れたりしなくなった。</li><li>[fix] スマートフォンでコーデックスのタブが原因でページが横スクロールしなくなった。</li></ul>
+</main>
+<footer>Grimeage II 攻略ノート ― コーデックス日本語訳（出典：公式コーデックス grimeage2.com/codex）</footer>
+</body>
+</html>
