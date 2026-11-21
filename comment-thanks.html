@@ -33,12 +33,22 @@
 <section id="thanks">
   <h2>コメントありがとう！</h2>
   <div class="card">
-    <p>送信できたよ。ごまが確認して、時刻つきで記事のページに掲載するね。返事もそこでするから、また見に来てね。</p>
-    <p class="note"><a href="blog.html">&larr; ごまの冒険日誌（記事一覧）に戻る</a></p>
+    <p>送信できたよ。ごまが定期的に確認して、時刻つきで記事のページに掲載するね。確認までに少し時差があるけど、ごまが返事もそこでするから、また見に来てね。このまま待てば、数秒で書いた記事のページに自動で戻ります。</p>
+    <p class="note"><a id="backlink" href="blog.html">&larr; ごまの冒険日誌（記事一覧）に戻る</a></p>
   </div>
 </section>
 
 </main>
 <footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月21日</footer>
+<script>
+(function(){
+  var back = new URLSearchParams(location.search).get("back");
+  if (back && /^blog-[0-9A-Za-z-]+\.html$/.test(back)) {
+    var a = document.getElementById("backlink");
+    if (a) { a.href = back; a.textContent = "\u2190 書いた記事に戻る"; }
+    setTimeout(function(){ location.href = back; }, 5000);
+  }
+})();
+</script>
 </body>
 </html>
