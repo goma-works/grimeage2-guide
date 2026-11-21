@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>制作（クラフト） | Grimeage II 攻略ノート</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#0f2733; --line:#22303d;
+    --text:#dbe7ee; --muted:#8fa6b3; --accent:#39d0c4; --accent2:#a678f0;
+    --gold:#e8c268; --red:#e06c6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.75}
+  a{color:var(--accent)}
+  nav{position:sticky;top:0;background:rgba(11,15,20,.94);border-bottom:1px solid var(--line);padding:10px 16px;z-index:10;backdrop-filter:blur(4px)}
+  nav a{margin-right:16px;text-decoration:none;font-size:.92rem;white-space:nowrap}
+  main{max-width:960px;margin:0 auto;padding:8px 16px 64px}
+  section{margin-top:40px}
+  h2{border-left:4px solid var(--accent);padding-left:10px;font-size:1.3rem;margin-bottom:14px}
+  h3{color:var(--accent2);margin:20px 0 8px;font-size:1.05rem}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .status .cell{background:var(--panel2);border-radius:8px;padding:10px 12px}
+  .status .k{color:var(--muted);font-size:.8rem}
+  .status .v{font-size:1.1rem;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;white-space:nowrap}
+  .note{color:var(--muted);font-size:.9rem}
+  footer{color:var(--muted);text-align:center;padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">&larr; 攻略ノート トップ</a><a href="#basics">制作の基本</a><a href="#inter">中間素材</a><a href="#staff">杖・ワンド</a><a href="#robe">ローブ</a><a href="#acc">アクセサリー</a><a href="#weapons">その他の武器</a><a href="#armor">軽装・重装・盾</a><a href="#cons">消耗品</a><a href="#sources">素材の入手先</a><a href="#now">muse の制作状況</a><a href="codex.html">コーデックス日本語訳</a>
+</nav>
+<main>
+
+<section id="top">
+  <h2>制作（クラフト）</h2>
+  <div class="card">
+    <p>装備は店では買えず、<strong>制作が主な入手経路</strong>。全206レシピ（中間素材10／武器77／防具105／盾3／アクセサリー10／消耗品8）の必要素材と制作手数料を、公式コーデックスのデータと実機確認をもとにまとめた。各アイテムは「名前／要求Lv／性能／必要素材／手数料」が単体で完結して読める形にしてあるので、「これ作りたい」の指示出しにも使える。</p>
+    <p class="note">出典：公式コーデックス（grimeage2.com/codex）の Recipes / Items データ（2026-11-21 調査）と、ゲーム内 Forge での実機確認。固有名詞は作中表記（英語）のまま、地名などは攻略ノートの表記ルールに合わせている。</p>
+  </div>
+</section>
+
+<section id="basics">
+  <h2>制作の基本</h2>
+  <div class="card">
+    <p>・制作は <strong>グルーディオス（Gludios）の Forge Master Doran</strong>（鍛冶場のNPC）で行う。話しかけるとカテゴリ別のレシピ一覧が開く。<br>
+    ・<strong>レシピアイテムは不要</strong>。低〜中位のレシピは、要求レベルを満たしていれば「素材＋ゴールド（制作手数料）」だけで作れる（実機確認済み）。<br>
+    ・完成品の要求レベル帯は <strong>Lv0 / 20 / 40 / 52 / 61</strong> の5段階。作れるのは自分のレベル以下の帯まで（例：Lv.35 なら Lv20 帯まで）。<br>
+    ・Forge の所持数表示は <strong>バッグ＋倉庫の合算</strong>。倉庫に預けた素材もそのまま制作に使える。<br>
+    ・最上位の Astral 系武器と Lv61 防具セットだけは例外で、レシピアイテムを <strong>Master Artisan Veldros</strong> に登録して習得する方式。Artisan's Token（職人のトークン）10枚で好きなレシピ1つと交換できる（公式コーデックス情報）。<br>
+    ・制作したネックレスは宝石職人 <strong>Jewelsmith Dorran</strong>（Gilran）で Resonant Sigil を使って +5 まで強化でき、ユニーク指輪は Binding Sigil で同様に強化できる。失敗してもアイテムは壊れない（公式 Enchanting Guide）。<br>
+    ・ゲーム内の「Professions（専門職）」は釣り（Fishing）と地図作成（Cartography）の生活系スキルで、アイテム制作とは別系統の仕組み。</p>
+  </div>
+</section>
+
+<section id="inter">
+  <h2>中間素材チェーン</h2>
+  <p class="note">他の制作の前提になる素材。まず素材を素材に加工してから装備を作る、二段構えになっている。</p>
+  <div class="card">
+<table>
+<tr><th>中間素材</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Alloy</td><td>0</td><td>uncommon</td><td>1,000</td><td>Iron Ore×10</td></tr>
+<tr><td>Adamantine Alloy</td><td>0</td><td>rare</td><td>3,000</td><td>Adamantine Ore×2、Mithril Alloy×1</td></tr>
+<tr><td>Pyrite Alloy</td><td>0</td><td>rare</td><td>6,000</td><td>Pyrite×2、Quicksilver×1、Adamantine Alloy×1</td></tr>
+<tr><td>Leather</td><td>0</td><td>uncommon</td><td>1,500</td><td>Animal Skin×15</td></tr>
+<tr><td>Composite Leather</td><td>0</td><td>rare</td><td>4,000</td><td>Moss-Back Hide×2、Leather×1、Resin Glue×1</td></tr>
+<tr><td>Reinforced Bone</td><td>0</td><td>uncommon</td><td>500</td><td>Bone Fragment×10</td></tr>
+<tr><td>Hardened Stem</td><td>0</td><td>uncommon</td><td>1,000</td><td>Stem×10</td></tr>
+<tr><td>Composite Fiber</td><td>0</td><td>rare</td><td>4,000</td><td>Brackish Vine×2、Hardened Stem×1、Resin Glue×1</td></tr>
+<tr><td>Enchanted Crystal</td><td>0</td><td>rare</td><td>15,000</td><td>Dark Crystal×2</td></tr>
+<tr><td>Magical Dust</td><td>0</td><td>rare</td><td>20,000</td><td>Magical Shard×2</td></tr>
+</table>
+</div>
+  <p class="note">素材名の対訳：Iron Ore＝鉄鉱石、Adamantine Ore＝アダマンタイト鉱石、Pyrite＝黄鉄鉱、Quicksilver＝水銀、Animal Skin＝動物の皮、Moss-Back Hide＝苔背の皮、Bone Fragment＝骨の破片、Stem＝茎、Brackish Vine＝汽水のつる、Resin Glue＝樹脂グルー、Dark Crystal＝ダーククリスタル、Magical Shard＝魔法の破片。</p>
+</section>
+
+<section id="staff">
+  <h2>杖・ワンド（ネクロマンサー向け）</h2>
+  <div class="card">
+<table>
+<tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>性能</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Crystal-Woven Staff</td><td>0</td><td>epic</td><td>P.Atk 64, M.Atk 80, 両手 True, 攻撃間隔ms 2400</td><td>250,000</td><td>Mithril Alloy×5、Magical Dust×6、Enchanted Crystal×2、Magic Crystal×250</td></tr>
+<tr><td>Archmage's Staff</td><td>20</td><td>epic</td><td>P.Atk 88, M.Atk 110, 両手 True, 攻撃間隔ms 2200</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×12、Enchanted Crystal×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Staff</td><td>40</td><td>epic</td><td>P.Atk 114, M.Atk 143, 両手 True, 攻撃間隔ms 2200</td><td>8,000,000</td><td>Hardened Stem×40、Magical Dust×60、Enchanted Crystal×18、Adamantine Ore×160、Stone of Purity×100、Magic Crystal×2500、Eldritch Stone×12</td></tr>
+<tr><td>Aether Staff</td><td>52</td><td>epic</td><td>P.Atk 190, M.Atk 239, 両手 True, 攻撃間隔ms 2200</td><td>8,000,000</td><td>Composite Fiber×50、Pyrite Alloy×200、Magical Dust×75、Enchanted Crystal×23、Stone of Purity×125、Magic Crystal×3125、Aether Stone×15</td></tr>
+<tr><td>Abyssal Staff</td><td>40</td><td>epic</td><td>P.Atk 167, M.Atk 210, 両手 True, 攻撃間隔ms 2200</td><td>15,000,000</td><td>Hardened Stem×60、Magical Dust×85、Enchanted Crystal×25、Adamantine Ore×220、Stone of Purity×150、Magic Crystal×3500、Abyssal Stone×15</td></tr>
+<tr><td>Empyrean Staff</td><td>52</td><td>epic</td><td>P.Atk 210, M.Atk 264, 両手 True, 攻撃間隔ms 2200</td><td>12,000,000</td><td>Composite Fiber×60、Pyrite Alloy×240、Magical Dust×90、Enchanted Crystal×28、Stone of Purity×150、Magic Crystal×3750、Empyrean Stone×15</td></tr>
+<tr><td>Astral Staff</td><td>61</td><td>epic</td><td>P.Atk 242, M.Atk 304, 両手 True, 攻撃間隔ms 2200</td><td>0</td><td>Astral Stone×15、Runewood Focus×500、Jotun Corestone×250</td></tr>
+<tr><td>Wooden Wand</td><td>0</td><td>common</td><td>P.Atk 8, M.Atk 11, 攻撃間隔ms 2200</td><td>2,000</td><td>Stem×5、Magical Shard×2</td></tr>
+<tr><td>Runic Wand</td><td>20</td><td>epic</td><td>P.Atk 60, M.Atk 90, 攻撃間隔ms 2200</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×12、Enchanted Crystal×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Wand</td><td>40</td><td>epic</td><td>P.Atk 78, M.Atk 117, 攻撃間隔ms 2200</td><td>8,000,000</td><td>Hardened Stem×40、Magical Dust×60、Enchanted Crystal×18、Adamantine Ore×160、Stone of Purity×100、Magic Crystal×2500、Eldritch Stone×12</td></tr>
+<tr><td>Aether Wand</td><td>52</td><td>epic</td><td>P.Atk 130, M.Atk 196, 攻撃間隔ms 2200</td><td>8,000,000</td><td>Composite Fiber×50、Pyrite Alloy×200、Magical Dust×75、Enchanted Crystal×23、Stone of Purity×125、Magic Crystal×3125、Aether Stone×15</td></tr>
+<tr><td>Abyssal Wand</td><td>40</td><td>epic</td><td>P.Atk 114, M.Atk 172, 攻撃間隔ms 2200</td><td>15,000,000</td><td>Hardened Stem×60、Magical Dust×85、Enchanted Crystal×25、Adamantine Ore×220、Stone of Purity×150、Magic Crystal×3500、Abyssal Stone×15</td></tr>
+<tr><td>Empyrean Wand</td><td>52</td><td>epic</td><td>P.Atk 143, M.Atk 216, 攻撃間隔ms 2200</td><td>12,000,000</td><td>Composite Fiber×60、Pyrite Alloy×240、Magical Dust×90、Enchanted Crystal×28、Stone of Purity×150、Magic Crystal×3750、Empyrean Stone×15</td></tr>
+<tr><td>Astral Wand</td><td>61</td><td>epic</td><td>P.Atk 165, M.Atk 249, 攻撃間隔ms 2200</td><td>0</td><td>Astral Stone×13、Runewood Focus×500、Jotun Corestone×250</td></tr>
+</table>
+</div>
+  <p class="note">Crystal-Woven Staff（Lv0、M.Atk 80）は muse の現装備で、これ自体が制作品。次の杖は Archmage's Staff（Lv20、M.Atk 110）。Lv40 の Eldritch Staff は M.Atk 143 だが、手数料800万ゴールドと素材が非常に重い。</p>
+</section>
+
+<section id="robe">
+  <h2>ローブ防具（ネクロマンサー向け）</h2>
+  <div class="card">
+<table>
+<tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>性能</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Hood</td><td>20</td><td>set</td><td>P.Def 20, M.Def 26, M.Atk+% 1, 最大MP 20</td><td>80,000</td><td>Mithril Alloy×3、Magical Dust×4、Dark Crystal×2、Magic Crystal×200</td></tr>
+<tr><td>Mithril Robe</td><td>20</td><td>set</td><td>P.Def 36, M.Def 47, 最大HP 60, 最大MP 90</td><td>150,000</td><td>Mithril Alloy×5、Magical Dust×8、Dark Crystal×4、Magic Crystal×200</td></tr>
+<tr><td>Mithril Gloves</td><td>20</td><td>set</td><td>P.Def 14, M.Def 18, 最大MP 50</td><td>60,000</td><td>Mithril Alloy×2、Magical Dust×3、Dark Crystal×1、Magic Crystal×200</td></tr>
+<tr><td>Mithril Pants</td><td>20</td><td>set</td><td>P.Def 24, M.Def 32, M.Atk+% 1, 最大HP 40</td><td>100,000</td><td>Mithril Alloy×4、Magical Dust×5、Dark Crystal×2、Magic Crystal×200</td></tr>
+<tr><td>Mithril Shoes</td><td>20</td><td>set</td><td>P.Def 17, M.Def 21, 移動速度 1, 最大MP 20</td><td>70,000</td><td>Mithril Alloy×3、Magical Dust×4、Dark Crystal×2、Magic Crystal×200</td></tr>
+<tr><td>Karmian Hood</td><td>40</td><td>set</td><td>P.Def 29, M.Def 38, 詠唱速度+% 2, 最大MP 30</td><td>1,500,000</td><td>Magical Dust×30、Enchanted Crystal×8、Adamantine Ore×15、Stem×30、Dark Crystal×15、Magic Crystal×500</td></tr>
+<tr><td>Karmian Robe</td><td>40</td><td>set</td><td>P.Def 50, M.Def 68, MEN 1, 最大MP 80</td><td>3,000,000</td><td>Magical Dust×60、Enchanted Crystal×15、Adamantine Ore×30、Stem×60、Dark Crystal×30、Magic Crystal×1000</td></tr>
+<tr><td>Karmian Gloves</td><td>40</td><td>set</td><td>P.Def 21, M.Def 27, MP回復 1, 最大MP 40</td><td>1,200,000</td><td>Magical Dust×20、Enchanted Crystal×5、Adamantine Ore×10、Stem×20、Dark Crystal×10、Magic Crystal×400</td></tr>
+<tr><td>Karmian Pants</td><td>40</td><td>set</td><td>P.Def 35, M.Def 47, 最大MP 140, MP回復 1</td><td>2,000,000</td><td>Magical Dust×40、Enchanted Crystal×10、Adamantine Ore×20、Stem×40、Dark Crystal×20、Magic Crystal×700</td></tr>
+<tr><td>Karmian Shoes</td><td>40</td><td>set</td><td>P.Def 24, M.Def 32, 移動速度 2, 最大MP 30</td><td>1,500,000</td><td>Magical Dust×30、Enchanted Crystal×7、Adamantine Ore×12、Stem×25、Dark Crystal×15、Magic Crystal×500</td></tr>
+<tr><td>Demon Hood</td><td>40</td><td>set</td><td>P.Def 29, M.Def 38, M.Atk+% 2, 最大MP 30</td><td>1,500,000</td><td>Magical Dust×30、Enchanted Crystal×8、Adamantine Ore×15、Stem×30、Dark Crystal×15、Magic Crystal×500</td></tr>
+<tr><td>Demon Robe</td><td>40</td><td>set</td><td>P.Def 50, M.Def 68, M.Atk+% 3, 最大HP 60, 最大MP 50</td><td>3,000,000</td><td>Magical Dust×60、Enchanted Crystal×15、Adamantine Ore×30、Stem×60、Dark Crystal×30、Magic Crystal×1000</td></tr>
+<tr><td>Demon Gloves</td><td>40</td><td>set</td><td>P.Def 21, M.Def 27, 詠唱速度+% 1, 最大MP 40</td><td>1,200,000</td><td>Magical Dust×20、Enchanted Crystal×5、Adamantine Ore×10、Stem×20、Dark Crystal×10、Magic Crystal×400</td></tr>
+<tr><td>Demon Pants</td><td>40</td><td>set</td><td>P.Def 35, M.Def 47, M.Atk+% 2, 最大HP 40, 最大MP 30</td><td>2,000,000</td><td>Magical Dust×40、Enchanted Crystal×10、Adamantine Ore×20、Stem×40、Dark Crystal×20、Magic Crystal×700</td></tr>
+<tr><td>Demon Shoes</td><td>40</td><td>set</td><td>P.Def 24, M.Def 32, 移動速度 1, MP回復 1, 最大MP 30</td><td>1,500,000</td><td>Magical Dust×30、Enchanted Crystal×7、Adamantine Ore×12、Stem×25、Dark Crystal×15、Magic Crystal×500</td></tr>
+<tr><td>Thalassa Hood</td><td>52</td><td>set</td><td>P.Def 37, M.Def 48, MP回復 3</td><td>1,900,000</td><td>Magical Dust×38、Enchanted Crystal×10、Pyrite Alloy×19、Composite Fiber×38、Dark Crystal×19、Brine Stone×4、Magic Crystal×650</td></tr>
+<tr><td>Thalassa Robe</td><td>52</td><td>set</td><td>P.Def 64, M.Def 87, WIT 1, 詠唱速度+% 3</td><td>3,800,000</td><td>Magical Dust×77、Enchanted Crystal×19、Pyrite Alloy×38、Composite Fiber×77、Dark Crystal×38、Brine Stone×10、Magic Crystal×1300</td></tr>
+<tr><td>Thalassa Gloves</td><td>52</td><td>set</td><td>P.Def 27, M.Def 35, 詠唱速度+% 2</td><td>1,500,000</td><td>Magical Dust×26、Enchanted Crystal×6、Pyrite Alloy×13、Composite Fiber×26、Dark Crystal×13、Magic Crystal×500</td></tr>
+<tr><td>Thalassa Pants</td><td>52</td><td>set</td><td>P.Def 45, M.Def 60, MEN 1, 最大MP 60</td><td>2,500,000</td><td>Magical Dust×51、Enchanted Crystal×13、Pyrite Alloy×26、Composite Fiber×51、Dark Crystal×26、Brine Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Thalassa Shoes</td><td>52</td><td>set</td><td>P.Def 31, M.Def 41, 移動速度 2, 最大MP 60</td><td>1,900,000</td><td>Magical Dust×38、Enchanted Crystal×9、Pyrite Alloy×15、Composite Fiber×32、Dark Crystal×19、Magic Crystal×650</td></tr>
+<tr><td>Mire-Weaver Hood</td><td>52</td><td>set</td><td>P.Def 37, M.Def 48, INT 1</td><td>1,900,000</td><td>Magical Dust×38、Enchanted Crystal×10、Pyrite Alloy×19、Composite Fiber×38、Dark Crystal×19、Blight Stone×4、Magic Crystal×650</td></tr>
+<tr><td>Mire-Weaver Robe</td><td>52</td><td>set</td><td>P.Def 64, M.Def 87, INT 1, M.Atk+% 3</td><td>3,800,000</td><td>Magical Dust×77、Enchanted Crystal×19、Pyrite Alloy×38、Composite Fiber×77、Dark Crystal×38、Blight Stone×10、Magic Crystal×1300</td></tr>
+<tr><td>Mire-Weaver Gloves</td><td>52</td><td>set</td><td>P.Def 27, M.Def 35, 詠唱速度+% 2</td><td>1,500,000</td><td>Magical Dust×26、Enchanted Crystal×6、Pyrite Alloy×13、Composite Fiber×26、Dark Crystal×13、Magic Crystal×500</td></tr>
+<tr><td>Mire-Weaver Pants</td><td>52</td><td>set</td><td>P.Def 45, M.Def 60, M.Atk+% 2, 最大MP 120</td><td>2,500,000</td><td>Magical Dust×51、Enchanted Crystal×13、Pyrite Alloy×26、Composite Fiber×51、Dark Crystal×26、Blight Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Mire-Weaver Shoes</td><td>52</td><td>set</td><td>P.Def 31, M.Def 41, 移動速度 2, 最大MP 70</td><td>1,900,000</td><td>Magical Dust×38、Enchanted Crystal×9、Pyrite Alloy×15、Composite Fiber×32、Dark Crystal×19、Magic Crystal×650</td></tr>
+<tr><td>Elderwood Hood</td><td>61</td><td>set</td><td>P.Def 47, M.Def 62, MP回復 3, 最大MP 40</td><td>0</td><td>Frostheart Stone×1、Warded Weave×90、Runed Hide×45</td></tr>
+<tr><td>Elderwood Robe</td><td>61</td><td>set</td><td>P.Def 82, M.Def 111, WIT 1, 詠唱速度+% 3, 最大MP 60</td><td>0</td><td>Frostheart Stone×1、Warded Weave×270、Runed Hide×135</td></tr>
+<tr><td>Elderwood Gloves</td><td>61</td><td>set</td><td>P.Def 35, M.Def 45, 詠唱速度+% 2, M.Atk+% 2</td><td>0</td><td>Frostheart Stone×1、Warded Weave×90、Runed Hide×45</td></tr>
+<tr><td>Elderwood Pants</td><td>61</td><td>set</td><td>P.Def 58, M.Def 77, MEN 1, 最大MP 80</td><td>0</td><td>Frostheart Stone×1、Warded Weave×180、Runed Hide×90</td></tr>
+<tr><td>Elderwood Shoes</td><td>61</td><td>set</td><td>P.Def 39, M.Def 52, 移動速度 4, 最大MP 40</td><td>0</td><td>Frostheart Stone×1、Warded Weave×90、Runed Hide×45</td></tr>
+<tr><td>Frostgrove Hood</td><td>61</td><td>set</td><td>P.Def 47, M.Def 62, MEN 1, MP回復 1</td><td>0</td><td>Gloomroot Stone×1、Warded Weave×90、Runed Hide×45</td></tr>
+<tr><td>Frostgrove Robe</td><td>61</td><td>set</td><td>P.Def 82, M.Def 111, INT 3</td><td>0</td><td>Gloomroot Stone×1、Warded Weave×270、Runed Hide×135</td></tr>
+<tr><td>Frostgrove Gloves</td><td>61</td><td>set</td><td>P.Def 35, M.Def 45, 詠唱速度+% 2, 最大MP 30</td><td>0</td><td>Gloomroot Stone×1、Warded Weave×90、Runed Hide×45</td></tr>
+<tr><td>Frostgrove Pants</td><td>61</td><td>set</td><td>P.Def 58, M.Def 77, M.Atk+% 4, 最大HP 70</td><td>0</td><td>Gloomroot Stone×1、Warded Weave×180、Runed Hide×90</td></tr>
+<tr><td>Frostgrove Shoes</td><td>61</td><td>set</td><td>P.Def 39, M.Def 52, 移動速度 3, MP回復 1</td><td>0</td><td>Gloomroot Stone×1、Warded Weave×90、Runed Hide×45</td></tr>
+</table>
+</div>
+  <p class="note">Mithril セット（Lv20）が現在装備可能。Lv40 では攻撃寄りの Demon セットと、詠唱速度・MP寄りの Karmian セットに分かれる（muse の方針は Karmian）。</p>
+</section>
+
+<section id="acc">
+  <h2>アクセサリー</h2>
+  <div class="card">
+<table>
+<tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>性能</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Elven Ring</td><td>0</td><td>epic</td><td>P.Def 3, M.Def 12, HP回復 1</td><td>10,000</td><td>Mithril Alloy×5、Magical Dust×5、Enchanted Crystal×1</td></tr>
+<tr><td>Elven Amulet</td><td>0</td><td>epic</td><td>P.Def 4, M.Def 12, HP回復 1</td><td>10,000</td><td>Mithril Alloy×5、Magical Dust×5、Enchanted Crystal×1</td></tr>
+<tr><td>Mithril Striker Necklace</td><td>20</td><td>unique</td><td>P.Def 10, M.Def 20, 攻撃速度+% 2</td><td>5,000</td><td>Mithril Alloy×1、Magical Dust×2</td></tr>
+<tr><td>Mithril Mystic Necklace</td><td>20</td><td>unique</td><td>P.Def 10, M.Def 20, 詠唱速度+% 2</td><td>5,000</td><td>Mithril Alloy×1、Magical Dust×2</td></tr>
+<tr><td>Eldritch Striker Necklace</td><td>40</td><td>unique</td><td>P.Def 20, M.Def 40, 攻撃速度+% 3</td><td>2,000,000</td><td>Mithril Alloy×20、Adamantine Ore×80、Magic Crystal×1000、Eldritch Stone×50</td></tr>
+<tr><td>Eldritch Mystic Necklace</td><td>40</td><td>unique</td><td>P.Def 20, M.Def 40, 詠唱速度+% 3</td><td>2,000,000</td><td>Mithril Alloy×20、Adamantine Ore×80、Magic Crystal×1000、Eldritch Stone×50</td></tr>
+<tr><td>Aether Striker Necklace</td><td>52</td><td>unique</td><td>P.Def 30, M.Def 60, 攻撃速度+% 4</td><td>4,000,000</td><td>Pyrite Alloy×50、Stone of Purity×60、Magic Crystal×1500、Aether Stone×100</td></tr>
+<tr><td>Aether Mystic Necklace</td><td>52</td><td>unique</td><td>P.Def 30, M.Def 60, 詠唱速度+% 4</td><td>4,000,000</td><td>Pyrite Alloy×50、Stone of Purity×60、Magic Crystal×1500、Aether Stone×100</td></tr>
+<tr><td>Runeward Striker Necklace</td><td>61</td><td>unique</td><td>P.Def 40, M.Def 80, 攻撃速度+% 5</td><td>8,000,000</td><td>Warded Weave×20、Runewood Focus×20、Magic Crystal×2500、Astral Stone×300</td></tr>
+<tr><td>Runeward Mystic Necklace</td><td>61</td><td>unique</td><td>P.Def 40, M.Def 80, 詠唱速度+% 5</td><td>8,000,000</td><td>Warded Weave×20、Runewood Focus×20、Magic Crystal×2500、Astral Stone×300</td></tr>
+</table>
+</div>
+  <p class="note">ネックレスは Striker（攻撃速度）／Mystic（詠唱速度）の2系統で、魔法職は Mystic 系。Elven Ring / Elven Amulet は Lv0 から作れる入門アクセサリー。指輪は Elven Ring のみ（他の指輪レシピは存在しない）。</p>
+</section>
+
+<section id="weapons">
+  <h2>その他の武器（全種）</h2>
+  <p class="note">杖・ワンド以外の武器。性能数値は公式コーデックスのアイテムDB参照（ここでは素材と手数料を掲載）。</p>
+  <h3>剣（sword）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Longsword</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×6、Magical Dust×5、Enchanted Crystal×1、Reinforced Bone×2、Magic Crystal×250</td></tr>
+<tr><td>Runic Blade</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×8、Enchanted Crystal×2、Reinforced Bone×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Blade</td><td>40</td><td>epic</td><td>8,000,000</td><td>Mithril Alloy×40、Magical Dust×40、Enchanted Crystal×12、Adamantine Ore×160、Stone of Purity×100、Magic Crystal×2500、Eldritch Stone×10</td></tr>
+<tr><td>Aether Blade</td><td>52</td><td>epic</td><td>8,000,000</td><td>Pyrite Alloy×250、Magical Dust×50、Enchanted Crystal×15、Stone of Purity×125、Magic Crystal×3125、Aether Stone×13</td></tr>
+<tr><td>Abyssal Blade</td><td>40</td><td>epic</td><td>15,000,000</td><td>Mithril Alloy×60、Magical Dust×60、Enchanted Crystal×18、Adamantine Ore×220、Stone of Purity×150、Magic Crystal×3500、Abyssal Stone×12</td></tr>
+<tr><td>Empyrean Blade</td><td>52</td><td>epic</td><td>12,000,000</td><td>Pyrite Alloy×300、Magical Dust×60、Enchanted Crystal×18、Stone of Purity×150、Magic Crystal×3750、Empyrean Stone×13</td></tr>
+<tr><td>Astral Blade</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×13、Keening Edge×500、Hunter's Sinew×250</td></tr>
+</table></div><h3>大剣（greatsword）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Greatsword</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×6、Magical Dust×5、Enchanted Crystal×1、Reinforced Bone×2、Magic Crystal×250</td></tr>
+<tr><td>Runic Greatsword</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×10、Magical Dust×10、Enchanted Crystal×2、Reinforced Bone×4、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Greatsword</td><td>40</td><td>epic</td><td>8,000,000</td><td>Mithril Alloy×50、Magical Dust×50、Enchanted Crystal×15、Adamantine Ore×180、Stone of Purity×110、Magic Crystal×3000、Eldritch Stone×12</td></tr>
+<tr><td>Aether Greatsword</td><td>52</td><td>epic</td><td>8,000,000</td><td>Pyrite Alloy×288、Magical Dust×63、Enchanted Crystal×19、Stone of Purity×138、Magic Crystal×3750、Aether Stone×15</td></tr>
+<tr><td>Abyssal Greatsword</td><td>40</td><td>epic</td><td>15,000,000</td><td>Mithril Alloy×75、Magical Dust×75、Enchanted Crystal×22、Adamantine Ore×250、Stone of Purity×170、Magic Crystal×4500、Abyssal Stone×15</td></tr>
+<tr><td>Empyrean Greatsword</td><td>52</td><td>epic</td><td>12,000,000</td><td>Pyrite Alloy×346、Magical Dust×76、Enchanted Crystal×23、Stone of Purity×166、Magic Crystal×4500、Empyrean Stone×15</td></tr>
+<tr><td>Astral Greatsword</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×15、Jotun Corestone×500、Keening Edge×250</td></tr>
+</table></div><h3>短剣（dagger）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Stiletto</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×6、Magical Dust×5、Enchanted Crystal×1、Leather×2、Magic Crystal×250</td></tr>
+<tr><td>Runic Kris</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×8、Enchanted Crystal×2、Leather×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Kris</td><td>40</td><td>epic</td><td>8,000,000</td><td>Mithril Alloy×40、Magical Dust×40、Enchanted Crystal×12、Adamantine Ore×160、Stone of Purity×100、Magic Crystal×2500、Eldritch Stone×12</td></tr>
+<tr><td>Aether Kris</td><td>52</td><td>epic</td><td>8,000,000</td><td>Pyrite Alloy×250、Magical Dust×50、Enchanted Crystal×15、Stone of Purity×125、Magic Crystal×3125、Aether Stone×15</td></tr>
+<tr><td>Abyssal Kris</td><td>40</td><td>epic</td><td>15,000,000</td><td>Mithril Alloy×60、Magical Dust×60、Enchanted Crystal×18、Adamantine Ore×220、Stone of Purity×150、Magic Crystal×3500、Abyssal Stone×12</td></tr>
+<tr><td>Empyrean Kris</td><td>52</td><td>epic</td><td>12,000,000</td><td>Pyrite Alloy×300、Magical Dust×60、Enchanted Crystal×18、Stone of Purity×150、Magic Crystal×3750、Empyrean Stone×15</td></tr>
+<tr><td>Astral Kris</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×15、Hunter's Sinew×500、Runewood Focus×250</td></tr>
+</table></div><h3>二刀流（dual sword）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Dual Mithril Swords</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×6、Magical Dust×5、Enchanted Crystal×1、Reinforced Bone×2、Magic Crystal×250</td></tr>
+<tr><td>Dual Runic Swords</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×10、Magical Dust×10、Enchanted Crystal×2、Reinforced Bone×4、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Dual Eldritch Swords</td><td>40</td><td>epic</td><td>8,000,000</td><td>Mithril Alloy×50、Magical Dust×50、Enchanted Crystal×15、Adamantine Ore×180、Stone of Purity×110、Magic Crystal×3000、Eldritch Stone×12</td></tr>
+<tr><td>Dual Aether Swords</td><td>52</td><td>epic</td><td>8,000,000</td><td>Pyrite Alloy×288、Magical Dust×63、Enchanted Crystal×19、Stone of Purity×138、Magic Crystal×3750、Aether Stone×15</td></tr>
+<tr><td>Dual Abyssal Swords</td><td>40</td><td>epic</td><td>15,000,000</td><td>Mithril Alloy×75、Magical Dust×75、Enchanted Crystal×22、Adamantine Ore×250、Stone of Purity×170、Magic Crystal×4500、Abyssal Stone×15</td></tr>
+<tr><td>Dual Empyrean Swords</td><td>52</td><td>epic</td><td>12,000,000</td><td>Pyrite Alloy×346、Magical Dust×76、Enchanted Crystal×23、Stone of Purity×166、Magic Crystal×4500、Empyrean Stone×15</td></tr>
+<tr><td>Dual Astral Swords</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×15、Keening Edge×500、Hunter's Sinew×250</td></tr>
+</table></div><h3>弓（bow）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Composite Bow</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×5、Magical Dust×5、Enchanted Crystal×1、Reinforced Bone×1、Leather×2、Magic Crystal×250</td></tr>
+<tr><td>Runic Warbow</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×8、Enchanted Crystal×2、Reinforced Bone×2、Leather×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Warbow</td><td>40</td><td>epic</td><td>8,000,000</td><td>Hardened Stem×50、Magical Dust×50、Enchanted Crystal×15、Adamantine Ore×180、Stone of Purity×110、Magic Crystal×3000、Eldritch Stone×12</td></tr>
+<tr><td>Aether Warbow</td><td>52</td><td>epic</td><td>8,000,000</td><td>Composite Fiber×63、Pyrite Alloy×225、Magical Dust×63、Enchanted Crystal×19、Stone of Purity×138、Magic Crystal×3750、Aether Stone×15</td></tr>
+<tr><td>Abyssal Warbow</td><td>40</td><td>epic</td><td>15,000,000</td><td>Hardened Stem×75、Magical Dust×75、Enchanted Crystal×22、Adamantine Ore×250、Stone of Purity×170、Magic Crystal×4500、Abyssal Stone×15</td></tr>
+<tr><td>Empyrean Warbow</td><td>52</td><td>epic</td><td>12,000,000</td><td>Composite Fiber×76、Pyrite Alloy×270、Magical Dust×76、Enchanted Crystal×23、Stone of Purity×166、Magic Crystal×4500、Empyrean Stone×15</td></tr>
+<tr><td>Astral Warbow</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×15、Hunter's Sinew×500、Runewood Focus×250</td></tr>
+</table></div><h3>拳（fist）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Mithril Claws</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×6、Magical Dust×5、Enchanted Crystal×1、Reinforced Bone×2、Magic Crystal×250</td></tr>
+<tr><td>Runic War Fists</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×10、Magical Dust×10、Enchanted Crystal×2、Reinforced Bone×4、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch War Fists</td><td>40</td><td>epic</td><td>8,000,000</td><td>Mithril Alloy×50、Magical Dust×50、Enchanted Crystal×15、Adamantine Ore×180、Stone of Purity×110、Magic Crystal×3000、Eldritch Stone×12</td></tr>
+<tr><td>Aether War Fists</td><td>52</td><td>epic</td><td>8,000,000</td><td>Pyrite Alloy×288、Magical Dust×63、Enchanted Crystal×19、Stone of Purity×138、Magic Crystal×3750、Aether Stone×15</td></tr>
+<tr><td>Abyssal War Fists</td><td>40</td><td>epic</td><td>15,000,000</td><td>Mithril Alloy×75、Magical Dust×75、Enchanted Crystal×22、Adamantine Ore×250、Stone of Purity×170、Magic Crystal×4500、Abyssal Stone×15</td></tr>
+<tr><td>Empyrean War Fists</td><td>52</td><td>epic</td><td>12,000,000</td><td>Pyrite Alloy×346、Magical Dust×76、Enchanted Crystal×23、Stone of Purity×166、Magic Crystal×4500、Empyrean Stone×15</td></tr>
+<tr><td>Astral War Fists</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×15、Runewood Focus×500、Jotun Corestone×250</td></tr>
+</table></div><h3>メイス（mace）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Wooden Spirit Mace</td><td>0</td><td>common</td><td>2,000</td><td>Stem×5、Magical Shard×2</td></tr>
+<tr><td>Mithril Warhammer</td><td>0</td><td>epic</td><td>250,000</td><td>Mithril Alloy×6、Magical Dust×5、Enchanted Crystal×1、Reinforced Bone×2、Magic Crystal×250</td></tr>
+<tr><td>Runic Crusher</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×8、Enchanted Crystal×2、Reinforced Bone×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Runic Spirit Mace</td><td>20</td><td>epic</td><td>500,000</td><td>Mithril Alloy×8、Magical Dust×12、Enchanted Crystal×3、Stone of Purity×5、Magic Crystal×500</td></tr>
+<tr><td>Eldritch Crusher</td><td>40</td><td>epic</td><td>8,000,000</td><td>Mithril Alloy×40、Magical Dust×40、Enchanted Crystal×12、Adamantine Ore×160、Stone of Purity×100、Magic Crystal×2500、Eldritch Stone×10</td></tr>
+<tr><td>Eldritch Spirit Mace</td><td>40</td><td>epic</td><td>8,000,000</td><td>Hardened Stem×40、Magical Dust×60、Enchanted Crystal×18、Adamantine Ore×160、Stone of Purity×100、Magic Crystal×2500、Eldritch Stone×12</td></tr>
+<tr><td>Aether Crusher</td><td>52</td><td>epic</td><td>8,000,000</td><td>Pyrite Alloy×250、Magical Dust×50、Enchanted Crystal×15、Stone of Purity×125、Magic Crystal×3125、Aether Stone×13</td></tr>
+<tr><td>Aether Spirit Mace</td><td>52</td><td>epic</td><td>8,000,000</td><td>Composite Fiber×50、Pyrite Alloy×200、Magical Dust×75、Enchanted Crystal×23、Stone of Purity×125、Magic Crystal×3125、Aether Stone×15</td></tr>
+<tr><td>Abyssal Crusher</td><td>40</td><td>epic</td><td>15,000,000</td><td>Mithril Alloy×60、Magical Dust×60、Enchanted Crystal×18、Adamantine Ore×220、Stone of Purity×150、Magic Crystal×3500、Abyssal Stone×12</td></tr>
+<tr><td>Abyssal Spirit Mace</td><td>40</td><td>epic</td><td>15,000,000</td><td>Hardened Stem×60、Magical Dust×85、Enchanted Crystal×25、Adamantine Ore×220、Stone of Purity×150、Magic Crystal×3500、Abyssal Stone×15</td></tr>
+<tr><td>Empyrean Crusher</td><td>52</td><td>epic</td><td>12,000,000</td><td>Pyrite Alloy×300、Magical Dust×60、Enchanted Crystal×18、Stone of Purity×150、Magic Crystal×3750、Empyrean Stone×13</td></tr>
+<tr><td>Empyrean Spirit Mace</td><td>52</td><td>epic</td><td>12,000,000</td><td>Composite Fiber×60、Pyrite Alloy×240、Magical Dust×90、Enchanted Crystal×28、Stone of Purity×150、Magic Crystal×3750、Empyrean Stone×15</td></tr>
+<tr><td>Astral Crusher</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×13、Jotun Corestone×500、Keening Edge×250</td></tr>
+<tr><td>Astral Spirit Mace</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×13、Runewood Focus×500、Jotun Corestone×250</td></tr>
+</table>
+</div>
+</section>
+
+<section id="armor">
+  <h2>軽装・重装・盾</h2>
+  <p class="note">ローブ以外の防具。性能数値は公式コーデックスのアイテムDB参照（ここでは素材と手数料を掲載）。</p>
+  <h3>軽装（light）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Manticore Helm</td><td>20</td><td>set</td><td>80,000</td><td>Leather×4、Magical Shard×3、Enchanted Crystal×1、Magic Crystal×200</td></tr>
+<tr><td>Manticore Tunic</td><td>20</td><td>set</td><td>150,000</td><td>Leather×8、Magical Shard×6、Enchanted Crystal×2、Magic Crystal×200</td></tr>
+<tr><td>Manticore Gloves</td><td>20</td><td>set</td><td>60,000</td><td>Leather×3、Magical Shard×2、Enchanted Crystal×1、Magic Crystal×200</td></tr>
+<tr><td>Manticore Pants</td><td>20</td><td>set</td><td>100,000</td><td>Leather×5、Magical Shard×4、Enchanted Crystal×1、Magic Crystal×200</td></tr>
+<tr><td>Manticore Boots</td><td>20</td><td>set</td><td>70,000</td><td>Leather×4、Magical Shard×3、Enchanted Crystal×1、Magic Crystal×200</td></tr>
+<tr><td>Theca Helm</td><td>40</td><td>set</td><td>1,500,000</td><td>Leather×30、Magical Shard×20、Adamantine Ore×15、Stem×30、Enchanted Crystal×8、Magic Crystal×500</td></tr>
+<tr><td>Theca Tunic</td><td>40</td><td>set</td><td>3,000,000</td><td>Leather×60、Magical Shard×40、Adamantine Ore×30、Stem×60、Enchanted Crystal×15、Magic Crystal×1000</td></tr>
+<tr><td>Theca Gloves</td><td>40</td><td>set</td><td>1,200,000</td><td>Leather×20、Magical Shard×15、Adamantine Ore×10、Stem×20、Enchanted Crystal×5、Magic Crystal×400</td></tr>
+<tr><td>Theca Pants</td><td>40</td><td>set</td><td>2,000,000</td><td>Leather×40、Magical Shard×30、Adamantine Ore×20、Stem×40、Enchanted Crystal×10、Magic Crystal×700</td></tr>
+<tr><td>Theca Boots</td><td>40</td><td>set</td><td>1,500,000</td><td>Leather×30、Magical Shard×20、Adamantine Ore×12、Stem×25、Enchanted Crystal×7、Magic Crystal×500</td></tr>
+<tr><td>Plated Leather Helm</td><td>40</td><td>set</td><td>1,500,000</td><td>Leather×30、Magical Shard×20、Adamantine Ore×15、Stem×30、Enchanted Crystal×8、Magic Crystal×500</td></tr>
+<tr><td>Plated Leather Tunic</td><td>40</td><td>set</td><td>3,000,000</td><td>Leather×60、Magical Shard×40、Adamantine Ore×30、Stem×60、Enchanted Crystal×15、Magic Crystal×1000</td></tr>
+<tr><td>Plated Leather Gloves</td><td>40</td><td>set</td><td>1,200,000</td><td>Leather×20、Magical Shard×15、Adamantine Ore×10、Stem×20、Enchanted Crystal×5、Magic Crystal×400</td></tr>
+<tr><td>Plated Leather Pants</td><td>40</td><td>set</td><td>2,000,000</td><td>Leather×40、Magical Shard×30、Adamantine Ore×20、Stem×40、Enchanted Crystal×10、Magic Crystal×700</td></tr>
+<tr><td>Plated Leather Boots</td><td>40</td><td>set</td><td>1,500,000</td><td>Leather×30、Magical Shard×20、Adamantine Ore×12、Stem×25、Enchanted Crystal×7、Magic Crystal×500</td></tr>
+<tr><td>Marauder Helm</td><td>52</td><td>set</td><td>1,900,000</td><td>Composite Leather×38、Magical Shard×26、Pyrite Alloy×19、Composite Fiber×38、Enchanted Crystal×10、Brine Stone×4、Magic Crystal×650</td></tr>
+<tr><td>Marauder Tunic</td><td>52</td><td>set</td><td>3,800,000</td><td>Composite Leather×77、Magical Shard×51、Pyrite Alloy×38、Composite Fiber×77、Enchanted Crystal×19、Brine Stone×10、Magic Crystal×1300</td></tr>
+<tr><td>Marauder Gloves</td><td>52</td><td>set</td><td>1,500,000</td><td>Composite Leather×26、Magical Shard×19、Pyrite Alloy×13、Composite Fiber×26、Enchanted Crystal×6、Magic Crystal×500</td></tr>
+<tr><td>Marauder Pants</td><td>52</td><td>set</td><td>2,500,000</td><td>Composite Leather×51、Magical Shard×38、Pyrite Alloy×26、Composite Fiber×51、Enchanted Crystal×13、Brine Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Marauder Boots</td><td>52</td><td>set</td><td>1,900,000</td><td>Composite Leather×38、Magical Shard×26、Pyrite Alloy×15、Composite Fiber×32、Enchanted Crystal×9、Magic Crystal×650</td></tr>
+<tr><td>Spore-Walker Helm</td><td>52</td><td>set</td><td>1,900,000</td><td>Composite Leather×38、Magical Shard×26、Pyrite Alloy×19、Composite Fiber×38、Enchanted Crystal×10、Blight Stone×4、Magic Crystal×650</td></tr>
+<tr><td>Spore-Walker Tunic</td><td>52</td><td>set</td><td>3,800,000</td><td>Composite Leather×77、Magical Shard×51、Pyrite Alloy×38、Composite Fiber×77、Enchanted Crystal×19、Blight Stone×10、Magic Crystal×1300</td></tr>
+<tr><td>Spore-Walker Gloves</td><td>52</td><td>set</td><td>1,500,000</td><td>Composite Leather×26、Magical Shard×19、Pyrite Alloy×13、Composite Fiber×26、Enchanted Crystal×6、Magic Crystal×500</td></tr>
+<tr><td>Spore-Walker Pants</td><td>52</td><td>set</td><td>2,500,000</td><td>Composite Leather×51、Magical Shard×38、Pyrite Alloy×26、Composite Fiber×51、Enchanted Crystal×13、Blight Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Spore-Walker Boots</td><td>52</td><td>set</td><td>1,900,000</td><td>Composite Leather×38、Magical Shard×26、Pyrite Alloy×15、Composite Fiber×32、Enchanted Crystal×9、Magic Crystal×650</td></tr>
+<tr><td>Thornstalker Helm</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Runed Hide×90、Wyrmsteel Plate×45</td></tr>
+<tr><td>Thornstalker Tunic</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Runed Hide×270、Wyrmsteel Plate×135</td></tr>
+<tr><td>Thornstalker Gloves</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Runed Hide×90、Wyrmsteel Plate×45</td></tr>
+<tr><td>Thornstalker Pants</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Runed Hide×180、Wyrmsteel Plate×90</td></tr>
+<tr><td>Thornstalker Boots</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Runed Hide×90、Wyrmsteel Plate×45</td></tr>
+<tr><td>Wolfscout Helm</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Runed Hide×90、Wyrmsteel Plate×45</td></tr>
+<tr><td>Wolfscout Tunic</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Runed Hide×270、Wyrmsteel Plate×135</td></tr>
+<tr><td>Wolfscout Gloves</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Runed Hide×90、Wyrmsteel Plate×45</td></tr>
+<tr><td>Wolfscout Pants</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Runed Hide×180、Wyrmsteel Plate×90</td></tr>
+<tr><td>Wolfscout Boots</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Runed Hide×90、Wyrmsteel Plate×45</td></tr>
+</table></div><h3>重装（heavy）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Brigandine Helm</td><td>20</td><td>set</td><td>80,000</td><td>Mithril Alloy×4、Reinforced Bone×2、Magical Dust×2、Magic Crystal×200</td></tr>
+<tr><td>Brigandine Plate</td><td>20</td><td>set</td><td>150,000</td><td>Mithril Alloy×8、Reinforced Bone×4、Magical Dust×3、Magic Crystal×200</td></tr>
+<tr><td>Brigandine Gauntlets</td><td>20</td><td>set</td><td>60,000</td><td>Mithril Alloy×3、Reinforced Bone×2、Magical Dust×1、Magic Crystal×200</td></tr>
+<tr><td>Brigandine Greaves</td><td>20</td><td>set</td><td>100,000</td><td>Mithril Alloy×5、Reinforced Bone×3、Magical Dust×2、Magic Crystal×200</td></tr>
+<tr><td>Brigandine Boots</td><td>20</td><td>set</td><td>70,000</td><td>Mithril Alloy×4、Reinforced Bone×2、Magical Dust×1、Magic Crystal×200</td></tr>
+<tr><td>Chain Mail Helm</td><td>40</td><td>set</td><td>1,500,000</td><td>Mithril Alloy×30、Reinforced Bone×15、Adamantine Ore×15、Stem×30、Magic Crystal×500</td></tr>
+<tr><td>Chain Mail Plate</td><td>40</td><td>set</td><td>3,000,000</td><td>Mithril Alloy×60、Reinforced Bone×30、Adamantine Ore×30、Stem×60、Magic Crystal×1000</td></tr>
+<tr><td>Chain Mail Gauntlets</td><td>40</td><td>set</td><td>1,200,000</td><td>Mithril Alloy×20、Reinforced Bone×10、Adamantine Ore×10、Stem×20、Magic Crystal×400</td></tr>
+<tr><td>Chain Mail Greaves</td><td>40</td><td>set</td><td>2,000,000</td><td>Mithril Alloy×40、Reinforced Bone×20、Adamantine Ore×20、Stem×40、Magic Crystal×700</td></tr>
+<tr><td>Chain Mail Boots</td><td>40</td><td>set</td><td>1,500,000</td><td>Mithril Alloy×30、Reinforced Bone×15、Adamantine Ore×12、Stem×25、Magic Crystal×500</td></tr>
+<tr><td>Composite Helm</td><td>40</td><td>set</td><td>1,500,000</td><td>Mithril Alloy×30、Reinforced Bone×15、Adamantine Ore×15、Stem×30、Magic Crystal×500</td></tr>
+<tr><td>Composite Plate</td><td>40</td><td>set</td><td>3,000,000</td><td>Mithril Alloy×60、Reinforced Bone×30、Adamantine Ore×30、Stem×60、Magic Crystal×1000</td></tr>
+<tr><td>Composite Gauntlets</td><td>40</td><td>set</td><td>1,200,000</td><td>Mithril Alloy×20、Reinforced Bone×10、Adamantine Ore×10、Stem×20、Magic Crystal×400</td></tr>
+<tr><td>Composite Greaves</td><td>40</td><td>set</td><td>2,000,000</td><td>Mithril Alloy×40、Reinforced Bone×20、Adamantine Ore×20、Stem×40、Magic Crystal×700</td></tr>
+<tr><td>Composite Boots</td><td>40</td><td>set</td><td>1,500,000</td><td>Mithril Alloy×30、Reinforced Bone×15、Adamantine Ore×12、Stem×25、Magic Crystal×500</td></tr>
+<tr><td>Dreadnought Helm</td><td>52</td><td>set</td><td>1,900,000</td><td>Pyrite Alloy×38、Reinforced Bone×19、Composite Fiber×38、Brine Stone×4、Magic Crystal×650</td></tr>
+<tr><td>Dreadnought Plate</td><td>52</td><td>set</td><td>3,800,000</td><td>Pyrite Alloy×77、Reinforced Bone×38、Composite Fiber×77、Brine Stone×10、Magic Crystal×1300</td></tr>
+<tr><td>Dreadnought Gauntlets</td><td>52</td><td>set</td><td>1,500,000</td><td>Pyrite Alloy×26、Reinforced Bone×13、Composite Fiber×26、Magic Crystal×500</td></tr>
+<tr><td>Dreadnought Greaves</td><td>52</td><td>set</td><td>2,500,000</td><td>Pyrite Alloy×51、Reinforced Bone×26、Composite Fiber×51、Brine Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Dreadnought Boots</td><td>52</td><td>set</td><td>1,900,000</td><td>Pyrite Alloy×38、Reinforced Bone×19、Composite Fiber×32、Magic Crystal×650</td></tr>
+<tr><td>Rot-Lord Helm</td><td>52</td><td>set</td><td>1,900,000</td><td>Pyrite Alloy×38、Reinforced Bone×19、Composite Fiber×38、Blight Stone×4、Magic Crystal×650</td></tr>
+<tr><td>Rot-Lord Plate</td><td>52</td><td>set</td><td>3,800,000</td><td>Pyrite Alloy×77、Reinforced Bone×38、Composite Fiber×77、Blight Stone×10、Magic Crystal×1300</td></tr>
+<tr><td>Rot-Lord Gauntlets</td><td>52</td><td>set</td><td>1,500,000</td><td>Pyrite Alloy×26、Reinforced Bone×13、Composite Fiber×26、Magic Crystal×500</td></tr>
+<tr><td>Rot-Lord Greaves</td><td>52</td><td>set</td><td>2,500,000</td><td>Pyrite Alloy×51、Reinforced Bone×26、Composite Fiber×51、Blight Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Rot-Lord Boots</td><td>52</td><td>set</td><td>1,900,000</td><td>Pyrite Alloy×38、Reinforced Bone×19、Composite Fiber×32、Magic Crystal×650</td></tr>
+<tr><td>Ironbark Helm</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Wyrmsteel Plate×90、Warded Weave×45</td></tr>
+<tr><td>Ironbark Plate</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Wyrmsteel Plate×270、Warded Weave×135</td></tr>
+<tr><td>Ironbark Gauntlets</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Wyrmsteel Plate×90、Warded Weave×45</td></tr>
+<tr><td>Ironbark Greaves</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Wyrmsteel Plate×180、Warded Weave×90</td></tr>
+<tr><td>Ironbark Boots</td><td>61</td><td>set</td><td>0</td><td>Frostheart Stone×1、Wyrmsteel Plate×90、Warded Weave×45</td></tr>
+<tr><td>Runebear Helm</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Wyrmsteel Plate×90、Warded Weave×45</td></tr>
+<tr><td>Runebear Plate</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Wyrmsteel Plate×270、Warded Weave×135</td></tr>
+<tr><td>Runebear Gauntlets</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Wyrmsteel Plate×90、Warded Weave×45</td></tr>
+<tr><td>Runebear Greaves</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Wyrmsteel Plate×180、Warded Weave×90</td></tr>
+<tr><td>Runebear Boots</td><td>61</td><td>set</td><td>0</td><td>Gloomroot Stone×1、Wyrmsteel Plate×90、Warded Weave×45</td></tr>
+</table></div><h3>盾（shield）</h3><div class="card"><table><tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Chain Shield</td><td>0</td><td>rare</td><td>4,000,000</td><td>Mithril Alloy×20、Magical Dust×20、Enchanted Crystal×6、Adamantine Ore×80、Stone of Purity×50、Magic Crystal×1250</td></tr>
+<tr><td>Dreadnought Bulwark</td><td>52</td><td>epic</td><td>2,500,000</td><td>Pyrite Alloy×51、Reinforced Bone×26、Composite Fiber×51、Brine Stone×7、Magic Crystal×900</td></tr>
+<tr><td>Astral Shield</td><td>61</td><td>epic</td><td>0</td><td>Astral Stone×13、Wyrmsteel Plate×500、Warded Weave×250</td></tr>
+</table>
+</div>
+</section>
+
+<section id="cons">
+  <h2>消耗品（Wardshot）</h2>
+  <div class="card">
+<table>
+<tr><th>完成品</th><th>要求Lv</th><th>レアリティ</th><th>性能</th><th>制作手数料（G）</th><th>必要素材</th></tr>
+<tr><td>Ironward Shot [D]</td><td>0</td><td>uncommon</td><td>属性 physical, グレード D, ダメージ軽減% 20</td><td>1,000</td><td>Runic Mote×10</td></tr>
+<tr><td>Spellward Shot [D]</td><td>0</td><td>uncommon</td><td>属性 magical, グレード D, ダメージ軽減% 20</td><td>1,000</td><td>Runic Mote×10</td></tr>
+<tr><td>Ironward Shot [C]</td><td>0</td><td>rare</td><td>属性 physical, グレード C, ダメージ軽減% 20</td><td>10,000</td><td>Eldritch Mote×10</td></tr>
+<tr><td>Spellward Shot [C]</td><td>0</td><td>rare</td><td>属性 magical, グレード C, ダメージ軽減% 20</td><td>10,000</td><td>Eldritch Mote×10</td></tr>
+<tr><td>Ironward Shot [B]</td><td>0</td><td>epic</td><td>属性 physical, グレード B, ダメージ軽減% 20</td><td>20,000</td><td>Aether Mote×10</td></tr>
+<tr><td>Spellward Shot [B]</td><td>0</td><td>epic</td><td>属性 magical, グレード B, ダメージ軽減% 20</td><td>20,000</td><td>Aether Mote×10</td></tr>
+<tr><td>Ironward Shot [A]</td><td>0</td><td>epic</td><td>属性 physical, グレード A, ダメージ軽減% 20</td><td>100,000</td><td>Astral Mote×10</td></tr>
+<tr><td>Spellward Shot [A]</td><td>0</td><td>epic</td><td>属性 magical, グレード A, ダメージ軽減% 20</td><td>100,000</td><td>Astral Mote×10</td></tr>
+</table>
+</div>
+  <p class="note">Ironward＝物理用、Spellward＝魔法用のダメージ軽減ショット。グレード D / C / B / A で素材が Runic / Eldritch / Aether / Astral Mote に変わる。軽減率は全グレード20%（公式データ上）。Mote 系素材の入手先は公式データで未確認。</p>
+</section>
+
+<section id="sources">
+  <h2>素材の入手先</h2>
+  <div class="card">
+    <h3>買う</h3>
+    <p>・<strong>Trader Marcus（グルーディオス）</strong>：ゲーム内唯一の商人。Magic Crystal を日替わり価格で販売している（2026-11-21 は 1個 1,007 ゴールド）。他の素材は置いていない。<br>
+    ・<strong>武器・防具の専門店は存在しない</strong>。装備は制作かドロップで手に入れる。<br>
+    ・<strong>ブラックマーケット</strong>：フィールドからでも画面右下ツールバーのボタンで開ける（開いている間もオートファームは戦闘を続ける）。4町のディーラーの出品が1画面に表示される。素材の出品は稀で、価格判断は出品価格ではなく直近の売却平均を基準にすること（相場から外れた高額出品が多い）。</p>
+    <h3>ドロップで集める</h3>
+    <p>・<strong>Twilight Ent（Lv.35、Twilight Grove）</strong>：Iron Ore を1〜4個（6%）、Magical Dust を6%で落とす。Iron Ore と Magical Dust を同時に集められる現在の主力調達先。<br>
+    ・<strong>Iron Ore</strong>：Wild Unicorn（Lv10、7%）、Ogre Brute（Lv10、7%）など入手先は多数。<br>
+    ・<strong>Magical Shard</strong>：Vampire Spawn（Lv15、6%、Darkmist Hollow）、Restless Shade（Lv32、6%、Forsaken Garrison）など。<br>
+    ・<strong>Dark Crystal</strong>：Restless Shade（Lv32、7%）、Plagued Knight（Lv30、6%）など Forsaken Garrison 一帯。<br>
+    ・<strong>Adamantine Ore / Stone of Purity</strong>：クロマ・タワー F1 のモンスター群が Adamantine Ore 15% / Stone of Purity 10% で落とす。<br>
+    ・<strong>Magic Crystal</strong>：通常モンスターの低レベル帯ドロップはほぼ無く、Lv.47 未満ではレイドボス <strong>Hierophant Malgrath（Lv.30、クロマ・タワー、HP 80,000）</strong> が唯一のドロップ源（70%で30〜60個、Dark Crystal 80%、Stone of Purity 65%）。ただし怒り（エンゲージ）仕様のためソロ討伐は現実的ではなく、実質的には Trader Marcus での購入が調達ルートになる。</p>
+  </div>
+</section>
+
+<section id="now">
+  <h2>muse の制作状況</h2>
+  <div class="status">
+    <div class="cell"><div class="k">レベル</div><div class="v">Lv.35</div></div>
+    <div class="cell"><div class="k">ゴールド</div><div class="v">1,414,293</div></div>
+    <div class="cell"><div class="k">場所</div><div class="v">Twilight Grove</div></div>
+    <div class="cell"><div class="k">制作済み</div><div class="v">Mithril Mystic Necklace</div></div>
+  </div>
+  <div class="card">
+    <p>・<strong>Mithril Mystic Necklace を制作して装備済み</strong>（手数料 5,000G、Magical Dust×2、Mithril Alloy×1）。アクセサリー枠はそれまで空だった。<br>
+    ・Trader Marcus から <strong>Magic Crystal ×500 を 1,007G/個（計 503,500G）</strong> で購入済み。<br>
+    ・中間素材も先行して制作済み（Enchanted Crystal ×5、Magical Dust ×17 など）。<br>
+    ・<strong>Archmage's Staff は Mithril Alloy があと7個不足</strong>して足踏み中（必要8個）。Iron Ore を Twilight Grove の Twilight Ent 狩りで集めている（12:15 時点でバッグ40個＋倉庫分）。他の素材と手数料 500,000G は確保済み。<br>
+    ・杖の次は <strong>Elven Ring と Elven Amulet</strong>（各 Mithril Alloy×5、Magical Dust×5、Enchanted Crystal×1、手数料 10,000G）を予定。</p>
+  </div>
+  <p class="note">2026-11-21 12:15 時点のスナップショット。</p>
+</section>
+
+</main>
+<footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月21日</footer>
+</body>
+</html>
