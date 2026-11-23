@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>移動速度・食事・釣り | Grimeage II 攻略ノート</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#0f2733; --line:#22303d;
+    --text:#dbe7ee; --muted:#8fa6b3; --accent:#39d0c4; --accent2:#a678f0;
+    --gold:#e8c268; --red:#e06c6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.75}
+  a{color:var(--accent)}
+  nav{position:sticky;top:0;background:rgba(11,15,20,.94);border-bottom:1px solid var(--line);padding:10px 16px;z-index:10;backdrop-filter:blur(4px)}
+  nav a{margin-right:16px;text-decoration:none;font-size:.92rem;white-space:nowrap}
+  main{max-width:960px;margin:0 auto;padding:8px 16px 64px}
+  section{margin-top:40px}
+  h2{border-left:4px solid var(--accent);padding-left:10px;font-size:1.3rem;margin-bottom:14px}
+  h3{color:var(--accent2);margin:20px 0 8px;font-size:1.05rem}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .status .cell{background:var(--panel2);border-radius:8px;padding:10px 12px}
+  .status .k{color:var(--muted);font-size:.8rem}
+  .status .v{font-size:1.1rem;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;white-space:nowrap}
+  .note{color:var(--muted);font-size:.9rem}
+  footer{color:var(--muted);text-align:center;padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">&larr; 攻略ノート トップ</a><a href="#basic">基本形</a><a href="#direct">本体が直接狙われる狩場</a><a href="#pain">被ダメが痛い場</a><a href="#tower">タワー（手動）</a><a href="#fa">FAの注意点</a><a href="#mp">MP管理</a><a href="#aggro">ヘイト</a><a href="crafting.html">制作</a><a href="blog.html">日誌</a><a href="codex.html">コーデックス日本語訳</a>
+</nav>
+<main>
+<h1>移動速度・食事・釣り</h1>
+<p>移動速度の上げ方と、食事バフ・釣りシステムのまとめ（2026-11-24 調査）。</p>
+<div class="card"><p><b>※検証中</b>：このページはCodexデータに基づくまとめです。実地検証が済んだ項目から順次修正していきます。</p></div>
+
+<section>
+<h2>移動速度の上げ方</h2>
+<h3>バフスキル（ウインドウォーク相当）</h3>
+<div class="card">
+<p>Prophet / Warcryer のバフスキルが本作のウインドウォーク枠。<b>移動速度+8%、3分間</b>（物理防御+3%も付く）。Majorバフ。他職は自前では使えず、パーティでバファーにかけてもらう形になる。</p>
+</div>
+<h3>食事（ソロで使える）</h3>
+<div class="card">
+<p><b>Grilled Smelt（焼きワカサギ）</b>を食べると<b>移動速度+4%、1時間</b>。食事バフは同時に1種だけ有効で、別のものを食べると置き換わる。</p>
+</div>
+<h3>装備（固定値 run_speed）</h3>
+<table>
+<tr><th>装備</th><th>移動速度</th><th>備考</th></tr>
+<tr><td>ミスリルシューズ（Lv.20）</td><td>+1</td><td>ローブ系の標準靴</td></tr>
+<tr><td>カルミアンシューズ（Lv.40）</td><td>+2</td><td>制作可</td></tr>
+<tr><td>Delver's Band（指輪）</td><td>+5</td><td>ユニーク。最大HP+250、M.Def 50、MPコスト-10%</td></tr>
+<tr><td>Frostreaver Loop（指輪）</td><td>+7</td><td>ユニーク。最大HP+300、回避+5</td></tr>
+<tr><td>Stormbinder Shoes（Lv.52）</td><td>+3</td><td>詠唱速度も付き</td></tr>
+<tr><td>Elderwood Shoes（Lv.61）</td><td>+4</td><td>61帯ローブ靴</td></tr>
+</table>
+</section>
+
+<section>
+<h2>食事システム</h2>
+<div class="card">
+<p>食事は2層ある。<b>food_fish</b>（魚を焼いた簡易食、1時間バフ）と、NPCベイカー・ヘッティが作る <b>meal</b>（epic料理、丸ごと1匹の宴会系）。全10種ほど。</p>
+<p>バフ例：Grilled Smelt＝移動速度+4%/1時間、Smoked Perch＝MP回復+3/1時間。</p>
+<p>魚群（school）ごとに釣れる魚が違い、その魚を焼くと対応する食事になる（例：サーモンの群れ→ワカサギ→Grilled Smelt）。</p>
+</div>
+</section>
+
+<section>
+<h2>釣りシステム</h2>
+<div class="card">
+<p>独立した放置系システム。釣りレベル、竿、釣り船、魚図鑑がある。</p>
+<p>進行は重めで、放置釣り約60時間で釣り船クエストが解放され、Guru（達人）到達まで約1,000時間（パッチノートで再調整済み）。船で海の魚群から釣ると獲得XP20倍。食用魚は最低2,000 XP、グルメ魚は最低8,000 XP。</p>
+</div>
+</section>
+</main>
+</body>
+</html>
