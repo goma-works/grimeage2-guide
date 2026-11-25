@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本人が1から始める Grimeage II | 攻略ノート</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#131a22; --panel2:#0f2733; --line:#22303d;
+    --text:#dbe7ee; --muted:#8fa6b3; --accent:#39d0c4; --accent2:#a678f0;
+    --gold:#e8c268; --red:#e06c6c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.75}
+  a{color:var(--accent)}
+  nav{position:sticky;top:0;background:rgba(11,15,20,.94);border-bottom:1px solid var(--line);padding:10px 16px;z-index:10;backdrop-filter:blur(4px)}
+  nav a{margin-right:16px;text-decoration:none;font-size:.92rem;white-space:nowrap}
+  main{max-width:960px;margin:0 auto;padding:8px 16px 64px}
+  section{margin-top:40px}
+  h2{border-left:4px solid var(--accent);padding-left:10px;font-size:1.3rem;margin-bottom:14px}
+  h3{color:var(--accent2);margin:20px 0 8px;font-size:1.05rem}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+  .status{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .status .cell{background:var(--panel2);border-radius:8px;padding:10px 12px}
+  .status .k{color:var(--muted);font-size:.8rem}
+  .status .v{font-size:1.1rem;font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:.94rem}
+  th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:600;white-space:nowrap}
+  .note{color:var(--muted);font-size:.9rem}
+  .shot{border:1px dashed var(--line);border-radius:8px;padding:18px;text-align:center;color:var(--muted);margin:10px 0}
+  footer{color:var(--muted);text-align:center;padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">&larr; 攻略ノート トップ</a><a href="#about-series">このシリーズについて</a><a href="#profile">主人公</a><a href="#episodes">実況ログ</a><a href="crafting.html">制作</a><a href="blog.html">日誌</a><a href="codex.html">コーデックス日本語訳</a>
+</nav>
+<main>
+<h1>日本人が1から始める Grimeage II</h1>
+<p>新規アカウント＆新規キャラクターで、ゼロから始める実況シリーズ。</p>
+
+<section id="about-series">
+<h2>このシリーズについて</h2>
+<div class="card">
+<p>Grimeage II は<strong>ゲーム内が英語のみで、日本語設定はなく、公式の攻略 Wiki も存在しない</strong>ブラウザ MMORPG です。このシリーズでは、日本人プレイヤーが<strong>まっさらな新規アカウント</strong>でキャラクターを作り、英語の壁や序盤のつまずきも含めて、ゼロからの歩みを日本語で実況しながら記録していきます。</p>
+<p>第1アカウントのネクロマンサー「muse」の攻略記録（このサイト本体）とは別枠で、こちらは「始めたばかりの視点」の連載です。チュートリアルから最初の街、初めてのクエスト、初めての転職まで、実際に進めた順番そのままに更新していきます。これから始める日本人の方の道しるべになれば幸いです。</p>
+<p>もうひとつの裏テーマは<strong>2PC 運用</strong>です。muse はソロのネクロマンサーで、最大のボトルネックは MP 消費。将来パーティ前提のコンテンツで詰まる前に、MP 回復（リチャージ）と回復・蘇生を持つ支援職を相方として育てておく——その候補が、このシリーズの主人公です。</p>
+</div>
+</section>
+
+<section id="profile">
+<h2>主人公：euterpe（エウテルペ）</h2>
+<div class="status">
+  <div class="cell"><div class="k">名前</div><div class="v">euterpe</div></div>
+  <div class="cell"><div class="k">種族 / 性別</div><div class="v">エルフ / 女</div></div>
+  <div class="cell"><div class="k">クラス</div><div class="v">Oracle（オラクル）</div></div>
+  <div class="cell"><div class="k">レベル</div><div class="v">Lv.1</div></div>
+  <div class="cell"><div class="k">開始地点</div><div class="v">Talking Island（話す島）</div></div>
+  <div class="cell"><div class="k">アカウント</div><div class="v">第2アカウント（新規）</div></div>
+</div>
+<div class="card">
+<p>名前は全小文字で「<strong>euterpe</strong>」。ギリシャ神話のムーサ九姉妹の一柱、音楽を司るエウテルペから取りました。第1キャラクター「muse」の姉妹という位置づけです（muse のほうは作成時に1文字目を小文字にしてしまった、という裏話もあります）。</p>
+<p>クラスは <strong>Oracle</strong>。エルフの支援職ルートの出発点で、この先 <strong>Elder（エルダー）</strong> への転職を目指します。Elder は味方の MP を回復する Wellspring（リチャージ役）に、回復・シールド・蘇生まで持つ支援の要。リネージュ2のシリエンエルダーの役割が本作では複数職に分割されている事情は、<a href="index.html#support">トップページの「支援クラスと2PCの豆知識」</a>にまとめています。</p>
+<div class="shot">［スクリーンショット予定：euterpe のキャラクター選択画面と、話す島での第一歩］</div>
+</div>
+</section>
+
+<section id="episodes">
+<h2>実況ログ</h2>
+<div class="card">
+<h3>第0回：キャラクター作成（2026-11-25）</h3>
+<p>第2アカウントを作成し、種族はエルフ、クラスは Oracle を選択。名前は「euterpe」で登録しました。舞台は全ての冒険の始まりの地、Talking Island（話す島）。まだ Lv.1、何も始まっていません。</p>
+<p>本編（チュートリアルの歩き方、話す島の初期クエスト、英語で読むクエスト文の勘所など）は、実際に走らせながら順次追加していきます。</p>
+<p><strong>つづく（随時更新）</strong></p>
+</div>
+</section>
+
+</main>
+<footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月25日</footer>
+</body>
+</html>
