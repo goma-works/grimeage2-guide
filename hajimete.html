@@ -34,7 +34,7 @@
 </head>
 <body>
 <nav>
-  <a href="index.html">&larr; 攻略ノート トップ</a><a href="#about-series">このシリーズについて</a><a href="#profile">主人公</a><a href="#episodes">実況ログ</a><a href="crafting.html">制作</a><a href="blog.html">日誌</a><a href="codex.html">コーデックス日本語訳</a>
+  <a href="index.html">&larr; 攻略ノート トップ</a><a href="#about-series">このシリーズについて</a><a href="#profile">主人公</a><a href="#episodes">実況ログ</a><a href="#zones">話す島の狩場</a><a href="crafting.html">制作</a><a href="blog.html">日誌</a><a href="codex.html">コーデックス日本語訳</a>
 </nav>
 <main>
 <h1>日本人が1から始める Grimeage II</h1>
@@ -55,7 +55,7 @@
   <div class="cell"><div class="k">名前</div><div class="v">euterpe</div></div>
   <div class="cell"><div class="k">種族 / 性別</div><div class="v">エルフ / 女</div></div>
   <div class="cell"><div class="k">クラス</div><div class="v">Oracle（オラクル）</div></div>
-  <div class="cell"><div class="k">レベル</div><div class="v">Lv.1</div></div>
+  <div class="cell"><div class="k">レベル</div><div class="v">Lv.14（2026-11-26）</div></div>
   <div class="cell"><div class="k">開始地点</div><div class="v">Talking Island（話す島）</div></div>
   <div class="cell"><div class="k">アカウント</div><div class="v">第2アカウント（新規）</div></div>
 </div>
@@ -63,6 +63,18 @@
 <p>名前は全小文字で「<strong>euterpe</strong>」。ギリシャ神話のムーサ九姉妹の一柱、音楽を司るエウテルペから取りました。第1キャラクター「muse」の姉妹という位置づけです（muse のほうは作成時に1文字目を小文字にしてしまった、という裏話もあります）。</p>
 <p>クラスは <strong>Oracle</strong>。エルフの支援職ルートの出発点で、この先 <strong>Elder（エルダー）</strong> への転職を目指します。Elder は味方の MP を回復する Wellspring（リチャージ役）に、回復・シールド・蘇生まで持つ支援の要。リネージュ2のシリエンエルダーの役割が本作では複数職に分割されている事情は、<a href="index.html#support">トップページの「支援クラスと2PCの豆知識」</a>にまとめています。</p>
 <div class="shot">［スクリーンショット予定：euterpe のキャラクター選択画面と、話す島での第一歩］</div>
+</div>
+<h3 style="margin-top:28px">相方：sibylla（シビュラ）</h3>
+<div class="status">
+  <div class="cell"><div class="k">名前</div><div class="v">sibylla</div></div>
+  <div class="cell"><div class="k">種族 / 性別</div><div class="v">ヒューマン / 女</div></div>
+  <div class="cell"><div class="k">クラス</div><div class="v">Cleric（クレリック）</div></div>
+  <div class="cell"><div class="k">レベル</div><div class="v">Lv.14（2026-11-26）</div></div>
+  <div class="cell"><div class="k">開始地点</div><div class="v">Talking Island（話す島）</div></div>
+  <div class="cell"><div class="k">アカウント</div><div class="v">第2アカウント（euterpe と同一）</div></div>
+</div>
+<div class="card">
+<p>同じ第2アカウントの2人目。ヒューマンの Cleric で、この先 <strong>Prophet（プロフェット）</strong>——味方を強化するバフ役——への転職を目指します。同じアカウントの2キャラクターは同時にオートファーム（放置狩り）させられますが、ファーム中のキャラはワールド内に姿がなく、同じアカウント同士ではパーティーは組めません。運用は「片方を裏でファームさせ、もう片方に入ってクエストや狩場を更新する」を交代で回す形です。</p>
 </div>
 </section>
 
@@ -72,11 +84,87 @@
 <h3>第0回：キャラクター作成（2026-11-25）</h3>
 <p>第2アカウントを作成し、種族はエルフ、クラスは Oracle を選択。名前は「euterpe」で登録しました。舞台は全ての冒険の始まりの地、Talking Island（話す島）。まだ Lv.1、何も始まっていません。</p>
 <p>本編（チュートリアルの歩き方、話す島の初期クエスト、英語で読むクエスト文の勘所など）は、実際に走らせながら順次追加していきます。</p>
+</div>
+
+<div class="card">
+<h3>はじめに読む：序盤の共通ルール</h3>
+<p>第1回以降の手順で何度も出てくる約束事を先にまとめます。</p>
+<table>
+<tr><th>オートファーム</th><td>自動で狩りを続ける放置狩り機能。クエストの討伐数稼ぎは基本これで回します。コマンド「/autofarm」でも切り替えられます</td></tr>
+<tr><th>最重要の注意</th><td><strong>NPC と話す前は必ずオートファームを OFF</strong>。ON のままだと戦闘に引き離されて会話やクエスト完了がエラーになります</td></tr>
+<tr><th>戦闘設定</th><td>狩る相手（Attack）と無視する相手（Ignore）をモンスターごとに指定できます。横殴り防止の Kill Steal は OFF。自動休息（座って回復）は HP 60%／MP 20% が序盤の目安です</td></tr>
+<tr><th>SoE</th><td>Scroll of Escape（帰還スクロール）。詠唱10秒で最寄りの村へ戻れます。クエスト報酬でもらえるので温存せず使ってOK</td></tr>
+<tr><th>強化の安全圏</th><td>武器・防具の強化（エンチャント）は <strong>+3 までは成功率100%</strong>。それを超えると失敗のリスクが出てきます</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>第1回：Perrin の案内で最初の武器まで（Lv.1〜13）</h3>
+<p>話す島の村にいる <strong>Guide Perrin</strong>（案内人ペリン）が、序盤を一本道で導いてくれます。出てくるクエストは上から順に受けていけばOKです。</p>
+<p><strong>手順1「Washed Ashore」</strong>：Sandy Shore（砂浜）で砂浜のモンスターを5体倒す。報酬は XP +100、SoE ×10、そして <strong>Apprentice Hood／Gloves／Shoes</strong>（見習い装備3点）。もらったらすぐ装備しましょう。</p>
+<p><strong>手順2「Let It Run」</strong>：Sandy Shore South でオートファームを ON にして20体討伐。報酬 XP +750。オートファームの練習クエストです。</p>
+<p><strong>手順3「Coastal Cull」</strong>：Sandy Shore North で25体討伐。報酬 XP +900 と <strong>Oak Staff（オークの杖、P.Atk 26／M.Atk 32）</strong>。最初の木の杖から持ち替えると魔法の威力が目に見えて上がります。</p>
+<p><strong>手順4「A Sharper Edge」</strong>：Perrin から Enchant Scroll (Weapon)（武器強化スクロール）を3枚もらい、Oak Staff に1枚ずつ使って <strong>+3</strong>（P.Atk 28／M.Atk 34）にします。+3 までは100%成功する安全圏なので、支給スクロールはここで使い切って大丈夫。報酬 XP +1,500。</p>
+<p class="note">このチェーンは euterpe と sibylla の両方で同じ手順・同じ報酬でした。2人とも Oak Staff +3 を装備して次へ進みます。</p>
+</div>
+
+<div class="card">
+<h3>第2回：海岸の用心棒と、内陸への道（〜Lv.13）</h3>
+<p><strong>「Trouble on the Shore」</strong>：村の海岸側にいる <strong>Beachwarden Corin</strong>（海岸警備コリン）から受諾。Sandy Shore 一帯で15体討伐すると、XP +500、ゴールド +500、HP Potion ×10、MP Potion ×10 がもらえます。</p>
+<p><strong>「The Road Inland」</strong>：同じく Corin から受ける紹介状クエスト。北へ進み、Pilgrim's Rest（巡礼者の休息地）にいる <strong>Roadwarden Hollis</strong>（道路警備ホリス）に会い、周辺のオオカミ（Wolf Lv.6／Elder Wolf Lv.8）を12体討伐します。狩場は Central Area（中央エリア、Lv.6–10）。報酬は XP +2,500、ゴールド +1,000、SoE ×3、ポーション ×10ずつ。序盤では破格の XP です。</p>
+</div>
+
+<div class="card">
+<h3>第3回：Forest of Gloom でレベル上げ（Lv.13〜14）</h3>
+<p>Lv.11 を超えたら、話す島の狩場 <strong>Forest of Gloom（Lv.11–15）</strong>へ。ここでの戦闘設定が大事です。</p>
+<table>
+<tr><th>Attack（狩る）</th><td><strong>Gloom Orc Lv.11 のみ</strong></td></tr>
+<tr><th>Ignore（無視）</th><td>Gloom Orc Shaman Lv.13／Gloom Orc Warrior Lv.15／Risen Sentry・Bowman Lv.15／Risen Gravecaller Lv.16</td></tr>
+<tr><th>その他</th><td>Kill Steal OFF、自動休息 HP 60%／MP 20%</td></tr>
+</table>
+<p><strong>要注意：Gloom Orc Shaman Lv.13 は絶対に相手にしないこと。</strong>魔法攻撃（Wind Strike）に毒まで使ってきて、Lv.12 の euterpe が1戦で HP 625 → 116 まで削られた実績があります。狩る相手の Gloom Orc Lv.11 も Power Strike が54〜71ダメージと痛く、1戦ごとに HP の半分以上を持っていくので、休息が挟まるのは正常です。</p>
+<p>euterpe は Venomous Thicket 側、sibylla は South 側と、同じ森でも場所を分けて狩っています。2人ともこの森で Lv.14 に到達しました。</p>
+</div>
+
+<div class="card">
+<h3>第4回：族長のお使いで +100,200 ゴールド（sibylla、Lv.13→14）</h3>
+<p><strong>「The Warchief's Gift」</strong>：Orc Village（オークの村）の <strong>Warchief Grok</strong>（族長グロック）から受けるお使いクエスト。グロックのケーキを Dark Elf Village（ダークエルフの村）の <strong>Shadow Warden Kael</strong>（影の番人カエル）に届けると、Kael が遺跡で見つけた War Medallion（戦争のメダリオン）を預かります。それを Grok に返すとクエスト完了。</p>
+<p>報酬は XP +5,000 と <strong>ゴールド +100,200</strong>。移動は往復で8分ほどかかりますが、序盤の所持金が一気に3倍近くになる破格のクエストです。見かけたら最優先で回す価値があります。完了後、Forest of Gloom に戻ると次のクエスト「Guard Captain Marcus に話せ」が案内に出ました（次回受諾予定）。</p>
+</div>
+
+<div class="card">
+<h3>第5回：発見物（ディスカバリー）の罠 ― Discoveries of the Coast</h3>
+<p>Perrin のクエスト「Discoveries of the Coast」は、Sandy Shore 一帯に現れる発見物（Ancient Shrine＝古代の祠、Monster Nest＝モンスターの巣、Sealed Treasure＝封印された宝）のエンカウント（遭遇イベント）を1回こなすクエストです。</p>
+<p>ところが実地でつまずきました。発見物を<strong>クリックしても何も始まりません</strong>（Monster Nest で2分半、Sealed Treasure で1分待っても無反応）。唯一始まったのは Sandy Shore South の Ancient Shrine で、到着地点のすぐそばに祠があり、Shrine Defiler Lv.2 が2体襲ってきたケース。どうやら<strong>発見物はクリックではなく「近づくこと」が引き金</strong>らしい、というのが現時点の見立てです（それでも進行度は 0% のまま止まり、未完了）。次回は発見物へ徒歩で隣接する方法を試します。</p>
 <p><strong>つづく（随時更新）</strong></p>
 </div>
 </section>
 
+<section id="zones">
+<h2>話す島の狩場（レベル帯）</h2>
+<div class="card">
+<p>Talking Island（話す島）のゾーンとレベル帯の実測一覧です。自分のレベルに合う帯で、1つ上の帯に挑むくらいが効率と安全のバランスが良いです。</p>
+<table>
+<tr><th>ゾーン</th><th>レベル帯</th><th>メモ</th></tr>
+<tr><td>Sandy Shore</td><td>Lv.1–2</td><td>開始直後の砂浜。Washed Ashore の狩場</td></tr>
+<tr><td>Sandy Shore South</td><td>Lv.1–3</td><td>Let It Run の狩場</td></tr>
+<tr><td>Sandy Shore North</td><td>Lv.2–5</td><td>Coastal Cull の狩場</td></tr>
+<tr><td>Road Cross</td><td>Lv.2–5</td><td></td></tr>
+<tr><td>Wayfarer's Crossing</td><td>Lv.2–5</td><td></td></tr>
+<tr><td>Central Area</td><td>Lv.6–10</td><td>Hollowrock Point、Pilgrim's Rest（オオカミ狩り）を含む</td></tr>
+<tr><td>Central Area Old Bridge</td><td>Lv.6–8</td><td>古い橋の周辺</td></tr>
+<tr><td>Singing Waterfall</td><td>Lv.10</td><td></td></tr>
+<tr><td>Forest of Gloom</td><td>Lv.11–15</td><td>Gloom Orc Lv.11 狙い。Shaman Lv.13 は危険（第3回参照）</td></tr>
+<tr><td>Forbidden Ruins</td><td>Lv.15–16</td><td></td></tr>
+<tr><td>Ruinbound Undercroft</td><td>Lv.16–20</td><td></td></tr>
+<tr><td>Cursed Isles</td><td>Lv.16–20</td><td></td></tr>
+<tr><td>Corsairs Lookout</td><td>Lv.16–20</td><td></td></tr>
+</table>
+<p class="note">村の主な NPC：Gatekeeper Bella（転送係ベラ）、Guide Perrin（案内人）、Beachwarden Corin（海岸警備）、Warehouse Clerk Benton（倉庫係）。</p>
+</div>
+</section>
+
 </main>
-<footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月25日</footer>
+<footer>Grimeage II 攻略ノート ― ファンメイドの非公式攻略メモです。最終更新：2026年11月26日</footer>
 </body>
 </html>
