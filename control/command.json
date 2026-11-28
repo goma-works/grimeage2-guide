@@ -1,7 +1,7 @@
 {
- "id": "20261128-193242",
- "action": "panel",
+ "id": "20261128-195806",
+ "action": "getLog",
  "args": {
-  "mode": "hide"
+  "limit": 80
  }
 }
