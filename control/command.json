@@ -1,5 +1,7 @@
 {
- "id": "20261128-201936",
- "action": "deepProbe",
- "args": {}
+ "id": "20261128-202527",
+ "action": "getLog",
+ "args": {
+  "limit": 120
+ }
 }
