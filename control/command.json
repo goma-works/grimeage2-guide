@@ -1,5 +1,7 @@
 {
- "id": "20261128-183823",
- "action": "ping",
- "args": {}
+ "id": "20261128-193242",
+ "action": "panel",
+ "args": {
+  "mode": "hide"
+ }
 }
